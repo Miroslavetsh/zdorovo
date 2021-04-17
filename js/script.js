@@ -239,3 +239,13 @@ try {
         }
     })
 } catch (e) {}
+
+try {
+    const likeIconsInCard = document.querySelectorAll('.card__like')
+
+    likeIconsInCard.forEach((icon) => {
+        icon.addEventListener('click', function () {
+            this.classList.toggle('_liked')
+        })
+    })
+} catch (e) {}
