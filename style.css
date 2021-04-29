@@ -454,7 +454,7 @@ input:focus:-ms-input-placeholder {
     padding: 163px 0 113px 0;
     min-height: 100vh;
     max-height: 971px;
-    background: url('../img/preview/bg.jpg') center no-repeat;
+    background: url('img/preview/bg.jpg') center no-repeat;
     background-size: cover;
     overflow: hidden;
     display: -webkit-box;
@@ -3212,7 +3212,7 @@ input:focus:-ms-input-placeholder {
 
 .prev {
     padding: 137px 0 40px;
-    background: url('../img/about/prev.jpg') center no-repeat;
+    background: url('img/about/prev.jpg') center no-repeat;
     background-size: cover;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
@@ -3326,7 +3326,7 @@ input:focus:-ms-input-placeholder {
 
 .work__media--video::after {
     content: '';
-    background: url('../img/icons/play.svg') center no-repeat;
+    background: url('img/icons/play.svg') center no-repeat;
     position: absolute;
     width: 93px;
     height: 64px;
@@ -3524,4 +3524,12 @@ input:focus:-ms-input-placeholder {
     font-size: 20px;
     margin-bottom: 20px;
     list-style: none;
+}
+
+.webp .preview {
+    background: url('img/preview/bg.webp') center no-repeat;
+}
+
+.webp .prev {
+    background: url('img/about/prev.webp') center no-repeat;
 }
