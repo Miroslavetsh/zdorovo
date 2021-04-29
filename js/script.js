@@ -1,13 +1,4 @@
-// // WEBP format
-
-function testWebP(callback) {
-    var webP = new Image()
-    webP.onload = webP.onerror = function () {
-        callback(webP.height == 2)
-    }
-    webP.src =
-        'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA'
-}
+// @@include('picturesListener.js')
 // ============================
 
 const MENU_TO_BURGER_WIDTH = 840
@@ -265,6 +256,8 @@ try {
     })
 } catch (e) {}
 
+// Card Like
+
 try {
     const likeIconsInCard = document.querySelectorAll('.card__like')
 
@@ -274,3 +267,30 @@ try {
         })
     })
 } catch (e) {}
+
+// Eye in register
+
+try {
+    const inputs = document.querySelectorAll('.register__input')
+
+    const passwordInputs = Array.from(inputs).filter(
+        (input) => input.getAttribute('type') === 'password',
+    )
+
+    passwordInputs.forEach((input) => {
+        input.toggleType = function () {
+            if (this.type === 'password') this.type = 'text'
+            else if (this.type === 'text') this.type = 'password'
+        }
+        console.log(input.parentNode)
+        input.parentNode.querySelector('img').addEventListener('click', function () {
+            if (input.type === 'password') {
+                input.type = 'text'
+            } else if (input.type === 'text') {
+                input.type = 'password'
+            }
+        })
+    })
+} catch (e) {
+    console.log(e)
+}

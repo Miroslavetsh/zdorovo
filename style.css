@@ -968,6 +968,14 @@ input:focus:-ms-input-placeholder {
     color: #fff;
 }
 
+.payment__input {
+    color: #eee;
+    width: 30px;
+    margin-right: -10px;
+    font-size: 20px;
+    background: transparent;
+}
+
 .payment__subtitle {
     font-size: 25px;
     font-weight: 600;
@@ -1790,7 +1798,7 @@ input:focus:-ms-input-placeholder {
     overflow: hidden;
     max-width: 80px;
     max-height: 380px;
-    overflow-y: scroll;
+    overflow-y: auto;
     margin-right: 50px;
 }
 
@@ -2155,9 +2163,10 @@ input:focus:-ms-input-placeholder {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start;
+    gap: 10px;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    overflow-x: scroll;
+    overflow-x: auto;
     padding-bottom: 20px;
 }
 
@@ -2318,6 +2327,10 @@ input:focus:-ms-input-placeholder {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+}
+
+.register__content--horizontal form label {
+    width: 100%;
 }
 
 .register__content--horizontal .register__input {
@@ -3511,12 +3524,4 @@ input:focus:-ms-input-placeholder {
     font-size: 20px;
     margin-bottom: 20px;
     list-style: none;
-}
-
-.webp .preview {
-    background: url(../img/preview/bg.webp) center no-repeat;
-}
-
-.webp .prev {
-    background: url(../img/about/prev.webp) center no-repeat;
 }

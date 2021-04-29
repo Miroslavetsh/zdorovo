@@ -558,6 +558,10 @@
 }
 
 @media (max-width: 760px) {
+    .work .container {
+        padding: 0;
+    }
+
     .work__block {
         margin-bottom: 60px;
         -webkit-box-orient: vertical;
@@ -572,10 +576,16 @@
 
     .work__text {
         width: 100%;
+        padding: 0 20px;
     }
 
     .work__media {
         width: 100%;
+        background: #88c74a;
+    }
+
+    .work__media--video {
+        background: transparent;
     }
 
     .work__media--video img {
@@ -1402,7 +1412,9 @@
         align-items: center;
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-        overflow-x: scroll;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 0;
     }
 
     .product__row {
