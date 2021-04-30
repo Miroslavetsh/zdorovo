@@ -80,6 +80,32 @@
     .register__title {
         margin-bottom: 0;
     }
+
+    .cabinet__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .cabinet__aside {
+        width: 100%;
+    }
+
+    .cabinet__main {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    .cabinet__main:last-child {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3;
+    }
 }
 
 @media (max-width: 990px) {

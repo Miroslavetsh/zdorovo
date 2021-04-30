@@ -291,6 +291,36 @@ try {
             }
         })
     })
-} catch (e) {
-    console.log(e)
-}
+} catch (e) {}
+
+// Cabinet orders
+
+try {
+    const orders = document.querySelectorAll('.order')
+
+    orders.forEach((order) => {
+        const showMoreOrderButton = order.querySelector('.showMoreOrderInfo')
+
+        showMoreOrderButton.addEventListener('click', () => {
+            order.querySelector('.cabinet__hidden').classList.toggle('_opened')
+            showMoreOrderButton.classList.toggle('_active')
+        })
+    })
+} catch (e) {}
+
+// Cabinet profile
+
+try {
+    const profile = document.querySelector('.cabinetProfile')
+    const redactorButton = profile.querySelector('.rewriteProfileButton')
+    const inputItems = profile.querySelectorAll('.inputedItem')
+
+    redactorButton.addEventListener('click', () => {
+        profile.classList.toggle('_redacting')
+        inputItems.forEach((item) => {
+            item.hasAttribute('disabled')
+                ? item.toggleAttribute('disabled')
+                : item.toggleAttribute('readonly')
+        })
+    })
+} catch (e) {}
