@@ -18,13 +18,18 @@ try {
 
 try {
     const slider = new Swiper('.cabinet__slider', {
-        slidesPerView: 2,
         navigation: {
             nextEl: '.swiper__button--next',
             prevEl: '.swiper__button--prev',
         },
         spaceBetween: 15,
+        breakpoints: {
+            840: {
+                slidesPerView: 2,
+            },
+            320: {
+                slidesPerView: 1,
+            },
+        },
     })
-} catch (e) {
-    console.log(e)
-}
+} catch (e) {}

@@ -92,19 +92,39 @@
     }
 
     .cabinet__aside {
+        margin-bottom: 50px;
         width: 100%;
     }
 
     .cabinet__main {
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-        order: 1;
+        width: 100%;
+        margin-bottom: 50px;
     }
 
-    .cabinet__main:last-child {
-        -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-        order: 3;
+    .cabinet__main .cabinet__main {
+        width: 100%;
+    }
+
+    .cabinet__progress {
+        max-width: 790px;
+        width: 100%;
+    }
+
+    .cabinet__cards {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .cabinet__repeat {
+        width: 100%;
+    }
+
+    .cabinet__repeat::before {
+        display: none;
+    }
+
+    .cabinet__product {
+        width: 50%;
     }
 }
 
@@ -125,6 +145,23 @@
 
     .product__table {
         margin: 0 auto;
+    }
+
+    .cabinet__cards {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .cabinet__cards .cabinet__card {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .cabinet__notify .cabinet__info-window {
+        left: unset;
+        right: 0;
+        font-size: 16px;
     }
 }
 
@@ -1227,6 +1264,48 @@
     .socials__right {
         margin-bottom: 30px;
     }
+
+    .cabinet__text {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .cabinet__text .cabinet__desc {
+        margin-bottom: 10px;
+    }
+
+    .cabinet__form .cabinet__label {
+        width: 100%;
+    }
+
+    .cabinet__form fieldset {
+        padding-left: 10px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .cabinet__form fieldset input,
+    .cabinet__form fieldset select {
+        width: 100%;
+    }
+
+    .cabinet__head {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .cabinet__head .title {
+        margin-bottom: 20px;
+    }
+
+    .cabinet__product {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1480,6 +1559,17 @@
 
     .agreement__text li {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .cabinet__order {
+        padding-right: 35px;
+    }
+
+    .cabinet .card .cabinet__img {
+        max-width: 90px;
+        margin-right: 15px;
     }
 }
 
