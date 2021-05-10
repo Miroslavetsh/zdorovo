@@ -1,4 +1,13 @@
-// @@include('picturesListener.js')
+// // WEBP format
+
+function testWebP(callback) {
+    var webP = new Image()
+    webP.onload = webP.onerror = function () {
+        callback(webP.height == 2)
+    }
+    webP.src =
+        'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA'
+}
 // ============================
 
 const MENU_TO_BURGER_WIDTH = 840
@@ -282,7 +291,7 @@ try {
             if (this.type === 'password') this.type = 'text'
             else if (this.type === 'text') this.type = 'password'
         }
-        console.log(input.parentNode)
+
         input.parentNode.querySelector('img').addEventListener('click', function () {
             if (input.type === 'password') {
                 input.type = 'text'
@@ -317,10 +326,182 @@ try {
 
     redactorButton.addEventListener('click', () => {
         profile.classList.toggle('_redacting')
+
         inputItems.forEach((item) => {
-            item.hasAttribute('disabled')
-                ? item.toggleAttribute('disabled')
-                : item.toggleAttribute('readonly')
+            if (item.tagName.toLowerCase() === 'input') item.toggleAttribute('readonly')
+            if (item.tagName.toLowerCase() === 'select') item.toggleAttribute('disabled')
         })
     })
 } catch (e) {}
+
+// Order show hidden part
+
+try {
+    const orderBlocks = document.querySelectorAll('.orderBlock')
+    const orderInputs = document.querySelectorAll('.showHidden')
+
+    orderInputs.forEach((input) => {
+        orderBlocks.forEach((block) => {
+            input.addEventListener('click', () => {
+                if ([...block.querySelectorAll('.showHidden')].includes(input))
+                    block.classList.remove('_hidden')
+                else {
+                    block.classList.add('_hidden')
+                }
+            })
+        })
+    })
+} catch (e) {}
+
+// Copying
+
+try {
+    const copyTextElements = document.querySelectorAll('.toCopy')
+    const floatingLabel = document.createElement('div')
+    floatingLabel.className = 'floating-label'
+    floatingLabel.innerText = 'Copied!'
+
+    if (copyTextElements.length) {
+        document.body.insertAdjacentElement('beforeend', floatingLabel)
+    }
+
+    const label = document.querySelector('.floating-label')
+
+    copyTextElements.forEach((element) => {
+        element.onclick = function () {
+            document.execCommand('copy')
+            label.classList.add('_active')
+            setTimeout(() => {
+                label.classList.remove('_active')
+            }, 2000)
+        }
+
+        element.addEventListener('copy', (event) => {
+            event.preventDefault()
+            if (event.clipboardData) {
+                event.clipboardData.setData('text/plain', element.textContent)
+            }
+        })
+    })
+} catch (e) {}
+
+try {
+    const resetButtons = document.querySelectorAll('.resetButton')
+
+    resetButtons.forEach((button) => {
+        const nameOfFieldsToReset = button.dataset['reset']
+        const inputsToReset = document.querySelectorAll(`[data-to-reset="${nameOfFieldsToReset}"]`)
+
+        button.addEventListener('click', () => {
+            inputsToReset.forEach((input) => {
+                input.value = ''
+            })
+        })
+    })
+} catch (e) {}
+
+// Sertificate prices button
+try {
+    const inputForUsersValue = document.querySelector('[data-reset-radios]')
+
+    inputForUsersValue.addEventListener('click', () => {
+        inputForUsersValue.parentElement
+            .querySelectorAll('input[type="radio"]')
+            .forEach((input) => {
+                console.log(input)
+                input.checked = false
+            })
+    })
+} catch (e) {
+    console.log(e)
+}
+
+const ModalsInterface = (function () {
+    const searchEveryModal = () => {
+        return Array.from(document.querySelectorAll('.modal'))
+    }
+
+    class Modal {
+        constructor({ modalElement, timeout, buttonsToOpen, isStoreModalClosedState }) {
+            this.modal = modalElement
+            this.timeout = timeout // Number
+            //buttonsToOpen:Array | NodeList
+            this.openButtons = buttonsToOpen
+            this.storeModalState = isStoreModalClosedState // Boolean
+        }
+
+        open() {
+            this.modal.classList.add('_opened')
+        }
+
+        openWithTimeout() {
+            if (this.timeout) {
+                setTimeout(() => {
+                    this.modal.classList.add('_opened')
+                }, this.timeout)
+            }
+        }
+
+        _close() {
+            if (this.storeModalState) {
+                localStorage.setItem(
+                    `modalWindow_${this.modal.dataset['modalName']}`,
+                    'closedAndHidden',
+                )
+            }
+
+            this.modal.classList.remove('_opened')
+        }
+
+        setClosingFunction() {
+            this.modal.addEventListener('click', (event) => {
+                event.preventDefault()
+                if (event.target.dataset['close'] !== undefined) this._close()
+            })
+        }
+
+        setOpeningFunction() {
+            this.openButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    this.open()
+                })
+            })
+        }
+    }
+
+    return {
+        init: function () {
+            const modalsArray = searchEveryModal()
+
+            modalsArray.forEach((modal) => {
+                const buttonsToOpen = document.querySelectorAll(
+                    `[data-modal-open="${modal.dataset['modalName']}"]`,
+                )
+                // Auto open modal if timeout
+                const timeout = Number(modal.dataset['timeout']) ?? 0
+                const isStoreModalClosedState = modal.dataset['storeState'] === 'true' ?? false
+
+                const modalWindow = new Modal({
+                    modalElement: modal,
+                    timeout: timeout,
+                    buttonsToOpen: buttonsToOpen,
+                    isStoreModalClosedState: isStoreModalClosedState,
+                })
+
+                if (
+                    localStorage.getItem(`modalWindow_${modal.dataset['modalName']}`) !==
+                    'closedAndHidden'
+                ) {
+                    if (modalWindow.timeout) modalWindow.openWithTimeout()
+                }
+
+                // If we have a buttons need to close modal
+                if (buttonsToOpen.length) modalWindow.setOpeningFunction()
+
+                modalWindow.setClosingFunction()
+            })
+        },
+    }
+})()
+
+ModalsInterface.init()
