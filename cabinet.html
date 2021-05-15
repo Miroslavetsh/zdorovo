@@ -213,7 +213,7 @@
                             <div class="cabinet__slider">
                                 <div class="swiper-wrapper">
 
-                                    <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__slide swiper-slide cabinet__card card">
                                         <div class="cabinet__notification">Увага! Акція!</div>
                                         <div class="cabinet__card">
                                             <div class="cabinet__img">
@@ -343,7 +343,7 @@
                             </div>
                         </main>
                         <div class="cabinet__main cabinet__main--profile cabinetProfile">
-                            <div class="cabinet__head">
+                            <div class="cabinet__head cabinet__head--personal">
                                 <div class="cabinet__head--inner">
                                     <h2 class="cabinet__title title">
                                         Особисті дані
@@ -376,7 +376,8 @@
                                     </div>
                                 </div>
                                 <div class="cabinet__btns">
-                                    <button type="reset" class="cabinet__btn cabinet__btn--gray">
+                                    <button type="reset" class="cabinet__btn cabinet__btn--gray resetButton"
+                                        data-reset="personal-data">
                                         Очистити
                                     </button>
                                     <button type="submit" class="cabinet__btn">
@@ -392,7 +393,7 @@
                                                 Прізвище
                                             </p>
                                             <input class="cabinet__input inputedItem" type="text" value="Зименок"
-                                                readonly>
+                                                readonly data-to-reset="personal-data">
                                         </label>
 
                                         <label class="cabinet__label">
@@ -400,7 +401,7 @@
                                                 Ім'я
                                             </p>
                                             <input class="cabinet__input inputedItem" type="text" value="Даніїл"
-                                                readonly>
+                                                readonly data-to-reset="personal-data">
                                         </label>
 
                                         <label class="cabinet__label">
@@ -408,7 +409,7 @@
                                                 E-mail
                                             </p>
                                             <input class="cabinet__input inputedItem" type="text"
-                                                value="dzimenok01@gmail.com" readonly>
+                                                value="dzimenok01@gmail.com" readonly data-to-reset="personal-data">
                                         </label>
 
                                         <label class="cabinet__label">
@@ -416,7 +417,7 @@
                                                 Телефон
                                             </p>
                                             <input class="cabinet__input inputedItem" type="text"
-                                                value="+38(093)3344589" readonly>
+                                                value="+38(093)3344589" readonly data-to-reset="personal-data">
                                         </label>
 
                                         <label class="cabinet__label">
@@ -425,7 +426,7 @@
                                             </p>
                                             <div class="cabinet__password">
                                                 <input type="password" class="register__input inputedItem"
-                                                    value="asdahd" readonly>
+                                                    value="asdahd" readonly data-to-reset="personal-data">
                                                 <picture>
                                                     <source srcset="img/icons/eye-psw.svg" type="image/webp"><img
                                                         src="img/icons/eye-psw.svg" alt="">
@@ -597,130 +598,295 @@
 
                     <main class="cabinet__main cabinet__main--fullsize">
                         <div class="cabinet__head">
-                            <h2 class="cabinet__title title">Улюблені товари</h2>
+                            <div class="cabinet__head--inner">
+                                <h2 class="cabinet__title title">Улюблені товари</h2>
+                                <div class="cabinet__notify">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.8199 20.5547L11.8199 8.33246" stroke="#88C74A" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.8227 3.44423C11.1477 3.44423 10.6005 3.99144 10.6005 4.66645C10.6005 5.34146 11.1477 5.88867 11.8227 5.88867C12.4977 5.88867 13.0449 5.34146 13.0449 4.66645C13.0449 3.99144 12.4977 3.44423 11.8227 3.44423Z"
+                                            fill="#88C74A" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.8223 23C17.8974 23 22.8223 18.0751 22.8223 12C22.8223 5.92487 17.8974 1 11.8223 1C5.74713 1 0.822266 5.92487 0.822266 12C0.822266 18.0751 5.74713 23 11.8223 23Z"
+                                            stroke="#88C74A" stroke-width="1.5" />
+                                    </svg>
+                                    <div class="cabinet__info-window">
+                                        Інформація користувача
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabinet__buttons">
+                                <div class="cabinet__button cabinet__slider--fullsize-fav--prev">
+                                    <svg width="22" height="27" viewBox="0 0 22 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.5607 25.7062L2.07286 12.9748L20.6367 1" stroke="black"
+                                            stroke-opacity="0.75" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="cabinet__button cabinet__slider--fullsize-fav--next">
+                                    <svg width="22" height="27" viewBox="0 0 22 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.79832 1.31515L19.9404 14.3095L1.05859 26" stroke="black"
+                                            stroke-opacity="0.75" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                        <div class="cabinet__cards">
 
-                            <div class="cabinet__slide cabinet__card card">
-                                <div class="cabinet__notification">Увага! Акція!</div>
-                                <div class="cabinet__card">
-                                    <div class="cabinet__img">
-                                        <picture>
-                                            <source srcset="img/catalog/1.webp" type="image/webp"><img
-                                                src="img/catalog/1.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="cabinet__txt">
-                                        <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
-                                        <div class="cabinet__info">
-                                            <div class="cabinet__price">143 грн</div>
-                                            <div class="cabinet__gr">325 г</div>
+                        <div class="cabinet__slider cabinet__slider--fullsize-fav">
+                            <div class="swiper-wrapper">
+
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Увага! Акція!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
                                         </div>
-                                        <div class="cabinet__buttons">
-                                            <div class="card__btns">
-                                                <button type="button" class="card__btn cardBtnMinus">
-                                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                                <input type="number" value="0" readonly>
-                                                <button type="button" class="card__btn cardBtnPlus">
-                                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
-                                                            stroke-width="3" stroke-linecap="round" />
-                                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
                                                 </button>
                                             </div>
-                                            <button type="button" class="cabinet__button">
-                                                В кошик
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="cabinet__slide cabinet__card card">
-                                <div class="cabinet__card">
-                                    <div class="cabinet__img">
-                                        <picture>
-                                            <source srcset="img/catalog/1.webp" type="image/webp"><img
-                                                src="img/catalog/1.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="cabinet__txt">
-                                        <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
-                                        <div class="cabinet__info">
-                                            <div class="cabinet__price">143 грн</div>
-                                            <div class="cabinet__gr">325 г</div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Вже у продажу!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
                                         </div>
-                                        <div class="cabinet__buttons">
-                                            <div class="card__btns">
-                                                <button type="button" class="card__btn cardBtnMinus">
-                                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                                <input type="number" value="0" readonly>
-                                                <button type="button" class="card__btn cardBtnPlus">
-                                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
-                                                            stroke-width="3" stroke-linecap="round" />
-                                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
                                                 </button>
                                             </div>
-                                            <button type="button" class="cabinet__button">
-                                                В кошик
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="cabinet__slide cabinet__card card">
-                                <div class="cabinet__card">
-                                    <div class="cabinet__img">
-                                        <picture>
-                                            <source srcset="img/catalog/1.webp" type="image/webp"><img
-                                                src="img/catalog/1.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="cabinet__txt">
-                                        <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
-                                        <div class="cabinet__info">
-                                            <div class="cabinet__price">143 грн</div>
-                                            <div class="cabinet__gr">325 г</div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Вже у продажу!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
                                         </div>
-                                        <div class="cabinet__buttons">
-                                            <div class="card__btns">
-                                                <button type="button" class="card__btn cardBtnMinus">
-                                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                                <input type="number" value="0" readonly>
-                                                <button type="button" class="card__btn cardBtnPlus">
-                                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
-                                                            stroke-width="3" stroke-linecap="round" />
-                                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
                                                 </button>
                                             </div>
-                                            <button type="button" class="cabinet__button">
-                                                В кошик
-                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Вже у продажу!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Вже у продажу!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Вже у продажу!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -730,132 +896,336 @@
 
                     <main class="cabinet__main cabinet__main--fullsize">
                         <div class="cabinet__head">
-                            <h2 class="cabinet__title title">Ми рекомендуємо</h2>
+                            <div class="cabinet__head--inner">
+                                <h2 class="cabinet__title title">Ми рекомендуємо</h2>
+                                <div class="cabinet__notify notify">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.8199 20.5547L11.8199 8.33246" stroke="#88C74A" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.8227 3.44423C11.1477 3.44423 10.6005 3.99144 10.6005 4.66645C10.6005 5.34146 11.1477 5.88867 11.8227 5.88867C12.4977 5.88867 13.0449 5.34146 13.0449 4.66645C13.0449 3.99144 12.4977 3.44423 11.8227 3.44423Z"
+                                            fill="#88C74A" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.8223 23C17.8974 23 22.8223 18.0751 22.8223 12C22.8223 5.92487 17.8974 1 11.8223 1C5.74713 1 0.822266 5.92487 0.822266 12C0.822266 18.0751 5.74713 23 11.8223 23Z"
+                                            stroke="#88C74A" stroke-width="1.5" />
+                                    </svg>
+                                    <div class="cabinet__info-window">
+                                        Товари, які ви найчастіше замовляєте або цікавитесь їми.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabinet__buttons">
+                                <div class="cabinet__button cabinet__slider--fullsize-rec--prev">
+                                    <svg width="22" height="27" viewBox="0 0 22 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.5607 25.7062L2.07286 12.9748L20.6367 1" stroke="black"
+                                            stroke-opacity="0.75" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="cabinet__button cabinet__slider--fullsize-rec--next">
+                                    <svg width="22" height="27" viewBox="0 0 22 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.79832 1.31515L19.9404 14.3095L1.05859 26" stroke="black"
+                                            stroke-opacity="0.75" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                        <div class="cabinet__cards">
+                        <div class="cabinet__slider cabinet__slider--fullsize-rec">
+                            <div class="swiper-wrapper">
 
-                            <div class="cabinet__slide cabinet__card card">
-                                <div class="cabinet__notification">Ідеально для пікніку!</div>
-                                <div class="cabinet__card">
-                                    <div class="cabinet__img">
-                                        <picture>
-                                            <source srcset="img/catalog/1.webp" type="image/webp"><img
-                                                src="img/catalog/1.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="cabinet__txt">
-                                        <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
-                                        <div class="cabinet__info">
-                                            <div class="cabinet__price">143 грн</div>
-                                            <div class="cabinet__gr">325 г</div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Увага! Акція!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
                                         </div>
-                                        <div class="cabinet__buttons">
-                                            <div class="card__btns">
-                                                <button type="button" class="card__btn cardBtnMinus">
-                                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                                <input type="number" value="0" readonly>
-                                                <button type="button" class="card__btn cardBtnPlus">
-                                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
-                                                            stroke-width="3" stroke-linecap="round" />
-                                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
                                                 </button>
                                             </div>
-                                            <button type="button" class="cabinet__button">
-                                                В кошик
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="cabinet__slide cabinet__card card">
-                                <div class="cabinet__notification">На подарунок!</div>
-                                <div class="cabinet__card">
-                                    <div class="cabinet__img">
-                                        <picture>
-                                            <source srcset="img/catalog/1.webp" type="image/webp"><img
-                                                src="img/catalog/1.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="cabinet__txt">
-                                        <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
-                                        <div class="cabinet__info">
-                                            <div class="cabinet__price">143 грн</div>
-                                            <div class="cabinet__gr">325 г</div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Увага! Акція!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
                                         </div>
-                                        <div class="cabinet__buttons">
-                                            <div class="card__btns">
-                                                <button type="button" class="card__btn cardBtnMinus">
-                                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                                <input type="number" value="0" readonly>
-                                                <button type="button" class="card__btn cardBtnPlus">
-                                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
-                                                            stroke-width="3" stroke-linecap="round" />
-                                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
                                                 </button>
                                             </div>
-                                            <button type="button" class="cabinet__button">
-                                                В кошик
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="cabinet__slide cabinet__card card">
-                                <div class="cabinet__notification">Для дієти!</div>
-                                <div class="cabinet__card">
-                                    <div class="cabinet__img">
-                                        <picture>
-                                            <source srcset="img/catalog/1.webp" type="image/webp"><img
-                                                src="img/catalog/1.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="cabinet__txt">
-                                        <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
-                                        <div class="cabinet__info">
-                                            <div class="cabinet__price">143 грн</div>
-                                            <div class="cabinet__gr">325 г</div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Увага! Акція!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
                                         </div>
-                                        <div class="cabinet__buttons">
-                                            <div class="card__btns">
-                                                <button type="button" class="card__btn cardBtnMinus">
-                                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                                <input type="number" value="0" readonly>
-                                                <button type="button" class="card__btn cardBtnPlus">
-                                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
-                                                            stroke-width="3" stroke-linecap="round" />
-                                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
-                                                            stroke-linecap="round" />
-                                                    </svg>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
                                                 </button>
                                             </div>
-                                            <button type="button" class="cabinet__button">
-                                                В кошик
-                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Увага! Акція!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Увага! Акція!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Вже у продажу!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cabinet__slide  swiper-slide cabinet__card card">
+                                    <div class="cabinet__notification">Вже у продажу!</div>
+                                    <div class="cabinet__card">
+                                        <div class="cabinet__img">
+                                            <picture>
+                                                <source srcset="img/catalog/1.webp" type="image/webp"><img
+                                                    src="img/catalog/1.png" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="cabinet__txt">
+                                            <h3 class="cabinet__subtitle">Язики яловичі у власному соку</h3>
+                                            <div class="cabinet__info">
+                                                <div class="cabinet__price">143 грн</div>
+                                                <div class="cabinet__gr">325 г</div>
+                                            </div>
+                                            <div class="cabinet__buttons">
+                                                <div class="card__btns">
+                                                    <button type="button" class="card__btn cardBtnMinus">
+                                                        <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                                                stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="0" readonly>
+                                                    <button type="button" class="card__btn cardBtnPlus">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.7965 10.7579H2.39819" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                            <path d="M11.0972 2V19.5797" stroke="#88C74A"
+                                                                stroke-width="3" stroke-linecap="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <button type="button" class="cabinet__button">
+                                                    В кошик
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -865,7 +1235,6 @@
                 </div>
             </div>
         </div>
-
         <footer class="footer">
             <div class="container">
                 <div class="footer__inner">
