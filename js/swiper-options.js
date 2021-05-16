@@ -1,7 +1,7 @@
 // Slider on index
 
 try {
-    const swiper = new Swiper('.swiper-container', {
+    const swiperIndex = new Swiper('.swiper-container', {
         pagination: {
             el: '.swiper__pagination',
             clickable: true,
@@ -12,11 +12,7 @@ try {
         },
         spaceBetween: 10,
     })
-} catch (e) {}
 
-// Slider in cabinet
-
-try {
     const slider = new Swiper('.cabinet__slider', {
         navigation: {
             nextEl: '.swiper__button--next',
@@ -25,6 +21,44 @@ try {
         spaceBetween: 15,
         breakpoints: {
             840: {
+                slidesPerView: 2,
+            },
+            320: {
+                slidesPerView: 1,
+            },
+        },
+    })
+
+    const sliderFavourite = new Swiper('.cabinet__slider--fullsize-fav', {
+        navigation: {
+            nextEl: '.cabinet__slider--fullsize-fav--next',
+            prevEl: '.cabinet__slider--fullsize-fav--prev',
+        },
+        spaceBetween: 15,
+        breakpoints: {
+            1040: {
+                slidesPerView: 3,
+            },
+            820: {
+                slidesPerView: 2,
+            },
+            320: {
+                slidesPerView: 1,
+            },
+        },
+    })
+
+    const sliderRecommend = new Swiper('.cabinet__slider--fullsize-rec', {
+        navigation: {
+            nextEl: '.cabinet__slider--fullsize-rec--next',
+            prevEl: '.cabinet__slider--fullsize-rec--prev',
+        },
+        spaceBetween: 15,
+        breakpoints: {
+            1040: {
+                slidesPerView: 3,
+            },
+            820: {
                 slidesPerView: 2,
             },
             320: {
