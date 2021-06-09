@@ -2796,7 +2796,8 @@ textarea:focus:-ms-input-placeholder {
 
 .card {
     position: relative;
-    max-width: 225px;
+    max-width: 220px;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2924,20 +2925,30 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .card__img img {
-    right: 30px;
+    left: 50%;
     max-width: 100%;
     position: absolute;
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+
+    transform: translateX(-50%);
 }
 
-.card__img--toggle {
+.card__img .card__img--toggle {
     left: 100%;
+    transform: translateX(0);
+}
+
+.card__img:hover img {
+    display: none;
 }
 
 .card__img:hover .card__img--toggle {
-    left: 0;
+    display: block;
+    left: 50%;
+    
+    transform: translate(-50%);
 }
 
 .card__text {
