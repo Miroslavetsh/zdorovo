@@ -2,11 +2,11 @@
 
 function testWebP(callback) {
 
-	var webP = new Image()
-	webP.onload = webP.onerror = function () {
-		callback(webP.height == 2)
-	}
-	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+    var webP = new Image()
+    webP.onload = webP.onerror = function () {
+        callback(webP.height == 2)
+    }
+    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 }
 // ============================
 
@@ -108,8 +108,7 @@ try {
         })
 
         btnPlus.addEventListener('click', function () {
-            this.parentNode.querySelector('input').value =
-                +this.parentNode.querySelector('input').value + 1
+            this.parentNode.querySelector('input').value = +this.parentNode.querySelector('input').value + 1
         })
     })
 } catch {}
@@ -302,7 +301,7 @@ try {
     })
 } catch (e) {}
 
-// Cabinet orders
+// Cabinet orders toggler in aside block
 
 try {
     const orders = document.querySelectorAll('.order')
@@ -317,7 +316,7 @@ try {
     })
 } catch (e) {}
 
-// Cabinet profile
+// Cabinet profile 
 
 try {
     const profile = document.querySelector('.cabinetProfile')
@@ -401,6 +400,7 @@ try {
 } catch (e) {}
 
 // Sertificate prices button
+
 try {
     const inputForUsersValue = document.querySelector('[data-reset-radios]')
 
@@ -420,7 +420,12 @@ const ModalsInterface = (function () {
     }
 
     class Modal {
-        constructor({ modalElement, timeout, buttonsToOpen, isStoreModalClosedState }) {
+        constructor({
+            modalElement,
+            timeout,
+            buttonsToOpen,
+            isStoreModalClosedState
+        }) {
             this.modal = modalElement
             this.timeout = timeout // Number
             //buttonsToOpen:Array | NodeList
@@ -494,6 +499,7 @@ const ModalsInterface = (function () {
                 }
 
                 // If we have a buttons need to close modal
+
                 if (buttonsToOpen.length) modalWindow.setOpeningFunction()
 
                 modalWindow.setClosingFunction()
@@ -503,3 +509,19 @@ const ModalsInterface = (function () {
 })()
 
 ModalsInterface.init()
+
+// Order form block delivery accordion
+
+try {
+    const formBlockTriggers = document.querySelectorAll('[data-trigger]')
+
+    formBlockTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            console.log('clicked')
+            document.querySelectorAll('[data-content]').forEach(content => {
+                content.classList.add('_hided')
+                if (trigger.dataset.trigger === content.dataset.content) content.classList.remove('_hided')
+            })
+        })
+    })
+} catch {}

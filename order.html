@@ -197,49 +197,92 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form__block">
-                                    <label class="order__radio--label">
+                                <div class="form__block form__block--column">
+                                    <label class="order__radio--label" data-trigger="NovaPoshta">
                                         <input type="radio" name="post" checked>
-                                        <span>Нова Пошта</span>
+                                        <span>Нова пошта</span>
                                     </label>
-                                    <label class="order__radio--label">
+
+                                    <div class="form__block form__block--column" data-content="NovaPoshta">
+                                        <select type="text">
+                                            <option disabled selected>Область</option>
+                                            <option>Область 1</option>
+                                            <option>Область 2</option>
+                                            <option>Область 3</option>
+                                            <option>Область 4</option>
+                                            <option>Область 5</option>
+                                        </select>
+
+                                        <select type="text">
+                                            <option disabled selected>Місто</option>
+                                            <option>Місто 1</option>
+                                            <option>Місто 2</option>
+                                            <option>Місто 3</option>
+                                            <option>Місто 4</option>
+                                            <option>Місто 5</option>
+                                        </select>
+
+                                        <select type="text">
+                                            <option disabled selected>Відділення</option>
+                                            <option>Відділення 1</option>
+                                            <option>Відділення 2</option>
+                                            <option>Відділення 3</option>
+                                            <option>Відділення 4</option>
+                                            <option>Відділення 5</option>
+                                        </select>
+                                    </div>
+                                    <label class="order__radio--label" data-trigger="UkrPoshta">
                                         <input type="radio" name="post">
-                                        <span>УкрПошта</span>
+                                        <span>Укрпошта</span>
                                     </label>
+                                    <div class="form__block form__block--column _hided" data-content="UkrPoshta">
+                                        <input type="text" placeholder="Область, місто">
+                                        <input type="text" placeholder="Адреса">
+                                        <input type="text" placeholder="Поштовий індекс">
+                                    </div>
+                                    <label class="order__radio--label" data-trigger="Justin">
+                                        <input type="radio" name="post">
+                                        <span>Justin</span>
+                                    </label>
+                                    <div class="form__block form__block--column _hided" data-content="Justin">
+                                        <select type="text">
+                                            <option disabled selected>Область</option>
+                                            <option>Область 1</option>
+                                            <option>Область 2</option>
+                                            <option>Область 3</option>
+                                            <option>Область 4</option>
+                                            <option>Область 5</option>
+                                        </select>
+
+                                        <select type="text">
+                                            <option disabled selected>Місто</option>
+                                            <option>Місто 1</option>
+                                            <option>Місто 2</option>
+                                            <option>Місто 3</option>
+                                            <option>Місто 4</option>
+                                            <option>Місто 5</option>
+                                        </select>
+
+                                        <select type="text">
+                                            <option disabled selected>Відділення</option>
+                                            <option>Відділення 1</option>
+                                            <option>Відділення 2</option>
+                                            <option>Відділення 3</option>
+                                            <option>Відділення 4</option>
+                                            <option>Відділення 5</option>
+                                        </select>
+                                    </div>
+                                    <label class="order__radio--label" data-trigger="Courier">
+                                        <input type="radio" name="post">
+                                        <span>Кур'єрська доставка в руки</span>
+                                    </label>
+                                    <div class="form__block form__block--column _hided" data-content="Courier">
+                                        <input type="text" placeholder="Область, місто">
+                                        <input type="text" placeholder="Адреса, будинок">
+                                        <input type="text" placeholder="Квартира">
+                                    </div>
                                 </div>
-                                <div class="form__block">
-                                    <select type="text">
-                                        <option disabled selected>Область</option>
-                                        <option>Область 1</option>
-                                        <option>Область 2</option>
-                                        <option>Область 3</option>
-                                        <option>Область 4</option>
-                                        <option>Область 5</option>
-                                    </select>
-                                    <input type="text" placeholder="Область">
-                                </div>
-                                <div class="form__block">
-                                    <select type="text">
-                                        <option disabled selected>Місто</option>
-                                        <option>Місто 1</option>
-                                        <option>Місто 2</option>
-                                        <option>Місто 3</option>
-                                        <option>Місто 4</option>
-                                        <option>Місто 5</option>
-                                    </select>
-                                    <input type="text" placeholder="Місто">
-                                </div>
-                                <div class="form__block">
-                                    <select type="text">
-                                        <option disabled selected>Відділення</option>
-                                        <option>Відділення 1</option>
-                                        <option>Відділення 2</option>
-                                        <option>Відділення 3</option>
-                                        <option>Відділення 4</option>
-                                        <option>Відділення 5</option>
-                                    </select>
-                                    <input type="text" placeholder="Поштовий індекс">
-                                </div>
+
                             </fieldset>
                             <fieldset class="payment-field">
                                 <div class="order__head">

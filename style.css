@@ -595,12 +595,18 @@ textarea:focus:-ms-input-placeholder {
     max-width: 320px;
     line-height: 1.4;
     font-size: 23px;
+    margin-bottom: 20px;
 }
 
 .prom__description {
     max-width: 425px;
     font-size: 18px;
     line-height: 1.23;
+    margin-bottom: 30px;
+}
+
+.prom__description:last-child {
+    margin-bottom: 0;
 }
 
 .prom__text {
@@ -618,6 +624,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .prom__slide {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -642,13 +649,65 @@ textarea:focus:-ms-input-placeholder {
     max-height: 250px;
 }
 
+.prom__form.card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    max-width: none;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.prom .product__cardPlusMinus {
+    min-width: 170px;
+    width: 35%;
+}
+
+.prom__submit {
+    width: 55%;
+    padding: 13px;
+    background: #88c74a;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
 .prom__socials {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    margin-bottom: 25px;
+    max-width: 240px;
+}
+
+.prom__socials:last-child {
+    margin-bottom: 0;
 }
 
 .prom__socials a {
@@ -1590,12 +1649,11 @@ textarea:focus:-ms-input-placeholder {
 
 .catalog .card__outer {
     gap: 0;
-    margin: -10px;
-    margin-bottom: 55px;
     -webkit-box-pack: unset;
     -ms-flex-pack: unset;
     justify-content: unset;
     margin: 0 -5px;
+    margin-bottom: 55px;
 }
 
 .catalog .card__outer .card {
@@ -2408,6 +2466,11 @@ textarea:focus:-ms-input-placeholder {
     position: relative;
 }
 
+.register__content._active form.no-line::after {
+    display: none;
+    opacity: 0;
+}
+
 .register__content._active form::after {
     content: '';
     width: 100%;
@@ -2416,6 +2479,10 @@ textarea:focus:-ms-input-placeholder {
     top: -36px;
     left: 0;
     background: #88c74a;
+}
+
+.register__content--mt {
+    margin-top: 187px;
 }
 
 .register__content--horizontal {
@@ -2484,6 +2551,28 @@ textarea:focus:-ms-input-placeholder {
     justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+}
+
+.register__activation {
+    margin-bottom: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.register__activation p {
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -0.001em;
+}
+
+.register__activation img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
 }
 
 .register__facebook {
@@ -3313,6 +3402,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .filter__button {
+    margin-bottom: 20px;
     width: 100%;
     padding: 15px;
     text-align: center;
@@ -3321,6 +3411,11 @@ textarea:focus:-ms-input-placeholder {
     color: #fff;
     font-size: 18px;
     font-family: 'Montserrat';
+}
+
+.filter .prom__socials {
+    max-width: 134px;
+    margin: 0 auto;
 }
 
 .prev {
@@ -4373,6 +4468,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .order__aside {
+    margin-top: 42px;
     width: 33.6%;
 }
 
@@ -4422,7 +4518,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .order__subtitle {
-    margin-bottom: 40px;
+    margin-bottom: 37px;
     font-size: 23px;
     font-weight: 500;
     font-family: 'Montserrat';
@@ -4469,6 +4565,7 @@ textarea:focus:-ms-input-placeholder {
 
 .order__radio--label {
     margin-left: 0;
+    cursor: pointer;
     font-size: 20px;
 }
 
@@ -4527,6 +4624,16 @@ textarea:focus:-ms-input-placeholder {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    margin-left: 30px;
+}
+
+.order .form__block._hided {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
 }
 
 .order .form__block input,
@@ -4656,6 +4763,17 @@ textarea:focus:-ms-input-placeholder {
     width: 100%;
 }
 
+.order .form .form__block.form__block--column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.order .form .form__block.form__block--column label {
+    margin-bottom: 20px;
+}
+
 .order .form input[type='radio'],
 .order .form input[type='checkbox'] {
     display: none;
@@ -4718,7 +4836,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .order .form .payment-field .form__block {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 
 .order .form .payment-field .form__block:last-child {
@@ -4726,7 +4844,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .order__code {
-    margin-top: 143px;
+    margin-top: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
