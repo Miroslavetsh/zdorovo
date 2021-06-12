@@ -1561,14 +1561,10 @@
     }
 
     .catalog .card__img picture img {
-        right: 50%;
-        -webkit-transform: translateX(50%) scale(0.7);
-        -ms-transform: translateX(50%) scale(0.7);
-        transform: translateX(50%) scale(0.7);
-    }
-
-    .catalog .card__img picture:last-child {
-        display: none;
+        left: 50%;
+        -webkit-transform: translateX(-50%) scale(0.7);
+        -ms-transform: translateX(-50%) scale(0.7);
+        transform: translateX(-50%) scale(0.7);
     }
 
     .catalog .card__title {
@@ -1884,6 +1880,7 @@
 
     .nav__inner {
         margin-top: 80px;
+        margin-left: 0;
     }
 
     .nav__sublist {

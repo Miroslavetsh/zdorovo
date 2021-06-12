@@ -2844,6 +2844,9 @@ textarea:focus:-ms-input-placeholder {
     width: 100%;
     position: static;
     height: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
 }
 
 .card--big .card__img img:last-child {
@@ -2931,24 +2934,17 @@ textarea:focus:-ms-input-placeholder {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
-.card__img .card__img--toggle {
-    left: 100%;
-    transform: translateX(0);
-}
-
-.card__img:hover img {
+.card__img--toggle {
     display: none;
 }
 
 .card__img:hover .card__img--toggle {
     display: block;
-    left: 50%;
-    
-    transform: translate(-50%);
 }
 
 .card__text {
@@ -3418,10 +3414,28 @@ textarea:focus:-ms-input-placeholder {
     padding: 15px;
     text-align: center;
     font-weight: 700;
-    background: #b3b3b3;
-    color: #fff;
     font-size: 18px;
     font-family: 'Montserrat';
+    background: #88c74a;
+    color: #fff;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.filter__button[disabled] {
+    background: #b3b3b3;
+    color: #fff;
+}
+
+.filter__button[disabled]:hover {
+    background: #b3b3b3;
+    color: #fff;
+}
+
+.filter__button:hover {
+    background: #6faa34;
+    color: #eee;
 }
 
 .filter .prom__socials {
