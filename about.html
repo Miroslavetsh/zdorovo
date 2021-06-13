@@ -190,7 +190,7 @@
                                 про жорстку відповідність нашого підприємства європейським стандартам.
                             </p>
                         </div>
-                        <div class="work__media work__media--video">
+                        <div class="work__media work__media--video" data-modal-open="video">
                             <picture>
                                 <source srcset="img/about/video.webp" type="image/webp"><img src="img/about/video.jpg"
                                     alt="">
@@ -420,7 +420,14 @@
                 <span></span>
             </button>
         </footer>
-
+        <div class="modal" data-close data-modal-name="video">
+            <div class="modal__body">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VXgm1bGpjIY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
     <script src="js/script.js"></script>
     <script src="js/swiper-options.js"></script>
