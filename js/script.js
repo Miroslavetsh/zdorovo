@@ -1,13 +1,4 @@
-// // WEBP format 
-
-function testWebP(callback) {
-
-    var webP = new Image()
-    webP.onload = webP.onerror = function () {
-        callback(webP.height == 2)
-    }
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
+// @@include('picturesListener.js')
 // ============================
 
 const MENU_TO_BURGER_WIDTH = 840
@@ -408,7 +399,6 @@ try {
         inputForUsersValue.parentElement
             .querySelectorAll('input[type="radio"]')
             .forEach((input) => {
-                console.log(input)
                 input.checked = false
             })
     })
@@ -424,17 +414,24 @@ const ModalsInterface = (function () {
             modalElement,
             timeout,
             buttonsToOpen,
-            isStoreModalClosedState
+            isStoreModalClosedState,
+            isModalVideo
         }) {
             this.modal = modalElement
             this.timeout = timeout // Number
             //buttonsToOpen:Array | NodeList
             this.openButtons = buttonsToOpen
             this.storeModalState = isStoreModalClosedState // Boolean
+            this.isModalVideo = isModalVideo
+            this.frame = this.modal.querySelector('iframe')
         }
 
         open() {
             this.modal.classList.add('_opened')
+
+            if (this.isModalVideo) {
+                this.frame.src = this.frame.dataset.src
+            }
         }
 
         openWithTimeout() {
@@ -451,6 +448,10 @@ const ModalsInterface = (function () {
                     `modalWindow_${this.modal.dataset['modalName']}`,
                     'closedAndHidden',
                 )
+            }
+
+            if (this.isModalVideo) {
+                this.frame.src = ''
             }
 
             this.modal.classList.remove('_opened')
@@ -483,12 +484,13 @@ const ModalsInterface = (function () {
                 // Auto open modal if timeout
                 const timeout = Number(modal.dataset['timeout']) ?? 0
                 const isStoreModalClosedState = modal.dataset['storeState'] === 'true' ?? false
-
+                const isModalVideo = modal.querySelector('iframe') ? true : false
                 const modalWindow = new Modal({
                     modalElement: modal,
                     timeout: timeout,
                     buttonsToOpen: buttonsToOpen,
                     isStoreModalClosedState: isStoreModalClosedState,
+                    isModalVideo: isModalVideo
                 })
 
                 if (
@@ -517,7 +519,6 @@ try {
 
     formBlockTriggers.forEach(trigger => {
         trigger.addEventListener('click', () => {
-            console.log('clicked')
             document.querySelectorAll('[data-content]').forEach(content => {
                 content.classList.add('_hided')
                 if (trigger.dataset.trigger === content.dataset.content) content.classList.remove('_hided')

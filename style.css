@@ -725,6 +725,27 @@ textarea:focus:-ms-input-placeholder {
     max-width: 100%;
 }
 
+.prom__button.button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0.5em 1em;
+    color: #fff;
+    font-size: 25px;
+    background: #88c74a;
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-transition: background 0.4s ease;
+    -o-transition: background 0.4s ease;
+    transition: background 0.4s ease;
+}
+
+.prom__button.button:hover {
+    background: #62962e;
+}
+
 .swiper__pagination {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2940,6 +2961,10 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .card__img--toggle {
+    display: none;
+}
+
+.card__img:hover img {
     display: none;
 }
 
