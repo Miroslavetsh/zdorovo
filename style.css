@@ -1542,6 +1542,10 @@ textarea:focus:-ms-input-placeholder {
     padding-top: 17px;
 }
 
+.catalog__main {
+    width: 100%;
+}
+
 .catalog__main--empty .catalog__cont {
     display: -webkit-box;
     display: -ms-flexbox;
