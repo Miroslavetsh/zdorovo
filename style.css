@@ -613,6 +613,10 @@ textarea:focus:-ms-input-placeholder {
     margin-bottom: 0;
 }
 
+.prom__description a {
+    color: #000;
+}
+
 .prom__text {
     width: 50%;
     display: -webkit-box;
@@ -5546,6 +5550,15 @@ textarea:focus:-ms-input-placeholder {
     color: #000;
 }
 
+.modal__cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: 500;
+    font-size: 28px;
+    color: #fff;
+}
+
 .modal__row {
     margin-top: 32px;
     text-align: right;
@@ -5556,9 +5569,9 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .webp .preview {
-    background: url(../img/preview/bg.webp) center no-repeat;
+    background: url(img/preview/bg.webp) center no-repeat;
 }
 
 .webp .prev {
-    background: url(../img/about/prev.webp) center no-repeat;
+    background: url(img/about/prev.webp) center no-repeat;
 }
