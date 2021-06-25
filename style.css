@@ -2866,6 +2866,7 @@ textarea:focus:-ms-input-placeholder {
     -ms-flex-align: center;
     align-items: center;
     margin: 0 auto;
+    margin-top: 20px;
     margin-bottom: -20px;
 }
 
@@ -2951,6 +2952,7 @@ textarea:focus:-ms-input-placeholder {
 
 .card__img {
     margin-bottom: -20px;
+    margin-top: 15px;
     height: 148px;
     position: relative;
     width: 100%;
@@ -3172,6 +3174,20 @@ textarea:focus:-ms-input-placeholder {
 .card__button[disabled] {
     background: #b3b3b3;
     pointer-events: none;
+}
+
+.card .zdorovo_card {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .pagination {
