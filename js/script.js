@@ -1,4 +1,13 @@
-// @@include('picturesListener.js')
+// // WEBP format 
+
+function testWebP(callback) {
+
+    var webP = new Image()
+    webP.onload = webP.onerror = function () {
+        callback(webP.height == 2)
+    }
+    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+}
 // ============================
 
 const MENU_TO_BURGER_WIDTH = 840
@@ -526,3 +535,18 @@ try {
         })
     })
 } catch {}
+
+/* Only For Roulette */
+try {
+    const rouletteSection = document.querySelector('.roulette')
+    const rouletteItems = rouletteSection.querySelectorAll('.roulette--bottom')
+    const button = rouletteSection.querySelector('.showHiddenRoulette')
+
+    button.addEventListener('click', () => {
+        rouletteItems.forEach(rouletteItem => {
+            rouletteItem.classList.toggle('_hidden')
+        })
+    })
+} catch (e) {
+    console.log(e)
+}
