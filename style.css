@@ -514,7 +514,7 @@ textarea:focus:-ms-input-placeholder {
   padding: 163px 0 113px 0;
   min-height: 100vh;
   max-height: 971px;
-  background: url('img/preview/bg.jpg') center no-repeat;
+  background: url('../img/preview/bg.jpg') center no-repeat;
   background-size: cover;
   overflow: hidden;
   display: -webkit-box;
@@ -3588,6 +3588,25 @@ textarea:focus:-ms-input-placeholder {
   fill: #88c74a;
 }
 
+.card__notify.notify {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 5px);
+  width: 180px;
+  padding: 10px;
+  background: #eee;
+  font-size: 14px;
+}
+
+.card__notify.notify .link {
+  color: #88c74a;
+  text-decoration: underline;
+}
+
+.card__notify.notify._hidden {
+  display: none;
+}
+
 .card__amount {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3994,7 +4013,7 @@ textarea:focus:-ms-input-placeholder {
 
 .prev {
   padding: 137px 0 40px;
-  background: url('img/about/prev.jpg') center no-repeat;
+  background: url('../img/about/prev.jpg') center no-repeat;
   background-size: cover;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -4116,7 +4135,7 @@ textarea:focus:-ms-input-placeholder {
 
 .work__media--video::after {
   content: '';
-  background: url('img/icons/play.svg') center no-repeat;
+  background: url('../img/icons/play.svg') center no-repeat;
   position: absolute;
   width: 93px;
   height: 64px;
@@ -5134,7 +5153,7 @@ textarea:focus:-ms-input-placeholder {
   content: '';
   border: none;
   width: 12px;
-  background: url('img/icons/union.svg') 2px 3px no-repeat;
+  background: url('../img/icons/union.svg') 2px 3px no-repeat;
 }
 
 .order__radio--label {
@@ -5904,7 +5923,7 @@ textarea:focus:-ms-input-placeholder {
   content: '';
   border: none;
   width: 12px;
-  background: url('img/icons/union.svg') 2px 3px no-repeat;
+  background: url('../img/icons/union.svg') 2px 3px no-repeat;
 }
 
 .sertificate__checkbox input {
@@ -6081,9 +6100,9 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .webp .preview {
-  background: url(img/preview/bg.webp) center no-repeat;
+  background: url(../img/preview/bg.webp) center no-repeat;
 }
 
 .webp .prev {
-  background: url(img/about/prev.webp) center no-repeat;
+  background: url(../img/about/prev.webp) center no-repeat;
 }
