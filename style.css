@@ -4618,6 +4618,24 @@ textarea:focus:-ms-input-placeholder {
   transform: rotate(45deg);
 }
 
+.cabinet__img {
+  position: relative;
+}
+
+.cabinet__img--dn {
+  display: none;
+  position: absolute;
+}
+
+.cabinet__img:hover img {
+  display: none;
+}
+
+.cabinet__img:hover .cabinet__img--dn {
+  display: block;
+  position: static;
+}
+
 .cabinet__img img {
   max-width: 100%;
 }
