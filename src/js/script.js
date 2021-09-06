@@ -1,6 +1,4 @@
 @@include('./swiper-options.js')
-// ============================
-
 const MENU_TO_BURGER_WIDTH = 840
 const BODY = document.querySelector('html')
 
@@ -410,11 +408,15 @@ const ModalsInterface = (function () {
     return Array.from(document.querySelectorAll('.modal'))
   }
 
+  /**
+   * @param {Array | NodeList} buttonsToOpen
+   */
+
   class Modal {
     constructor({ modalElement, timeout, buttonsToOpen, isStoreModalClosedState, isModalVideo }) {
       this.modal = modalElement
       this.timeout = timeout // Number
-      //buttonsToOpen:Array | NodeList
+      
       this.openButtons = buttonsToOpen
       this.storeModalState = isStoreModalClosedState // Boolean
       this.isModalVideo = isModalVideo
@@ -518,7 +520,8 @@ try {
   })
 } catch {}
 
-/* Only For Roulette */
+// Only For Roulette
+
 try {
   const rouletteSection = document.querySelector('.roulette')
   const rouletteItems = rouletteSection.querySelectorAll('.roulette--bottom')
@@ -529,6 +532,4 @@ try {
       rouletteItem.classList.toggle('_hidden')
     })
   })
-} catch (e) {
-  console.log(e)
-}
+} catch (e) {}

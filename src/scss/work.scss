@@ -1,124 +1,124 @@
 .work {
-    .container {
-        padding: 0 20px;
-    }
-    &__title {
-        margin-bottom: 18px;
+  .container {
+    padding: 0 20px;
+  }
+  &__title {
+    margin-bottom: 18px;
 
-        text-align: left;
+    text-align: left;
+  }
+  &__block {
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+    &--reverse {
+      flex-direction: row-reverse;
+      .work__text {
+        width: 44%;
+      }
     }
-    &__block {
-        margin-bottom: 120px;
-        display: flex;
-        justify-content: space-between;
-        &--reverse {
-            flex-direction: row-reverse;
-            .work__text {
-                width: 44%;
-            }
-        }
-        &:not(:first-child) {
-            .work__title {
-                margin-bottom: 56px;
-            }
-        }
+    &:not(:first-child) {
+      .work__title {
+        margin-bottom: 56px;
+      }
     }
-    &__block:first-child {
-        .work__text {
-            margin-top: 39px;
-        }
+  }
+  &__block:first-child {
+    .work__text {
+      margin-top: 39px;
     }
-    &__block:last-child {
-        .work__text {
-            margin-top: 30px;
-        }
+  }
+  &__block:last-child {
+    .work__text {
+      margin-top: 30px;
     }
-    &__text {
-        width: 52%;
+  }
+  &__text {
+    width: 52%;
 
-        font-family: $mainHeadingFont;
-        line-height: 1.4;
-        font-weight: 500;
-        p {
-            font-size: 20px;
-            margin-bottom: 35px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-            strong {
-                display: block;
-                font-weight: 600;
-            }
-        }
+    font-family: $mainHeadingFont;
+    line-height: 1.4;
+    font-weight: 500;
+    p {
+      font-size: 20px;
+      margin-bottom: 35px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      strong {
+        display: block;
+        font-weight: 600;
+      }
     }
-    &__link {
-        color: $mainCompColor;
+  }
+  &__link {
+    color: $mainCompColor;
+  }
+  &__media {
+    width: 46%;
+    img {
+      max-width: 100%;
     }
-    &__media {
-        width: 46%;
-        img {
-            max-width: 100%;
-        }
-        &--video {
-            height: fit-content;
-            position: relative;
-            &::after {
-                content: '';
-                background: url('../img/icons/play.svg') center no-repeat;
-                position: absolute;
-                width: 93px;
-                height: 64px;
+    &--video {
+      height: fit-content;
+      position: relative;
+      &::after {
+        content: '';
+        background: url('../img/icons/play.svg') center no-repeat;
+        position: absolute;
+        width: 93px;
+        height: 64px;
 
-                top: 50%;
-                left: 50%;
+        top: 50%;
+        left: 50%;
 
-                transform: translate(-50%, -50%);
-            }
-        }
+        transform: translate(-50%, -50%);
+      }
     }
+  }
 }
 @media (max-width: 760px) {
-    .work {
-        .container {
-            padding: 0;
-        }
-        &__block {
-            margin-bottom: 60px;
-            flex-direction: column-reverse;
-            &--reverse {
-                .work__text {
-                    width: 100%;
-                }
-            }
-        }
-        &__text {
-            width: 100%;
-            padding: 0 20px;
-        }
-        &__media {
-            width: 100%;
-            background: $mainCompColor;
-            &--video {
-                background: transparent;
-                img {
-                    width: 100%;
-                    display: block;
-                    margin: 0 auto;
-                }
-            }
-        }
+  .work {
+    .container {
+      padding: 0;
     }
+    &__block {
+      margin-bottom: 60px;
+      flex-direction: column-reverse;
+      &--reverse {
+        .work__text {
+          width: 100%;
+        }
+      }
+    }
+    &__text {
+      width: 100%;
+      padding: 0 20px;
+    }
+    &__media {
+      width: 100%;
+      background: $mainCompColor;
+      &--video {
+        background: transparent;
+        img {
+          width: 100%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 560px) {
-    .work {
-        &__block:not(:first-child) .work__title {
-            margin-bottom: 15px;
-        }
-        &__text {
-            p {
-                font-size: 16px;
-            }
-        }
+  .work {
+    &__block:not(:first-child) .work__title {
+      margin-bottom: 15px;
     }
+    &__text {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 }

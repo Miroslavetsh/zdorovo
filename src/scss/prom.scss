@@ -1,272 +1,272 @@
 .prom {
-    padding-top: 120px;
-    &__title {
-        margin-bottom: 64px;
+  padding-top: 120px;
+  &__title {
+    margin-bottom: 64px;
+  }
+  &__subtitle {
+    max-width: 320px;
+    line-height: 1.4;
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+  &__description {
+    max-width: 425px;
+    font-size: 18px;
+    line-height: 1.23;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
     }
-    &__subtitle {
-        max-width: 320px;
-        line-height: 1.4;
-        font-size: 23px;
-        margin-bottom: 20px;
+    a {
+      color: #000;
     }
-    &__description {
-        max-width: 425px;
-        font-size: 18px;
-        line-height: 1.23;
-        margin-bottom: 30px;
-        &:last-child {
-            margin-bottom: 0;
-        }
-        a {
-            color: #000;
-        }
+  }
+  &__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__slide {
+    position: relative;
+    display: flex;
+    gap: 67px;
+    justify-content: space-between;
+  }
+  &__image {
+    width: 50%;
+    max-width: 543px;
+    max-height: 340px;
+    overflow: hidden;
+    img {
+      width: auto;
+      max-width: 543px;
+      min-width: 320px;
+      height: 100%;
+      max-height: 250px;
     }
-    &__text {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+  }
+  &__form.card {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    max-width: none;
+    border: none;
+    box-shadow: none;
+  }
+  .product__cardPlusMinus {
+    min-width: 170px;
+    width: 35%;
+  }
+  &__submit {
+    width: 55%;
+    padding: 13px;
+    background: $mainCompColor;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: $mainWhtColor;
+  }
+  &__socials {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    max-width: 240px;
+    &:last-child {
+      margin-bottom: 0;
     }
-    &__slide {
-        position: relative;
-        display: flex;
-        gap: 67px;
-        justify-content: space-between;
+    a {
+      max-width: 30px;
+      display: block;
+      margin-right: 22px;
+      &:last-child {
+        margin-right: 0;
+      }
+      svg,
+      img {
+        max-width: 100%;
+      }
     }
-    &__image {
-        width: 50%;
-        max-width: 543px;
-        max-height: 340px;
-        overflow: hidden;
-        img {
-            width: auto;
-            max-width: 543px;
-            min-width: 320px;
-            height: 100%;
-            max-height: 250px;
-        }
-    }
-    &__form.card {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: stretch;
-        flex-direction: row;
-        max-width: none;
-        border: none;
-        box-shadow: none;
-    }
-    .product__cardPlusMinus {
-        min-width: 170px;
-        width: 35%;
-    }
-    &__submit {
-        width: 55%;
-        padding: 13px;
-        background: $mainCompColor;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        font-weight: 700;
-        color: $mainWhtColor;
-    }
-    &__socials {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 25px;
-        max-width: 240px;
-        &:last-child {
-            margin-bottom: 0;
-        }
-        a {
-            max-width: 30px;
-            display: block;
-            margin-right: 22px;
-            &:last-child {
-                margin-right: 0;
-            }
-            svg,
-            img {
-                max-width: 100%;
-            }
-        }
-    }
-    &__button.button {
-        display: block;
-        margin: 0 auto;
-        margin-top: 40px;
-        padding: 0.5em 1em;
-        color: #fff;
-        font-size: 25px;
-        background: $mainCompColor;
-        text-align: center;
-        width: fit-content;
+  }
+  &__button.button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0.5em 1em;
+    color: #fff;
+    font-size: 25px;
+    background: $mainCompColor;
+    text-align: center;
+    width: fit-content;
 
-        transition: background 0.4s ease;
-        &:hover {
-            background: darken($mainCompColor, 15%);
-        }
+    transition: background 0.4s ease;
+    &:hover {
+      background: darken($mainCompColor, 15%);
     }
+  }
 }
 .swiper {
-    &__pagination {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        gap: 19px;
-        align-items: flex-end;
-        margin-bottom: 40px;
+  &__pagination {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 19px;
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__button {
+    position: relative;
+    max-width: 125px;
+    width: 100%;
+    height: 43px;
+
+    cursor: pointer;
+
+    background: #e4e4e4;
+
+    transition: all 0.4s ease;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 2px;
+      width: 15px;
+      background-color: $mainBlckColor;
+
+      transform: translate(-50%, -50%);
     }
-    &__buttons {
-        display: flex;
-        justify-content: space-between;
+    &::before {
+      top: 39%;
+      transform: translate(-50%, -50%) rotate(45deg);
     }
-    &__button {
-        position: relative;
-        max-width: 125px;
-        width: 100%;
-        height: 43px;
-
-        cursor: pointer;
-
-        background: #e4e4e4;
-
-        transition: all 0.4s ease;
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            height: 2px;
-            width: 15px;
-            background-color: $mainBlckColor;
-
-            transform: translate(-50%, -50%);
-        }
-        &::before {
-            top: 39%;
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-        &::after {
-            top: 61%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-        &--prev {
-            &::before {
-                transform: translate(-50%, -50%) rotate(-45deg);
-            }
-            &::after {
-                transform: translate(-50%, -50%) rotate(45deg);
-            }
-        }
+    &::after {
+      top: 61%;
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
+    &--prev {
+      &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
 }
 .swiper-container {
-    overflow: hidden;
+  overflow: hidden;
 }
 .swiper-button-disabled {
-    cursor: unset;
-    opacity: 0.3;
+  cursor: unset;
+  opacity: 0.3;
 }
 .swiper-wrapper {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 .swiper-pagination-bullet {
-    width: calc(50 / 3 * 1%);
-    height: 3px;
-    border-radius: 0;
-    background: #999;
-    transition: all 0.4s ease;
-    &-active {
-        max-width: 539px;
-        width: 100%;
-        height: 5px;
-        background: $mainCompColor;
-    }
+  width: calc(50 / 3 * 1%);
+  height: 3px;
+  border-radius: 0;
+  background: #999;
+  transition: all 0.4s ease;
+  &-active {
+    max-width: 539px;
+    width: 100%;
+    height: 5px;
+    background: $mainCompColor;
+  }
 }
 @media (max-width: 840px) {
-    .prom {
-        padding-top: 40px;
-        &__title {
-            margin-bottom: 30px;
-        }
-        &__subtitle {
-            max-width: none;
-        }
-        &__description {
-            max-width: none;
-        }
-        &__slide {
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        &__socials {
-            margin: 0 auto;
-            margin-bottom: 30px;
-        }
-        .swiper-wrapper {
-            margin-bottom: 30px;
-        }
-        &__image {
-            width: 100%;
-            img {
-                max-width: none;
-                width: 100%;
-            }
-        }
-        &__text {
-            width: 100%;
-            text-align: center;
-        }
-        &__subtitle {
-            margin-bottom: 30px;
-        }
+  .prom {
+    padding-top: 40px;
+    &__title {
+      margin-bottom: 30px;
     }
+    &__subtitle {
+      max-width: none;
+    }
+    &__description {
+      max-width: none;
+    }
+    &__slide {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    &__socials {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    .swiper-wrapper {
+      margin-bottom: 30px;
+    }
+    &__image {
+      width: 100%;
+      img {
+        max-width: none;
+        width: 100%;
+      }
+    }
+    &__text {
+      width: 100%;
+      text-align: center;
+    }
+    &__subtitle {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 @media (max-width: 560px) {
-    .swiper {
-        &__buttons {
-            flex-wrap: wrap;
-        }
+  .swiper {
+    &__buttons {
+      flex-wrap: wrap;
     }
+  }
 }
 
 @media (max-width: 480px) {
-    .prom {
-        padding-bottom: 80px;
-        &__slide {
-            min-height: 490px;
-        }
-        .swiper-container {
-            overflow: visible;
-        }
-        &__socials {
-            bottom: -150px;
-        }
-        &__subtitle {
-            font-size: 26px;
-        }
+  .prom {
+    padding-bottom: 80px;
+    &__slide {
+      min-height: 490px;
     }
+    .swiper-container {
+      overflow: visible;
+    }
+    &__socials {
+      bottom: -150px;
+    }
+    &__subtitle {
+      font-size: 26px;
+    }
+  }
 }
 
 @media (max-width: 440px) {
-    .prom {
-        &__form.card {
-            width: 100%;
-            flex-wrap: wrap;
-            .product__cardPlusMinus {
-                margin: 0 auto;
-                margin-bottom: 15px;
-            }
-        }
-        &__submit {
-            width: 100%;
-        }
+  .prom {
+    &__form.card {
+      width: 100%;
+      flex-wrap: wrap;
+      .product__cardPlusMinus {
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
     }
+    &__submit {
+      width: 100%;
+    }
+  }
 }

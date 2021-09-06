@@ -1,75 +1,75 @@
 .numbers {
-    padding: 120px 0 0 0;
-    &__title {
-        margin-bottom: 96px;
-    }
-    &__row {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        margin-bottom: 98px;
-    }
-    &__cards {
-        padding: 0 100px;
-    }
-    &__card {
-        max-width: 320px;
-        width: 100%;
-    }
-    &__head {
-        margin-bottom: 35px;
-        font-size: 45px;
-        font-weight: 700;
-        color: $mainCompColor;
+  padding: 120px 0 0 0;
+  &__title {
+    margin-bottom: 96px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 98px;
+  }
+  &__cards {
+    padding: 0 100px;
+  }
+  &__card {
+    max-width: 320px;
+    width: 100%;
+  }
+  &__head {
+    margin-bottom: 35px;
+    font-size: 45px;
+    font-weight: 700;
+    color: $mainCompColor;
 
-        font-family: $mainHeadingFont;
-    }
-    &__txt {
-        font-size: 23px;
-        line-height: 1.19;
-    }
+    font-family: $mainHeadingFont;
+  }
+  &__txt {
+    font-size: 23px;
+    line-height: 1.19;
+  }
 }
 
 @media (max-width: 720px) {
-    .numbers {
-        margin: 70px 0;
-        margin-bottom: 40px;
-        &__title {
-            margin-bottom: 60px;
-        }
-        &__cards {
-            gap: 50px;
-            padding: 0 10px;
-        }
-        &__card {
-            max-width: 320px;
-            text-align: center;
-            width: 100%;
-        }
-        &__head {
-            font-size: 36px;
-        }
-        &__txt {
-            font-size: 21px;
-        }
+  .numbers {
+    margin: 70px 0;
+    margin-bottom: 40px;
+    &__title {
+      margin-bottom: 60px;
     }
+    &__cards {
+      gap: 50px;
+      padding: 0 10px;
+    }
+    &__card {
+      max-width: 320px;
+      text-align: center;
+      width: 100%;
+    }
+    &__head {
+      font-size: 36px;
+    }
+    &__txt {
+      font-size: 21px;
+    }
+  }
 }
 
 @media (max-width: 560px) {
-    .numbers {
-        &__row {
-            flex-wrap: wrap;
-            margin-bottom: 15px;
-        }
-        &__card {
-            margin: 0 auto;
-            margin-bottom: 15px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-        &__head {
-            margin-bottom: 10px;
-        }
+  .numbers {
+    &__row {
+      flex-wrap: wrap;
+      margin-bottom: 15px;
     }
+    &__card {
+      margin: 0 auto;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__head {
+      margin-bottom: 10px;
+    }
+  }
 }
