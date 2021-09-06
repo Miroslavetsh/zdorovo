@@ -1,0 +1,41 @@
+.hits {
+    margin-top: 120px;
+    padding-bottom: 208px;
+    &__title {
+        margin-bottom: 74px;
+    }
+}
+@media (max-width: 920px) {
+    .hits {
+        padding-bottom: 90px;
+    }
+}
+@media (max-width: 780px) {
+    .hits {
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__outer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            flex-wrap: nowrap;
+            justify-content: start;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                height: 6px;
+            }
+            &::-webkit-scrollbar-track {
+                background: darken($mainWhtColor, 10%);
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $mainCompColor;
+            }
+        }
+    }
+}
+@media (max-width: 720px) {
+    .hits {
+        margin-top: 40px;
+        padding-bottom: 50px;
+    }
+}

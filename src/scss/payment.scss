@@ -1,0 +1,287 @@
+.payment {
+    padding: 44px 0 208px;
+
+    background: $mainCompColor;
+    box-shadow: inset 0 0 5px rgba(#000, 0.25);
+
+    font-family: $mainHeadingFont;
+    font-weight: 600;
+    &__triggers {
+        margin-bottom: 114px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__heading {
+        white-space: nowrap;
+        margin-left: 43px;
+        width: 50%;
+        width: fit-content;
+        position: relative;
+
+        background: transparent;
+        text-align-last: left;
+
+        color: $mainWhtColor;
+        font-size: 40px;
+        font-weight: 700;
+        &::after {
+            content: '';
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        &:last-child {
+            width: 43.5%;
+        }
+        &._active {
+            &::after {
+                content: '';
+                position: absolute;
+                height: 3px;
+                width: 100%;
+                left: 0;
+                opacity: 1;
+                background: $mainWhtColor;
+                bottom: -15px;
+
+                transition: all 0.4s ease;
+                transform-origin: center;
+                transform: scaleX(1);
+            }
+        }
+    }
+    &__block {
+        position: relative;
+    }
+    &__cards {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 100px;
+        column-gap: 20px;
+    }
+    &__card {
+        width: 48%;
+        .payment__text {
+            margin-left: 55px;
+        }
+        .payment__item {
+            img {
+                margin-right: 25px;
+            }
+        }
+        .payment__list {
+            margin-left: 55px;
+        }
+        span {
+            color: #293c16;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        img {
+            margin-right: 14px;
+        }
+    }
+    &__list {
+        flex: 1 1 auto;
+        height: 40%;
+        margin-left: 59px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 34px;
+        li {
+            font-size: 20px;
+            font-weight: 500;
+            color: $mainWhtColor;
+        }
+    }
+    &__input {
+        color: #eee;
+        width: 30px;
+        margin-right: -10px;
+        font-size: 20px;
+        background: transparent;
+    }
+    &__subtitle {
+        font-size: 25px;
+        font-weight: 600;
+        color: $mainWhtColor;
+    }
+    &__text {
+        margin-top: -10px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.18;
+        color: #e3f3d5;
+    }
+    &__content {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: all 0.4s ease;
+        &._active {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+
+            transform: scaleY(1);
+        }
+    }
+    &__questions {
+        max-width: 969px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__question {
+        position: relative;
+    }
+    &__trigger {
+        padding: 35px 30px 35px 0;
+        width: 100%;
+        background: transparent;
+        position: relative;
+
+        color: $mainWhtColor;
+        text-align: left;
+        font-size: 24px;
+        font-weight: 500;
+        &::before,
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            height: 2px;
+            width: 20px;
+            background: $mainWhtColor;
+
+            transform: rotate(45deg) translateY(-50%);
+            transition: all 0.4s ease;
+        }
+        &::after {
+            right: 13px;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        &._active {
+            &::before {
+                transform: translateY(-50%) rotate(-45deg);
+            }
+            &::after {
+                transform: translateY(-50%) rotate(45deg);
+            }
+        }
+    }
+    &__body {
+        position: absolute;
+        top: 80px;
+        visibility: hidden;
+        padding: 40px 20px;
+        border-bottom: 3px solid $mainWhtColor;
+        border-top: 3px solid $mainWhtColor;
+        opacity: 0;
+
+        font-size: 24px;
+        color: $mainWhtColor;
+
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: all 0.4s ease;
+        &._active {
+            position: static;
+            visibility: visible;
+            opacity: 1;
+
+            transform: scaleY(1);
+        }
+        p {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media (max-width: 1050px) {
+    .payment {
+        &__heading {
+            font-size: 28px;
+        }
+    }
+}
+@media (max-width: 920px) {
+    .payment {
+        &__item {
+            margin-left: 0;
+        }
+        &__cards {
+            justify-content: center;
+        }
+        &__card {
+            width: 100%;
+            max-width: 530px;
+        }
+        &__text {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 891px) {
+    .payment {
+        &__heading {
+            margin-left: 0;
+        }
+    }
+}
+@media (max-width: 840px) {
+    .payment {
+        padding-bottom: 80px;
+        &__heading {
+            width: 100%;
+            white-space: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            &:last-child {
+                width: 100%;
+            }
+        }
+        &__triggers {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .payment {
+        padding-bottom: 40px;
+        &__triggers {
+            margin-bottom: 25px;
+        }
+        &__card {
+            max-width: 480px;
+        }
+        &__subtitle {
+            font-size: 24px;
+        }
+        &__text {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}

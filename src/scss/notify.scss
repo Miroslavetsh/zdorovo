@@ -1,0 +1,40 @@
+.notify {
+    position: relative;
+    svg,
+    img {
+        max-width: 100%;
+    }
+    &:hover {
+        .cabinet__info-window {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .cabinet__info-window {
+        width: 300px;
+        padding: 20px 21px;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: 40px;
+        top: -50%;
+        z-index: 10;
+
+        background: #f4f4f4;
+        font-size: 19px;
+        line-height: 1.2;
+        text-align: center;
+
+        transition: all 0.4s ease;
+    }
+}
+
+@media (max-width: 990px) {
+    .notify {
+        .cabinet__info-window {
+            left: unset;
+            right: 0;
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.pagination {
+    margin: 0 auto;
+    max-width: 201px;
+    display: flex;
+    justify-content: space-between;
+    &__number {
+        display: block;
+        min-width: 24px;
+        height: 24px;
+        margin-right: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+
+        background: #efefef;
+        font-size: 16px;
+        font-weight: 500;
+        color: #3b3b3b;
+        a {
+            color: inherit;
+        }
+        &._active {
+            background: $mainCompColor;
+        }
+        &._next {
+            margin-right: 0;
+
+            background: transparent;
+        }
+    }
+}

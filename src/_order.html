@@ -1,0 +1,390 @@
+<section class="order">
+    <div class="container">
+        <div class="order__inner">
+            <main class="order__main">
+                <a href="catalog.html" class="order__back">Повернутись в каталог</a>
+                <h2 class="order__title title">Оформлення замовлення</h2>
+                <form action="#" class="order__form form">
+                    <fieldset>
+                        <h3 class="order__subtitle subtitle">Отримувач</h3>
+                        <div class="form__block">
+                            <input type="e-mail" placeholder="Email" required>
+                            <input type="tel" placeholder="Телефон">
+                        </div>
+                        <div class="order__additional">
+                            <label class="order__checkbox--label">
+                                <input type="checkbox">
+                                <span>
+                                    Створити особистий кабінет в інтернет-магазині ZdorovoTM та отримати інструкції щодо
+                                    його активації на електронну адресу
+                                    після оформлення замовлення.
+                                </span>
+                            </label>
+                        </div>
+                        <div class="order__additional">
+                            <strong>Ви вже робили у нас замовлення і ми вас пам’ятаємо.</strong>
+                            І автоматично створили особистий кабінет,
+                            де збережені всі ваші попередні покупки.
+                            Інструкції щодо його активації або видалення будуть надіслані на вашу електронну адресу
+                            після оформлення замовлення.
+                        </div>
+                        <div class="form__block">
+                            <input type="text" placeholder="Ім’я">
+                            <input type="text" placeholder="Прізвище">
+                        </div>
+                        <div class="form__block form__block--fullsize">
+                            <textarea placeholder="Ваші побажання, які ми спробуємо виконати"></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="order__head">
+                            <h3 class="order__subtitle subtitle">Доставка</h3>
+                            <div class="order__notify notify">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.8199 20.5547L11.8199 8.33246" stroke="#88C74A" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.8227 3.44423C11.1477 3.44423 10.6005 3.99144 10.6005 4.66645C10.6005 5.34146 11.1477 5.88867 11.8227 5.88867C12.4977 5.88867 13.0449 5.34146 13.0449 4.66645C13.0449 3.99144 12.4977 3.44423 11.8227 3.44423Z"
+                                        fill="#88C74A" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.8223 23C17.8974 23 22.8223 18.0751 22.8223 12C22.8223 5.92487 17.8974 1 11.8223 1C5.74713 1 0.822266 5.92487 0.822266 12C0.822266 18.0751 5.74713 23 11.8223 23Z"
+                                        stroke="#88C74A" stroke-width="1.5" />
+                                </svg>
+                                <div class="cabinet__info-window">
+                                    Інформація користувача
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__block form__block--column">
+                            <label class="order__radio--label" data-trigger="NovaPoshta">
+                                <input type="radio" name="post" checked>
+                                <span>Нова пошта</span>
+                            </label>
+
+                            <div class="form__block form__block--column" data-content="NovaPoshta">
+                                <select type="text">
+                                    <option disabled selected>Область</option>
+                                    <option>Область 1</option>
+                                    <option>Область 2</option>
+                                    <option>Область 3</option>
+                                    <option>Область 4</option>
+                                    <option>Область 5</option>
+                                </select>
+
+                                <select type="text">
+                                    <option disabled selected>Місто</option>
+                                    <option>Місто 1</option>
+                                    <option>Місто 2</option>
+                                    <option>Місто 3</option>
+                                    <option>Місто 4</option>
+                                    <option>Місто 5</option>
+                                </select>
+
+                                <select type="text">
+                                    <option disabled selected>Відділення</option>
+                                    <option>Відділення 1</option>
+                                    <option>Відділення 2</option>
+                                    <option>Відділення 3</option>
+                                    <option>Відділення 4</option>
+                                    <option>Відділення 5</option>
+                                </select>
+                            </div>
+                            <label class="order__radio--label" data-trigger="UkrPoshta">
+                                <input type="radio" name="post">
+                                <span>Укрпошта</span>
+                            </label>
+                            <div class="form__block form__block--column _hided" data-content="UkrPoshta">
+                                <input type="text" placeholder="Область, місто">
+                                <input type="text" placeholder="Адреса">
+                                <input type="text" placeholder="Поштовий індекс">
+                            </div>
+                            <label class="order__radio--label" data-trigger="Justin">
+                                <input type="radio" name="post">
+                                <span>Justin</span>
+                            </label>
+                            <div class="form__block form__block--column _hided" data-content="Justin">
+                                <select type="text">
+                                    <option disabled selected>Область</option>
+                                    <option>Область 1</option>
+                                    <option>Область 2</option>
+                                    <option>Область 3</option>
+                                    <option>Область 4</option>
+                                    <option>Область 5</option>
+                                </select>
+
+                                <select type="text">
+                                    <option disabled selected>Місто</option>
+                                    <option>Місто 1</option>
+                                    <option>Місто 2</option>
+                                    <option>Місто 3</option>
+                                    <option>Місто 4</option>
+                                    <option>Місто 5</option>
+                                </select>
+
+                                <select type="text">
+                                    <option disabled selected>Відділення</option>
+                                    <option>Відділення 1</option>
+                                    <option>Відділення 2</option>
+                                    <option>Відділення 3</option>
+                                    <option>Відділення 4</option>
+                                    <option>Відділення 5</option>
+                                </select>
+                            </div>
+                            <label class="order__radio--label" data-trigger="Courier">
+                                <input type="radio" name="post">
+                                <span>Кур'єрська доставка в руки</span>
+                            </label>
+                            <div class="form__block form__block--column _hided" data-content="Courier">
+                                <input type="text" placeholder="Область, місто">
+                                <input type="text" placeholder="Адреса, будинок">
+                                <input type="text" placeholder="Квартира">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <fieldset class="payment-field">
+                        <div class="order__head">
+                            <h3 class="order__subtitle subtitle">Оплата</h3>
+                        </div>
+
+                        <div class="form__block form__block--fullsize orderBlock _hidden">
+                            <label class="order__radio--label">
+                                <input type="radio" name="payment" checked class="showHidden">
+                                <span>Оплата готівкою при отриманні(Нова пошта)</span>
+                            </label>
+                        </div>
+
+                        <div class="form__block form__block--fullsize orderBlock _hidden">
+                            <label class="order__radio--label">
+                                <input type="radio" name="payment" class="showHidden">
+                                <span>Онлайн банківською картою</span>
+                            </label>
+                        </div>
+                        <div class="form__block form__block--fullsize orderBlock _hidden">
+                            <label class="order__radio--label">
+                                <input type="radio" name="payment" class="showHidden">
+                                <span>Оплата через Приват24 - Платежі - Україна</span>
+                            </label>
+                            <div class="form__hidden orderHidden">
+                                <p>
+                                    Рахунок отримувача: UA603052990000026008026303021. Отримувач: ТОВ “СУI ГЕНЕРIС”.
+                                    ЄДРПОУ 42718154, МФО 305299
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form__block form__block--fullsize orderBlock _hidden">
+                            <label class="order__radio--label">
+                                <input type="radio" name="payment" class="showHidden">
+                                <span>Оплата в BTC</span>
+                            </label>
+                            <div class="form__hidden orderHidden">
+                                <p>Наш гаманець: <strong class="toCopy"
+                                        title="Натисніть щоб скопіювати">155t8vTwbWfySYCGU<wbr>9LEZZ9ksfWACayNee</strong>
+                                </p>
+                                <label>
+                                    <p>Будь ласка, введіть номер вашого гаманця для ідентифікації оплати</p>
+                                    <input type="text" class="order__input">
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </main>
+            <aside class="order__aside">
+                <h2 class="order__title title">Кошик</h2>
+                <div class="order__code">
+                    <input type="text" class="order__code--input" value="asd312sdfsdf2342" data-to-reset="codeInput">
+                    <button class="resetButton" type="reset" data-reset="codeInput">Очистити</button>
+                </div>
+
+                <div class="order__products">
+                    <div class="order__product card">
+                        <div class="order__heading">
+                            <p>Язики яловичі у власному соку</p>
+                            <button class="order__button"><img src="img/icons/trash.png" alt=""></button>
+                        </div>
+                        <div class="order__text">
+                            <img src="img/catalog/1.png" alt="">
+                            <p class="order__price"><strong>112</strong>грн</p>
+                            <div class="card__btns">
+                                <button type="button" class="card__btn cardBtnMinus">
+                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <input type="number" value="0" readonly>
+                                <button type="button" class="card__btn cardBtnPlus">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="order__count"><strong>1123</strong>грн</p>
+                        </div>
+                    </div>
+                    <div class="order__product card">
+                        <div class="order__heading">
+                            <p>Язики яловичі у власному соку</p>
+                            <button class="order__button"><img src="img/icons/trash.png" alt=""></button>
+                        </div>
+                        <div class="order__text">
+                            <img src="img/catalog/1.png" alt="">
+                            <p class="order__price"><strong>112</strong>грн</p>
+                            <div class="card__btns">
+                                <button type="button" class="card__btn cardBtnMinus">
+                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <input type="number" value="0" readonly>
+                                <button type="button" class="card__btn cardBtnPlus">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="order__count"><strong>1123</strong>грн</p>
+                        </div>
+                    </div>
+                    <div class="order__product card">
+                        <div class="order__heading">
+                            <p>Язики яловичі у власному соку</p>
+                            <button class="order__button"><img src="img/icons/trash.png" alt=""></button>
+                        </div>
+                        <div class="order__text">
+                            <img src="img/catalog/1.png" alt="">
+                            <p class="order__price"><strong>112</strong>грн</p>
+                            <div class="card__btns">
+                                <button type="button" class="card__btn cardBtnMinus">
+                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <input type="number" value="0" readonly>
+                                <button type="button" class="card__btn cardBtnPlus">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="order__count"><strong>1123</strong>грн</p>
+                        </div>
+                    </div>
+                    <div class="order__product card">
+                        <div class="order__heading">
+                            <p>Язики яловичі у власному соку</p>
+                            <button class="order__button"><img src="img/icons/trash.png" alt=""></button>
+                        </div>
+                        <div class="order__text">
+                            <img src="img/catalog/1.png" alt="">
+                            <p class="order__price"><strong>112</strong>грн</p>
+                            <div class="card__btns">
+                                <button type="button" class="card__btn cardBtnMinus">
+                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <input type="number" value="0" readonly>
+                                <button type="button" class="card__btn cardBtnPlus">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="order__count"><strong>1123</strong>грн</p>
+                        </div>
+                    </div>
+                    <div class="order__product card">
+                        <div class="order__heading">
+                            <p>Язики яловичі у власному соку</p>
+                            <button class="order__button"><img src="img/icons/trash.png" alt=""></button>
+                        </div>
+                        <div class="order__text">
+                            <img src="img/catalog/1.png" alt="">
+                            <p class="order__price"><strong>112</strong>грн</p>
+                            <div class="card__btns">
+                                <button type="button" class="card__btn cardBtnMinus">
+                                    <svg width="20" height="4" viewBox="0 0 20 4" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.8162 2L2 2" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <input type="number" value="0" readonly>
+                                <button type="button" class="card__btn cardBtnPlus">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.7965 10.7579H2.39819" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                        <path d="M11.0972 2V19.5797" stroke="#88C74A" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="order__count"><strong>1123</strong>грн</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order__total">
+                    <div class="order__delivery">
+                        <div class="order__head">
+                            Доставка до відділення:
+                            <div class="order__notify notify">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.8199 20.5547L11.8199 8.33246" stroke="#88C74A" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.8227 3.44423C11.1477 3.44423 10.6005 3.99144 10.6005 4.66645C10.6005 5.34146 11.1477 5.88867 11.8227 5.88867C12.4977 5.88867 13.0449 5.34146 13.0449 4.66645C13.0449 3.99144 12.4977 3.44423 11.8227 3.44423Z"
+                                        fill="#88C74A" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.8223 23C17.8974 23 22.8223 18.0751 22.8223 12C22.8223 5.92487 17.8974 1 11.8223 1C5.74713 1 0.822266 5.92487 0.822266 12C0.822266 18.0751 5.74713 23 11.8223 23Z"
+                                        stroke="#88C74A" stroke-width="1.5" />
+                                </svg>
+                                <div class="cabinet__info-window">
+                                    Інформація користувача
+                                </div>
+                            </div>
+                        </div>
+
+                        <span>+<strong>57</strong> грн</span>
+                    </div>
+                    <p class="order__sertificate">
+                        <span>Оплачено сертифікатом</span>
+                        <span><strong>300</strong>грн</span>
+                    </p>
+                    <p class="order__all">
+                        <span>Всього:</span>
+                        <span><strong>2399</strong>грн</span>
+                    </p>
+                </div>
+                <button type="submit" class="order__submit" disabled>Оформити замовлення</button>
+            </aside>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,47 @@
+<div class="catalog">
+    <div class="container">
+        <div class="catalog__inner">
+            <div class="catalog__sort catalogSorting">
+                <a href="#" class="catalog__link">Набори ZdorovoTM</a>
+                <a href="#" class="catalog__link _active">М’ясні консерви</a>
+                <a href="#" class="catalog__link">Рибні консерви</a>
+                <a href="#" class="catalog__link">Добірні паштети</a>
+                <a href="#" class="catalog__link">PowerBANKa</a>
+                <a href="#" class="catalog__link">Бульйони</a>
+                <a href="#" class="catalog__link">Готові страви hapay!</a>
+                <a href="#" class="catalog__link">Аксесуари</a>
+            </div>
+            <main class="catalog__content">
+                @@include('_catalogFilter.html')
+                <div class="catalog__main">
+                    <div class="catalog__marks">
+                        <a href="#" class="catalog__mark">Без глютену</a>
+                    </div>
+                    <div class="catalog__cards card__outer">
+                        @@include('_cardDisabled.html') @@include('_card.html') @@include('_card.html')
+                        @@include('_card.html') @@include('_card.html') @@include('_card.html')
+                    </div>
+                    <ul class="catalog__pagination pagination catalogPagination">
+                        <li class="pagination__number _active">
+                            <a href="#">
+                                1
+                            </a>
+                        </li>
+                        <li class="pagination__number">
+                            <a href="#">
+                                2
+                            </a>
+                        </li>
+                        <li class="pagination__number">3</li>
+                        <li class="pagination__number">4</li>
+                        <li class="pagination__number">5</li>
+                        <li class="pagination__number">6</li>
+                        <li class="pagination__number _next">
+                            <img src="img/icons/next.svg" alt="" />
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>

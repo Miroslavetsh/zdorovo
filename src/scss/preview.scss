@@ -1,0 +1,127 @@
+.preview {
+    padding: 163px 0 113px 0;
+    min-height: 100vh;
+    max-height: 971px;
+    background: url('../img/preview/bg.jpg') center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.4s ease;
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding-left: 63px;
+    }
+    &__text {
+        width: 50%;
+    }
+    &__title {
+        font-family: Marmelad;
+        margin-bottom: 45px;
+        font-weight: 400;
+    }
+    &__description {
+        max-width: 506px;
+        width: 100%;
+        margin-bottom: 49px;
+
+        font-size: 18px;
+    }
+    &__button {
+        width: auto;
+        display: inline-block;
+        padding: 20px 35px;
+        border: 1px solid $mainWhtColor;
+        font-size: 23px;
+        font-weight: 500;
+        color: $mainWhtColor;
+
+        transition: all 0.4s ease;
+        &:hover {
+            background: $mainWhtColor;
+            color: $mainBlckColor;
+        }
+    }
+    &__image {
+        width: 50%;
+        max-width: 464px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    .preview {
+        &__inner {
+            position: relative;
+            padding-left: 50px;
+        }
+        &__image {
+            width: 100%;
+            max-width: none;
+            opacity: 0.4;
+            bottom: -30%;
+            z-index: 0;
+            pointer-events: none;
+            position: absolute;
+        }
+        &__text {
+            margin: 0 auto;
+            max-width: 536px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        &__description {
+            margin: 0 auto;
+            margin-bottom: 98px;
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .preview {
+        min-height: auto;
+        padding-top: 170px;
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__description {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .preview {
+        padding-top: 140px;
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__description {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .preview {
+        &__inner {
+            padding-left: 0px;
+        }
+        &__button {
+            font-size: 18px;
+        }
+        &__image {
+            display: none;
+        }
+        &__button {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

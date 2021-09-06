@@ -1,0 +1,371 @@
+.register {
+    position: relative;
+
+    transition: all 0.4s ease;
+    &::after {
+        content: '';
+        width: 24%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+
+        background: $mainCompColor;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 5;
+    }
+    &__green {
+        padding-top: 188px;
+        padding-bottom: 307px;
+        width: 32%;
+
+        background: $mainCompColor;
+        box-shadow: inset -4px 0px 5px rgba(#000, 0.25);
+        color: #fff;
+        font-family: $mainHeadingFont;
+        .title {
+            max-width: 240px;
+        }
+    }
+    &__title {
+        margin-bottom: 112px;
+
+        text-align: left;
+        span {
+            display: block;
+            margin-top: 10px;
+
+            font-size: 25px;
+        }
+    }
+    &__list {
+        max-width: 360px;
+        li {
+            font-size: 20px;
+            line-height: 2;
+            font-weight: 600;
+        }
+    }
+    &__white {
+        padding-bottom: 307px;
+        margin-right: 70px;
+        padding-top: 188px;
+        max-width: 637px;
+        width: 100%;
+    }
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 55px;
+        .title {
+            margin-bottom: 0;
+
+            cursor: pointer;
+            &:last-child {
+                margin-right: 140px;
+            }
+            &._active {
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    bottom: -20px;
+                    left: 0;
+
+                    background: $mainCompColor;
+                }
+            }
+        }
+    }
+    &__content {
+        position: absolute;
+        display: none;
+        &._active {
+            position: static;
+            display: block;
+            form {
+                position: relative;
+                &.no-line {
+                    &::after {
+                        display: none;
+                        opacity: 0;
+                    }
+                }
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    top: -36px;
+                    left: 0;
+
+                    background: $mainCompColor;
+                }
+            }
+        }
+        &--mt {
+            margin-top: 187px;
+        }
+        &--horizontal {
+            margin-top: 197px;
+            &._active {
+                form {
+                    &::after {
+                        width: 2px;
+                        height: 100%;
+                        top: 0;
+                        left: 130%;
+                    }
+                }
+            }
+        }
+        &--horizontal {
+            form {
+                width: 40%;
+                flex-direction: column;
+                label {
+                    width: 100%;
+                }
+            }
+            .register__input {
+                width: 100%;
+            }
+            .register__button {
+                width: 100%;
+
+                transition: all 0.4s ease;
+            }
+            .register__facebook {
+                width: 100%;
+                flex: 0 0 auto;
+            }
+            .register__facebook {
+                margin: 0 -80px 0 0;
+            }
+            &._active {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        form {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    &__activation {
+        margin-bottom: 22px;
+        display: flex;
+        align-items: center;
+        p {
+            font-size: 18px;
+            line-height: 1.2;
+            letter-spacing: -0.001em;
+        }
+        img {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+        }
+    }
+    &__facebook {
+        max-height: 70px;
+        position: relative;
+        padding: 15px 38px 15px 28px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 309px;
+        width: 100%;
+        background: none;
+        font-size: 20px;
+
+        box-shadow: 0 0 3px rgba(#000, 0.25);
+        margin-bottom: 60px;
+        transition: all 0.4s ease;
+        &:hover {
+            background: #eee;
+        }
+    }
+    label {
+        position: relative;
+        width: 40%;
+        input {
+            width: 100%;
+        }
+        img {
+            position: absolute;
+            top: 13px;
+            right: 13px;
+
+            cursor: pointer;
+        }
+    }
+    &__input {
+        margin-bottom: 20px;
+        display: block;
+        padding: 11px 13px;
+        width: 40%;
+
+        border: 1px solid $mainCompColor;
+        &::placeholder {
+            font-size: 16px;
+            font-weight: 300;
+            color: #888;
+        }
+        &--wrong {
+            border-color: #e40000;
+        }
+    }
+    &__button {
+        padding: 11px;
+        width: 40%;
+
+        background: $mainCompColor;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+
+        transition: all 0.4s ease;
+        &:hover {
+            background: darken($mainCompColor, 10%);
+        }
+    }
+}
+@media (max-width: 1150px) {
+    .register {
+        &__content {
+            form {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        &__white {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .register {
+        &::after {
+            display: none;
+        }
+        .container {
+            padding: 0;
+        }
+        &__inner {
+            flex-direction: column;
+        }
+        &__green {
+            padding: 120px 20px 30px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: inset 0 0 5px rgba(#000, 0.25);
+        }
+        &__white {
+            padding: 30px 20px;
+            width: 100%;
+            max-width: none;
+        }
+        &__content {
+            &--mt {
+                margin-top: 10px;
+            }
+            &--horizontal {
+                .register__facebook {
+                    margin-right: 0;
+                }
+            }
+        }
+        &__title {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .register {
+        &__list {
+            li {
+                font-size: 14px;
+            }
+        }
+        &__content {
+            margin-bottom: 20px;
+            &--horizontal {
+                flex-direction: column-reverse;
+                margin-top: 0;
+                form {
+                    width: 100%;
+                }
+                .register__facebook {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        &__green {
+            display: flex;
+            flex-wrap: wrap;
+            .register__title.title {
+                max-width: none;
+                width: 100%;
+                margin-bottom: 20px;
+
+                text-align: left;
+            }
+            .register__list {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        &__input {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+        }
+        &__facebook {
+            margin-bottom: 30px;
+        }
+        &__title.title {
+            width: 50%;
+
+            text-align: center;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        label {
+            width: 100%;
+        }
+        form {
+            flex-direction: column;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .register {
+        &__tabs {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            .register__title {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

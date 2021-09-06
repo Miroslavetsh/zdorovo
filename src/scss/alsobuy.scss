@@ -1,0 +1,26 @@
+.alsobuy {
+    padding: 120px 0;
+    &__title {
+        margin-bottom: 55px;
+    }
+    .card {
+        min-width: 220px;
+        &__outer {
+            justify-content: start;
+            gap: 10px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 20px;
+            margin: -20px;
+            &::-webkit-scrollbar {
+                height: 4px;
+            }
+            &::-webkit-scrollbar-track {
+                background: darken($mainWhtColor, 10%);
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $mainCompColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.trusts {
+    margin: 100px 0 136px;
+    &__title {
+        margin-bottom: 70px;
+    }
+
+    &__cards {
+        max-width: 1114px;
+        gap: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    &__img {
+        max-width: 240px;
+        img {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 720px) {
+    .trusts {
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 620px) {
+    .trusts {
+        &__cards {
+            align-items: center;
+            flex-direction: column;
+        }
+        &__img {
+            order: 2;
+            &:nth-child(2) {
+                order: 1;
+            }
+        }
+    }
+}

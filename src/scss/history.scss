@@ -1,0 +1,53 @@
+.history {
+    .container {
+        padding: 0 20px;
+    }
+    &__inner {
+        margin: 0 112px;
+        padding: 49px 0 53px;
+
+        border-top: 3px solid $mainCompColor;
+        border-bottom: 3px solid $mainCompColor;
+    }
+    &__title {
+        margin-bottom: 32px;
+    }
+    &__text {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+        font-family: $mainHeadingFont;
+        p {
+            text-indent: 38px;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media (max-width: 720px) {
+    .history {
+        &__inner {
+            margin: 0 35px;
+            padding: 25px 0 25px;
+        }
+        &__text {
+            font-size: 18px;
+        }
+    }
+}
+@media (max-width: 560px) {
+    .history {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 480px) {
+    .history {
+        margin-top: 40px;
+        &__inner {
+            margin: 0;
+            padding: 25px 0 25px;
+        }
+        &__text {
+            font-size: 18px;
+        }
+    }
+}
