@@ -68,21 +68,12 @@ try {
   })
 
   const sliderGiftBox = new Swiper('#productsBlock', {
+    spaceBetween: 20,
+    slidesPerView: 5,
+    slidesPerGroup: 1,
     navigation: {
-      nextEl: '.swiper-button-prev',
-      prevEl: '.swiper-button-next',
-    },
-    spaceBetween: 15,
-    breakpoints: {
-      1040: {
-        slidesPerView: 3,
-      },
-      820: {
-        slidesPerView: 2,
-      },
-      320: {
-        slidesPerView: 1,
-      },
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   })
 } catch (e) {}
