@@ -7,13 +7,14 @@
   font-family: $mainHeadingFont;
   font-weight: 600;
   &__triggers {
-    margin-bottom: 114px;
+    margin-bottom: 54px;
     display: flex;
     justify-content: space-between;
   }
   &__heading {
     white-space: nowrap;
     margin-left: 43px;
+    font-size: 20px;
     width: 50%;
     width: fit-content;
     position: relative;
@@ -22,15 +23,12 @@
     text-align-last: left;
 
     color: $mainWhtColor;
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 700;
     &::after {
       content: '';
       opacity: 0;
       transform: scaleX(0);
-    }
-    &:last-child {
-      width: 43.5%;
     }
     &._active {
       &::after {
