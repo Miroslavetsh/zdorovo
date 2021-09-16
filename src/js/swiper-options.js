@@ -53,7 +53,7 @@ try {
       nextEl: '.cabinet__slider--fullsize-rec--next',
       prevEl: '.cabinet__slider--fullsize-rec--prev',
     },
-    spaceBetween: 15,
+
     breakpoints: {
       1040: {
         slidesPerView: 3,
@@ -68,12 +68,36 @@ try {
   })
 
   const sliderGiftBox = new Swiper('#productsBlock', {
-    spaceBetween: 20,
-    slidesPerView: 5,
-    slidesPerGroup: 1,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 5,
+        slidesPerGroup: 1,
+      },
+      950: {
+        spaceBetween: 15,
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+      },
+      680: {
+        spaceBetween: 15,
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+      },
+      450: {
+        spaceBetween: 15,
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+      },
+      320: {
+        spaceBetween: 15,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
     },
   })
 } catch (e) {}

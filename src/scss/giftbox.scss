@@ -9,11 +9,22 @@
   &__left {
     max-width: 990px;
     width: 100%;
+    order: 0;
+    @media screen and (max-width: 1218px) {
+      width: 78.8%;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
   }
 
   &__right {
     max-width: 208px;
     width: 100%;
+    order: 1;
+    @media screen and (max-width: 1000px) {
+      order: 3;
+    }
   }
 
   &__box {
@@ -406,23 +417,23 @@
 
   .gb-swiper-container {
     position: relative;
-    overflow: hidden;
+    overflow-x: clip;
     width: 100%;
+    order: 3;
+    @media screen and (max-width: 1280px) {
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 1000px) {
+      order: 2;
+    }
   }
 
   .swiper-wrapper {
     margin: -20px 0;
     padding: 20px 0;
     max-width: 1102px;
-
-    margin: 0 auto;
     display: flex;
-  }
-
-  .swiper-slide {
-    min-width: 206px;
-    max-width: 206px;
-    width: 100%;
+    margin-left: 2px;
   }
 
   .swiper-button-prev {
@@ -479,5 +490,41 @@
     background-size: 100%;
     position: relative;
     bottom: 7px;
+  }
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.order__pack-info {
+  width: 100%;
+  margin-bottom: 38px;
+  order: 2;
+  @media screen and (max-width: 1000px) {
+    order: 1;
+  }
+}
+.order__pack-inner {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: 1000px) {
+    width: 98%;
+  }
+  .info__block {
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    span {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #88c74a;
+      margin-left: 12px;
+    }
   }
 }
