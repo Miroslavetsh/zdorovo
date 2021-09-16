@@ -1,93 +1,91 @@
 // Slider on index
 
 try {
-    const swiperIndex = new Swiper('.swiper-container', {
-        pagination: {
-            el: '.swiper__pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper__button--next',
-            prevEl: '.swiper__button--prev',
-        },
-        spaceBetween: 10,
-    })
+  const swiperIndex = new Swiper('.swiper-container', {
+    pagination: {
+      el: '.swiper__pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper__button--next',
+      prevEl: '.swiper__button--prev',
+    },
+    spaceBetween: 10,
+  })
 
-    const slider = new Swiper('.cabinet__slider', {
-        navigation: {
-            nextEl: '.swiper__button--next',
-            prevEl: '.swiper__button--prev',
-        },
-        spaceBetween: 15,
-        breakpoints: {
-            840: {
-                slidesPerView: 2,
-            },
-            320: {
-                slidesPerView: 1,
-            },
-        },
-    })
+  const slider = new Swiper('.cabinet__slider', {
+    navigation: {
+      nextEl: '.swiper__button--next',
+      prevEl: '.swiper__button--prev',
+    },
+    spaceBetween: 15,
+    breakpoints: {
+      840: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
+    },
+  })
 
-    const sliderFavourite = new Swiper('.cabinet__slider--fullsize-fav', {
-        navigation: {
-            nextEl: '.cabinet__slider--fullsize-fav--next',
-            prevEl: '.cabinet__slider--fullsize-fav--prev',
-        },
-        spaceBetween: 15,
-        breakpoints: {
-            1040: {
-                slidesPerView: 3,
-            },
-            820: {
-                slidesPerView: 2,
-            },
-            320: {
-                slidesPerView: 1,
-            },
-        },
-    })
+  const sliderFavourite = new Swiper('.cabinet__slider--fullsize-fav', {
+    navigation: {
+      nextEl: '.cabinet__slider--fullsize-fav--next',
+      prevEl: '.cabinet__slider--fullsize-fav--prev',
+    },
+    spaceBetween: 15,
+    breakpoints: {
+      1040: {
+        slidesPerView: 3,
+      },
+      820: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
+    },
+  })
 
-    const sliderRecommend = new Swiper('.cabinet__slider--fullsize-rec', {
-        navigation: {
-            nextEl: '.cabinet__slider--fullsize-rec--next',
-            prevEl: '.cabinet__slider--fullsize-rec--prev',
-        },
-        spaceBetween: 15,
-        breakpoints: {
-            1040: {
-                slidesPerView: 3,
-            },
-            820: {
-                slidesPerView: 2,
-            },
-            320: {
-                slidesPerView: 1,
-            },
-        },
-    })
+  const sliderRecommend = new Swiper('.cabinet__slider--fullsize-rec', {
+    navigation: {
+      nextEl: '.cabinet__slider--fullsize-rec--next',
+      prevEl: '.cabinet__slider--fullsize-rec--prev',
+    },
+    spaceBetween: 15,
+    breakpoints: {
+      1040: {
+        slidesPerView: 3,
+      },
+      820: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
+    },
+  })
 
-    const sliderGiftBox = new Swiper('#productsBlock', {
-        navigation: {
-            nextEl: '.swiper-button-prev',
-            prevEl: '.swiper-button-next',
-        },
-        spaceBetween: 15,
-        breakpoints: {
-            1040: {
-                slidesPerView: 3,
-            },
-            820: {
-                slidesPerView: 2,
-            },
-            320: {
-                slidesPerView: 1,
-            },
-        },
-    })
+  const sliderGiftBox = new Swiper('#productsBlock', {
+    navigation: {
+      nextEl: '.swiper-button-prev',
+      prevEl: '.swiper-button-next',
+    },
+    spaceBetween: 15,
+    breakpoints: {
+      1040: {
+        slidesPerView: 3,
+      },
+      820: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
+    },
+  })
 } catch (e) {}
-
-// ============================
 
 const MENU_TO_BURGER_WIDTH = 840
 const BODY = document.querySelector('html')
@@ -498,11 +496,15 @@ const ModalsInterface = (function () {
     return Array.from(document.querySelectorAll('.modal'))
   }
 
+  /**
+   * @param {Array | NodeList} buttonsToOpen
+   */
+
   class Modal {
     constructor({ modalElement, timeout, buttonsToOpen, isStoreModalClosedState, isModalVideo }) {
       this.modal = modalElement
       this.timeout = timeout // Number
-      //buttonsToOpen:Array | NodeList
+      
       this.openButtons = buttonsToOpen
       this.storeModalState = isStoreModalClosedState // Boolean
       this.isModalVideo = isModalVideo
@@ -606,7 +608,8 @@ try {
   })
 } catch {}
 
-/* Only For Roulette */
+// Only For Roulette
+
 try {
   const rouletteSection = document.querySelector('.roulette')
   const rouletteItems = rouletteSection.querySelectorAll('.roulette--bottom')
@@ -617,6 +620,4 @@ try {
       rouletteItem.classList.toggle('_hidden')
     })
   })
-} catch (e) {
-  console.log(e)
-}
+} catch (e) {}
