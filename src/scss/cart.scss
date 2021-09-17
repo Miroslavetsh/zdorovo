@@ -8,7 +8,7 @@
 
   background: $mainCompColor;
   border-top-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 
   text-align: center;
 
@@ -62,7 +62,7 @@
 }
 @media (max-width: 380px) {
   .shopping-cart {
-    max-width: 40px;
+    max-width: 60px;
     &__icon {
       max-width: 30px;
     }
