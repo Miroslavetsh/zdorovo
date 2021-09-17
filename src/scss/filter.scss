@@ -196,7 +196,7 @@
   .filter {
     max-width: 320px;
     padding-bottom: 30px;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     z-index: 20;
     left: -300px;
@@ -211,15 +211,15 @@
       opacity: 1;
       visibility: visible;
       padding: 10px;
-      width: 53.6px;
-      height: 53.6px;
+      width: 63.6px;
+      height: 63.6px;
       display: flex;
       justify-content: center;
       align-items: center;
       position: absolute;
       z-index: 100;
       top: 0;
-      right: -53.6px;
+      right: -63.6px;
 
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
@@ -242,8 +242,8 @@
     width: 280px;
     left: -285px;
     &__burger {
-      right: -36px;
-      max-width: 36px;
+      right: -54px;
+      max-width: 56px;
       max-height: 53.6px;
       img {
         max-width: 20px;

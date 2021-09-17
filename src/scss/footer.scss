@@ -24,6 +24,9 @@
   &__telephones {
     max-width: 376px;
     width: 100%;
+    a {
+      white-space: nowrap;
+    }
   }
   &__logo {
     width: 99px;
@@ -170,7 +173,6 @@
     }
     &__telephones {
       max-width: none;
-      width: 50%;
     }
     &__navigation {
       margin-top: -100px;
