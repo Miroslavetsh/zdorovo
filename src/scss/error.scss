@@ -16,13 +16,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 44px;
+    margin-bottom: 32px;
     &:last-child {
       margin-bottom: 0;
     }
   }
   &__title {
-    font-size: 30px;
+    font-size: 28px;
     text-transform: uppercase;
     font-weight: 700;
   }
@@ -39,7 +39,7 @@
   }
   &__desc {
     max-width: 613px;
-    font-size: 23px;
+    font-size: 20px;
     line-height: 1.24;
     color: #171717;
   }
@@ -49,6 +49,12 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    a {
+      max-width: 32px;
+      svg {
+        max-width: 32px;
+      }
+    }
   }
 }
 

@@ -21,7 +21,7 @@
   }
   &__green {
     padding-top: 188px;
-    padding-bottom: 307px;
+    padding-bottom: 80px;
     width: 32%;
 
     background: $mainCompColor;
@@ -30,6 +30,7 @@
     font-family: $mainHeadingFont;
     .title {
       max-width: 240px;
+      margin-bottom: 48px;
     }
   }
   &__title {
@@ -40,19 +41,19 @@
       display: block;
       margin-top: 10px;
 
-      font-size: 25px;
+      font-size: 16px;
     }
   }
   &__list {
     max-width: 360px;
     li {
-      font-size: 20px;
+      font-size: 16px;
       line-height: 2;
       font-weight: 600;
     }
   }
   &__white {
-    padding-bottom: 307px;
+    padding-bottom: 80px;
     margin-right: 70px;
     padding-top: 188px;
     max-width: 637px;
@@ -111,7 +112,7 @@
       }
     }
     &--mt {
-      margin-top: 187px;
+      margin-top: 88px;
     }
     &--horizontal {
       margin-top: 197px;
@@ -166,7 +167,7 @@
     display: flex;
     align-items: center;
     p {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.2;
       letter-spacing: -0.001em;
     }
@@ -268,7 +269,7 @@
       flex-direction: column;
     }
     &__green {
-      padding: 120px 20px 30px;
+      padding: 140px 20px 30px;
       width: 100%;
       display: flex;
       justify-content: space-between;
