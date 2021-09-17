@@ -53,7 +53,7 @@ try {
       nextEl: '.cabinet__slider--fullsize-rec--next',
       prevEl: '.cabinet__slider--fullsize-rec--prev',
     },
-    spaceBetween: 15,
+
     breakpoints: {
       1040: {
         slidesPerView: 3,
@@ -69,19 +69,34 @@ try {
 
   const sliderGiftBox = new Swiper('#productsBlock', {
     navigation: {
-      nextEl: '.swiper-button-prev',
-      prevEl: '.swiper-button-next',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-    spaceBetween: 15,
     breakpoints: {
-      1040: {
-        slidesPerView: 3,
+      1000: {
+        spaceBetween: 20,
+        slidesPerView: 5,
+        slidesPerGroup: 1,
       },
-      820: {
+      768: {
+        spaceBetween: 15,
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+      },
+      680: {
+        spaceBetween: 15,
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+      },
+      450: {
+        spaceBetween: 15,
         slidesPerView: 2,
+        slidesPerGroup: 1,
       },
       320: {
+        spaceBetween: 15,
         slidesPerView: 1,
+        slidesPerGroup: 1,
       },
     },
   })
@@ -162,7 +177,7 @@ try {
       lang.parentNode.addEventListener('click', () => {
         const currentLanguageImage = header.querySelector('.currentLanguage')
         currentLanguageImage.parentNode.innerHTML = `<img class="currentLanguage" src=${lang.getAttribute(
-          'src',
+          'src'
         )} alt="">`
       })
     })
@@ -294,10 +309,15 @@ try {
   triggers.addEventListener('click', (event) => {
     if (
       event.target.src &&
-      !event.target.parentNode.parentNode.classList.contains('product__row--play')
+      !event.target.parentNode.parentNode.classList.contains(
+        'product__row--play'
+      )
     ) {
       content.innerHTML = ''
-      content.insertAdjacentHTML('afterbegin', `<img src="${event.target.src}" alt="" />`)
+      content.insertAdjacentHTML(
+        'afterbegin',
+        `<img src="${event.target.src}" alt="" />`
+      )
     }
   })
 } catch (e) {}
@@ -306,15 +326,17 @@ try {
 
 try {
   const productSlide = document.querySelector('.productSlide')
-  productSlide.parentNode.querySelector('.showHideTable').addEventListener('click', function () {
-    productSlide.classList.toggle('_hidden')
-    this.classList.toggle('_hidden')
-    if (this.classList.contains('_hidden')) {
-      this.innerHTML = 'Детальніше'
-    } else {
-      this.innerHTML = 'Приховати'
-    }
-  })
+  productSlide.parentNode
+    .querySelector('.showHideTable')
+    .addEventListener('click', function () {
+      productSlide.classList.toggle('_hidden')
+      this.classList.toggle('_hidden')
+      if (this.classList.contains('_hidden')) {
+        this.innerHTML = 'Детальніше'
+      } else {
+        this.innerHTML = 'Приховати'
+      }
+    })
 } catch (e) {}
 
 // Register tabs
@@ -327,13 +349,15 @@ try {
     trigger.addEventListener('click', function () {
       triggers.forEach((trigger) => {
         trigger.classList.remove('_active')
-        registerTabs.parentNode.querySelectorAll('.register__content').forEach((content) => {
-          content.classList.remove('_active')
+        registerTabs.parentNode
+          .querySelectorAll('.register__content')
+          .forEach((content) => {
+            content.classList.remove('_active')
 
-          if (content.dataset['content'] === this.dataset['trigger']) {
-            content.classList.add('_active')
-          }
-        })
+            if (content.dataset['content'] === this.dataset['trigger']) {
+              content.classList.add('_active')
+            }
+          })
       })
       this.classList.add('_active')
     })
@@ -348,9 +372,9 @@ try {
   likeIconsInCard.forEach((icon) => {
     icon.addEventListener('click', function () {
       this.classList.toggle('_liked')
-      
+
       if (this.querySelector('.notify')) {
-          this.querySelector('.notify').classList.toggle('_hidden')
+        this.querySelector('.notify').classList.toggle('_hidden')
       }
     })
   })
@@ -362,7 +386,7 @@ try {
   const inputs = document.querySelectorAll('.register__input')
 
   const passwordInputs = Array.from(inputs).filter(
-    (input) => input.getAttribute('type') === 'password',
+    (input) => input.getAttribute('type') === 'password'
   )
 
   passwordInputs.forEach((input) => {
@@ -371,13 +395,15 @@ try {
       else if (this.type === 'text') this.type = 'password'
     }
 
-    input.parentNode.querySelector('img').addEventListener('click', function () {
-      if (input.type === 'password') {
-        input.type = 'text'
-      } else if (input.type === 'text') {
-        input.type = 'password'
-      }
-    })
+    input.parentNode
+      .querySelector('img')
+      .addEventListener('click', function () {
+        if (input.type === 'password') {
+          input.type = 'text'
+        } else if (input.type === 'text') {
+          input.type = 'password'
+        }
+      })
   })
 } catch (e) {}
 
@@ -407,8 +433,10 @@ try {
     profile.classList.toggle('_redacting')
 
     inputItems.forEach((item) => {
-      if (item.tagName.toLowerCase() === 'input') item.toggleAttribute('readonly')
-      if (item.tagName.toLowerCase() === 'select') item.toggleAttribute('disabled')
+      if (item.tagName.toLowerCase() === 'input')
+        item.toggleAttribute('readonly')
+      if (item.tagName.toLowerCase() === 'select')
+        item.toggleAttribute('disabled')
     })
   })
 } catch (e) {}
@@ -469,7 +497,9 @@ try {
 
   resetButtons.forEach((button) => {
     const nameOfFieldsToReset = button.dataset['reset']
-    const inputsToReset = document.querySelectorAll(`[data-to-reset="${nameOfFieldsToReset}"]`)
+    const inputsToReset = document.querySelectorAll(
+      `[data-to-reset="${nameOfFieldsToReset}"]`
+    )
 
     button.addEventListener('click', () => {
       inputsToReset.forEach((input) => {
@@ -485,9 +515,11 @@ try {
   const inputForUsersValue = document.querySelector('[data-reset-radios]')
 
   inputForUsersValue.addEventListener('click', () => {
-    inputForUsersValue.parentElement.querySelectorAll('input[type="radio"]').forEach((input) => {
-      input.checked = false
-    })
+    inputForUsersValue.parentElement
+      .querySelectorAll('input[type="radio"]')
+      .forEach((input) => {
+        input.checked = false
+      })
   })
 } catch (e) {}
 
@@ -501,10 +533,16 @@ const ModalsInterface = (function () {
    */
 
   class Modal {
-    constructor({ modalElement, timeout, buttonsToOpen, isStoreModalClosedState, isModalVideo }) {
+    constructor({
+      modalElement,
+      timeout,
+      buttonsToOpen,
+      isStoreModalClosedState,
+      isModalVideo,
+    }) {
       this.modal = modalElement
       this.timeout = timeout // Number
-      
+
       this.openButtons = buttonsToOpen
       this.storeModalState = isStoreModalClosedState // Boolean
       this.isModalVideo = isModalVideo
@@ -529,7 +567,10 @@ const ModalsInterface = (function () {
 
     _close() {
       if (this.storeModalState) {
-        localStorage.setItem(`modalWindow_${this.modal.dataset['modalName']}`, 'closedAndHidden')
+        localStorage.setItem(
+          `modalWindow_${this.modal.dataset['modalName']}`,
+          'closedAndHidden'
+        )
       }
 
       if (this.isModalVideo) {
@@ -561,11 +602,12 @@ const ModalsInterface = (function () {
 
       modalsArray.forEach((modal) => {
         const buttonsToOpen = document.querySelectorAll(
-          `[data-modal-open="${modal.dataset['modalName']}"]`,
+          `[data-modal-open="${modal.dataset['modalName']}"]`
         )
         // Auto open modal if timeout
         const timeout = Number(modal.dataset['timeout']) ?? 0
-        const isStoreModalClosedState = modal.dataset['storeState'] === 'true' ?? false
+        const isStoreModalClosedState =
+          modal.dataset['storeState'] === 'true' ?? false
         const isModalVideo = modal.querySelector('iframe') ? true : false
         const modalWindow = new Modal({
           modalElement: modal,
@@ -576,7 +618,8 @@ const ModalsInterface = (function () {
         })
 
         if (
-          localStorage.getItem(`modalWindow_${modal.dataset['modalName']}`) !== 'closedAndHidden'
+          localStorage.getItem(`modalWindow_${modal.dataset['modalName']}`) !==
+          'closedAndHidden'
         ) {
           if (modalWindow.timeout) modalWindow.openWithTimeout()
         }
@@ -602,7 +645,8 @@ try {
     trigger.addEventListener('click', () => {
       document.querySelectorAll('[data-content]').forEach((content) => {
         content.classList.add('_hided')
-        if (trigger.dataset.trigger === content.dataset.content) content.classList.remove('_hided')
+        if (trigger.dataset.trigger === content.dataset.content)
+          content.classList.remove('_hided')
       })
     })
   })
