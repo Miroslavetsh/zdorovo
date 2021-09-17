@@ -1,6 +1,6 @@
 .roulette {
   margin-top: 110px;
-  padding-bottom: 246px;
+  padding-bottom: 44px;
 
   transition: all 0.4s ease;
   &--mid {
@@ -27,7 +27,7 @@
   }
   &__subtitle {
     font-family: $mainHeadingFont;
-    font-size: 23px;
+    font-size: 16px;
     &:last-child {
       margin-left: 10px;
       font-size: 14px;
