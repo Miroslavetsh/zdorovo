@@ -782,12 +782,12 @@ body._fixed {
   font-family: "Montserrat";
   font-weight: 600;
   line-height: 1.18;
-  font-size: 36px;
+  font-size: 32px;
   text-align: center;
 }
 
 .title--main {
-  font-size: 48px;
+  font-size: 40px;
   color: #fff;
   text-align: left;
 }
@@ -1312,15 +1312,16 @@ textarea:focus:-ms-input-placeholder {
   max-width: 506px;
   width: 100%;
   margin-bottom: 49px;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 .preview__button {
   width: auto;
   display: inline-block;
-  padding: 20px 35px;
+  padding: 1.25rem 2rem;
   border: 1px solid #fff;
-  font-size: 23px;
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
   -webkit-transition: all 0.4s ease;
@@ -1348,19 +1349,19 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .prom__title {
-  margin-bottom: 64px;
+  margin-bottom: 34px;
 }
 
 .prom__subtitle {
   max-width: 320px;
   line-height: 1.4;
-  font-size: 23px;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
 .prom__description {
   max-width: 425px;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.23;
   margin-bottom: 30px;
 }
@@ -1392,7 +1393,7 @@ textarea:focus:-ms-input-placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 67px;
+  gap: 28px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1523,7 +1524,7 @@ textarea:focus:-ms-input-placeholder {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .swiper__buttons {
@@ -1597,7 +1598,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .swiper-wrapper {
-  margin-bottom: 80px;
+  margin-bottom: 32px;
 }
 
 .swiper-pagination-bullet {
@@ -1635,12 +1636,12 @@ textarea:focus:-ms-input-placeholder {
 
 .choose__img {
   max-width: 80px;
-  margin-bottom: 65px;
+  margin-bottom: 35px;
 }
 
 .choose__title {
   color: #fff;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .choose__cards {
@@ -1687,7 +1688,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .numbers__title {
-  margin-bottom: 96px;
+  margin-bottom: 66px;
 }
 
 .numbers__row {
@@ -1698,28 +1699,29 @@ textarea:focus:-ms-input-placeholder {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  margin-bottom: 98px;
+  margin-bottom: 36px;
 }
 
 .numbers__cards {
-  padding: 0 100px;
+  padding: 0 60px;
 }
 
 .numbers__card {
+  text-align: center;
   max-width: 320px;
   width: 100%;
 }
 
 .numbers__head {
-  margin-bottom: 35px;
-  font-size: 45px;
+  margin-bottom: 24px;
+  font-size: 40px;
   font-weight: 700;
   color: #88c74a;
   font-family: "Montserrat";
 }
 
 .numbers__txt {
-  font-size: 23px;
+  font-size: 16px;
   line-height: 1.19;
 }
 
@@ -1753,7 +1755,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .payment {
-  padding: 44px 0 208px;
+  padding: 44px 0 100px;
   background: #88c74a;
   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
@@ -1830,7 +1832,7 @@ textarea:focus:-ms-input-placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  row-gap: 100px;
+  row-gap: 40px;
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
@@ -1863,7 +1865,7 @@ textarea:focus:-ms-input-placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .payment__item img {
@@ -1874,7 +1876,6 @@ textarea:focus:-ms-input-placeholder {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  height: 40%;
   margin-left: 59px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1884,7 +1885,7 @@ textarea:focus:-ms-input-placeholder {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 14px;
-  margin-bottom: 34px;
+  margin-bottom: 14px;
 }
 
 .payment__list li {
@@ -1902,14 +1903,13 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .payment__subtitle {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   color: #fff;
 }
 
 .payment__text {
-  margin-top: -10px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.18;
   color: #e3f3d5;
@@ -1941,7 +1941,6 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .payment__questions {
-  max-width: 969px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1956,13 +1955,13 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .payment__trigger {
-  padding: 35px 30px 35px 0;
+  padding: 20px 20px 20px 0;
   width: 100%;
   background: transparent;
   position: relative;
   color: #fff;
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -2008,11 +2007,12 @@ textarea:focus:-ms-input-placeholder {
   position: absolute;
   top: 80px;
   visibility: hidden;
-  padding: 40px 20px;
+  padding: 20px 16px;
   border-bottom: 3px solid #fff;
   border-top: 3px solid #fff;
   opacity: 0;
-  font-size: 24px;
+  font-size: 16px;
+  line-height: 1.4;
   color: #fff;
   -webkit-transform-origin: top;
       -ms-transform-origin: top;
@@ -2071,6 +2071,7 @@ textarea:focus:-ms-input-placeholder {
 .footer__address {
   max-width: 417px;
   width: 100%;
+  font-size: 16px;
 }
 
 .footer__telephones {
@@ -2079,6 +2080,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .footer__telephones a {
+  font-size: 16px;
   white-space: nowrap;
 }
 
@@ -2100,7 +2102,7 @@ textarea:focus:-ms-input-placeholder {
 
 .footer__head {
   margin-bottom: 30px;
-  font-size: 24px;
+  font-size: 20px;
   color: #3bcd1b;
 }
 
@@ -2115,12 +2117,12 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .footer__soc a {
-  height: 40px;
-  width: 40px;
+  height: 28px;
+  width: 28px;
 }
 
 .footer__soc a svg {
-  max-width: 40px;
+  max-width: 28px;
 }
 
 .footer__soc a svg path {
@@ -2153,7 +2155,7 @@ textarea:focus:-ms-input-placeholder {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
 }
@@ -2169,12 +2171,12 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .footer__button {
-  padding: 16px 0;
+  padding: 8px 0;
   height: 50px;
   position: absolute;
   top: 0%;
   right: 95px;
-  max-width: 150px;
+  max-width: 100px;
   width: 100%;
   background: #fff;
   -webkit-transform: translateY(-50%);
@@ -2222,7 +2224,7 @@ textarea:focus:-ms-input-placeholder {
 
 .catalog {
   padding-top: 89px;
-  padding-bottom: 216px;
+  padding-bottom: 96px;
   -webkit-transition: -webkit-transform 0.4s ease;
   transition: -webkit-transform 0.4s ease;
   -o-transition: transform 0.4s ease;
@@ -2314,15 +2316,15 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .catalog__main--empty .catalog__title {
-  margin-bottom: 90px;
+  margin-bottom: 60px;
   font-family: "Montserrat";
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
 }
 
 .catalog__main--empty .catalog__subtitle {
   margin-bottom: 26px;
-  font-size: 25px;
+  font-size: 16px;
   font-weight: 500;
   font-family: "Montserrat";
 }
@@ -2380,7 +2382,7 @@ textarea:focus:-ms-input-placeholder {
 
 .catalog__main--empty .catalog__mail {
   margin-bottom: 39px;
-  font-size: 22px;
+  font-size: 16px;
   letter-spacing: 4%;
   font-weight: 500;
   color: #000;
@@ -2399,7 +2401,8 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .catalog__main--empty .catalog__phone {
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.4;
   font-weight: 600;
   color: #000;
 }
@@ -2475,7 +2478,7 @@ textarea:focus:-ms-input-placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 44px;
+  margin-bottom: 32px;
 }
 
 .error__blck:last-child {
@@ -2483,7 +2486,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .error__title {
-  font-size: 30px;
+  font-size: 28px;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -2502,7 +2505,7 @@ textarea:focus:-ms-input-placeholder {
 
 .error__desc {
   max-width: 613px;
-  font-size: 23px;
+  font-size: 20px;
   line-height: 1.24;
   color: #171717;
 }
@@ -2517,6 +2520,14 @@ textarea:focus:-ms-input-placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.error__soc a {
+  max-width: 32px;
+}
+
+.error__soc a svg {
+  max-width: 32px;
 }
 
 .thanks {
@@ -2549,19 +2560,19 @@ textarea:focus:-ms-input-placeholder {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 36px;
-  padding: 20px 104px;
+  padding: 16px 44px;
   line-height: 1.3;
-  border: 5px solid #88c74a;
+  border: 3px solid #88c74a;
 }
 
 .thanks__txt {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 300;
 }
 
 .thanks__txt span {
   color: #88c74a;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
 }
 
@@ -2570,13 +2581,13 @@ textarea:focus:-ms-input-placeholder {
   margin: 0 auto;
   margin-bottom: 34px;
   font-family: "Montserrat";
-  font-size: 20px;
+  font-size: 16px;
   color: #575757;
   text-align: center;
 }
 
 .thanks__advices {
-  margin-bottom: 105px;
+  margin-bottom: 50px;
 }
 
 .thanks__adv {
@@ -2586,8 +2597,8 @@ textarea:focus:-ms-input-placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 40px;
-  font-size: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -2596,8 +2607,8 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .thanks__adv img {
-  margin-right: 39px;
-  width: 63px;
+  margin-right: 20px;
+  width: 40px;
 }
 
 .thanks__block {
@@ -2625,7 +2636,7 @@ textarea:focus:-ms-input-placeholder {
 .thanks__block p {
   color: #fff;
   max-width: 817px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.22;
   text-align: left;
 }
@@ -3097,7 +3108,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .alsobuy {
-  padding: 120px 0;
+  padding: 60px 0;
 }
 
 .alsobuy__title {
@@ -3163,7 +3174,7 @@ textarea:focus:-ms-input-placeholder {
 
 .register__green {
   padding-top: 188px;
-  padding-bottom: 307px;
+  padding-bottom: 80px;
   width: 32%;
   background: #88c74a;
   -webkit-box-shadow: inset -4px 0px 5px rgba(0, 0, 0, 0.25);
@@ -3174,6 +3185,7 @@ textarea:focus:-ms-input-placeholder {
 
 .register__green .title {
   max-width: 240px;
+  margin-bottom: 48px;
 }
 
 .register__title {
@@ -3184,7 +3196,7 @@ textarea:focus:-ms-input-placeholder {
 .register__title span {
   display: block;
   margin-top: 10px;
-  font-size: 25px;
+  font-size: 16px;
 }
 
 .register__list {
@@ -3192,13 +3204,13 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .register__list li {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 2;
   font-weight: 600;
 }
 
 .register__white {
-  padding-bottom: 307px;
+  padding-bottom: 80px;
   margin-right: 70px;
   padding-top: 188px;
   max-width: 637px;
@@ -3268,7 +3280,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .register__content--mt {
-  margin-top: 187px;
+  margin-top: 88px;
 }
 
 .register__content--horizontal {
@@ -3350,7 +3362,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .register__activation p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: -0.001em;
 }
@@ -3467,7 +3479,7 @@ textarea:focus:-ms-input-placeholder {
 
 .roulette {
   margin-top: 110px;
-  padding-bottom: 246px;
+  padding-bottom: 44px;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -3509,7 +3521,7 @@ textarea:focus:-ms-input-placeholder {
 
 .roulette__subtitle {
   font-family: "Montserrat";
-  font-size: 23px;
+  font-size: 16px;
 }
 
 .roulette__subtitle:last-child {
@@ -4026,13 +4038,13 @@ textarea:focus:-ms-input-placeholder {
 .nav__item {
   margin-right: 25px;
   color: #fff;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .nav__item a {
   white-space: nowrap;
   color: inherit;
-  font-size: 16px;
+  font-size: 14px;
   -webkit-transition: color 0.4s ease;
   -o-transition: color 0.4s ease;
   transition: color 0.4s ease;
@@ -4672,7 +4684,7 @@ textarea:focus:-ms-input-placeholder {
   padding: 18px 23px 18px 18px;
   cursor: pointer;
   background: #f1f1f1;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: #7d7d7d;
 }
@@ -4907,7 +4919,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .work__text p {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 35px;
 }
 
@@ -4976,6 +4988,7 @@ textarea:focus:-ms-input-placeholder {
 
 .history__text p {
   text-indent: 38px;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 
@@ -5007,14 +5020,14 @@ textarea:focus:-ms-input-placeholder {
   min-width: 25%;
   text-align: center;
   font-family: "Montserrat";
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
 }
 
 .propose__square {
   margin: 0 auto;
-  width: 54px;
-  height: 54px;
+  width: 32px;
+  height: 32px;
   padding: 6px;
   margin-bottom: 17px;
   display: -webkit-box;
@@ -5043,7 +5056,7 @@ textarea:focus:-ms-input-placeholder {
   padding-left: 104px;
   margin-bottom: 22px;
   max-width: 1010px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2;
   font-family: "Montserrat";
 }
@@ -5102,6 +5115,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .socials__right a {
+  max-width: 32px;
   display: block;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -5115,7 +5129,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .socials__right svg {
-  max-width: 52px;
+  max-width: 32px;
   height: 53px;
   width: 100%;
 }
@@ -5142,7 +5156,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .agreement__list li {
-  font-size: 20px;
+  font-size: 14px;
   margin-bottom: 20px;
   list-style: none;
 }
@@ -5862,7 +5876,7 @@ textarea:focus:-ms-input-placeholder {
 
 .order {
   margin-top: 125px;
-  margin-bottom: 250px;
+  margin-bottom: 60px;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -5934,15 +5948,15 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .order__subtitle {
-  margin-bottom: 37px;
-  font-size: 23px;
+  margin-bottom: 24px;
+  font-size: 16px;
   font-weight: 500;
   font-family: "Montserrat";
 }
 
 .order__additional {
   margin-bottom: 12px;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.17;
   font-family: "Montserrat";
 }
@@ -5951,6 +5965,7 @@ textarea:focus:-ms-input-placeholder {
   position: relative;
   padding-left: 28px;
   display: inline-block;
+  font-size: 14px;
 }
 
 .order__checkbox--label span:before,
@@ -6063,28 +6078,28 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .order .form__block input::-webkit-input-placeholder, .order .form__block textarea::-webkit-input-placeholder, .order .form__block select::-webkit-input-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   color: #888;
   opacity: 0.8;
   font-weight: 300;
 }
 
 .order .form__block input::-moz-placeholder, .order .form__block textarea::-moz-placeholder, .order .form__block select::-moz-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   color: #888;
   opacity: 0.8;
   font-weight: 300;
 }
 
 .order .form__block input:-ms-input-placeholder, .order .form__block textarea:-ms-input-placeholder, .order .form__block select:-ms-input-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   color: #888;
   opacity: 0.8;
   font-weight: 300;
 }
 
 .order .form__block input::-ms-input-placeholder, .order .form__block textarea::-ms-input-placeholder, .order .form__block select::-ms-input-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   color: #888;
   opacity: 0.8;
   font-weight: 300;
@@ -6093,7 +6108,7 @@ textarea:focus:-ms-input-placeholder {
 .order .form__block input::placeholder,
 .order .form__block textarea::placeholder,
 .order .form__block select::placeholder {
-  font-size: 16px;
+  font-size: 14px;
   color: #888;
   opacity: 0.8;
   font-weight: 300;
@@ -6475,6 +6490,7 @@ textarea:focus:-ms-input-placeholder {
   margin-bottom: 30px;
   font-weight: 500;
   font-size: 16px;
+  line-height: 1.4;
   font-family: "Montserrat";
 }
 
@@ -7499,7 +7515,7 @@ textarea:focus:-ms-input-placeholder {
   }
 
   .register__green {
-    padding: 120px 20px 30px;
+    padding: 140px 20px 30px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7805,7 +7821,7 @@ textarea:focus:-ms-input-placeholder {
 
 @media (max-width: 840px) {
   .title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .description {
@@ -7963,7 +7979,9 @@ textarea:focus:-ms-input-placeholder {
 
   .prom__image img {
     max-width: none;
-    width: 100%;
+    display: block;
+    width: auto;
+    margin: 0 auto;
   }
 
   .prom__text {
@@ -8544,7 +8562,7 @@ textarea:focus:-ms-input-placeholder {
   }
 
   .catalog__main--empty .catalog__subtitle {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .catalog__main--empty .catalog__mail {
@@ -9234,6 +9252,14 @@ textarea:focus:-ms-input-placeholder {
             align-items: center;
   }
 
+  .preview__title {
+    text-align: center;
+  }
+
+  .preview__description {
+    text-align: center;
+  }
+
   .preview__inner {
     padding-left: 0px;
   }
@@ -9243,8 +9269,12 @@ textarea:focus:-ms-input-placeholder {
   }
 
   .preview__button {
-    width: 100%;
+    margin: 0 auto;
     text-align: center;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .prom__form.card {
