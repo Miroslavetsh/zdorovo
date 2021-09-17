@@ -1762,7 +1762,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .payment__triggers {
-  margin-bottom: 114px;
+  margin-bottom: 54px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1774,6 +1774,7 @@ textarea:focus:-ms-input-placeholder {
 .payment__heading {
   white-space: nowrap;
   margin-left: 43px;
+  font-size: 20px;
   width: 50%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1783,7 +1784,7 @@ textarea:focus:-ms-input-placeholder {
   -moz-text-align-last: left;
        text-align-last: left;
   color: #fff;
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -1793,10 +1794,6 @@ textarea:focus:-ms-input-placeholder {
   -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
           transform: scaleX(0);
-}
-
-.payment__heading:last-child {
-  width: 43.5%;
 }
 
 .payment__heading._active::after {
@@ -2079,6 +2076,10 @@ textarea:focus:-ms-input-placeholder {
 .footer__telephones {
   max-width: 376px;
   width: 100%;
+}
+
+.footer__telephones a {
+  white-space: nowrap;
 }
 
 .footer__logo {
@@ -4988,7 +4989,7 @@ textarea:focus:-ms-input-placeholder {
 
 .propose__title {
   margin-bottom: 80px;
-  text-align: left;
+  text-align: center;
 }
 
 .propose__blocks {
@@ -5004,12 +5005,14 @@ textarea:focus:-ms-input-placeholder {
 
 .propose__item {
   min-width: 25%;
+  text-align: center;
   font-family: "Montserrat";
   font-size: 30px;
   font-weight: 500;
 }
 
 .propose__square {
+  margin: 0 auto;
   width: 54px;
   height: 54px;
   padding: 6px;
@@ -5070,6 +5073,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .socials__mail {
+  margin: 0 auto;
   display: block;
   margin-bottom: 62px;
   text-decoration: underline;
@@ -5080,6 +5084,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .socials__phones a {
+  margin: 0 auto;
   display: block;
 }
 
@@ -5124,7 +5129,7 @@ textarea:focus:-ms-input-placeholder {
 
 .agreement__title {
   margin-bottom: 38px;
-  text-align: left;
+  text-align: center;
 }
 
 .agreement__text {
@@ -8456,19 +8461,26 @@ textarea:focus:-ms-input-placeholder {
   }
 
   .propose__square {
+    margin: unset;
     margin-right: 10px;
   }
 
   .propose__item {
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
     margin-bottom: 35px;
     width: 100%;
-    text-align: center;
   }
 
   .propose__item:last-child {
@@ -8572,7 +8584,7 @@ textarea:focus:-ms-input-placeholder {
   .filter {
     max-width: 320px;
     padding-bottom: 30px;
-    position: absolute;
+    position: fixed;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -8593,8 +8605,8 @@ textarea:focus:-ms-input-placeholder {
     opacity: 1;
     visibility: visible;
     padding: 10px;
-    width: 53.6px;
-    height: 53.6px;
+    width: 63.6px;
+    height: 63.6px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -8607,7 +8619,7 @@ textarea:focus:-ms-input-placeholder {
     position: absolute;
     z-index: 100;
     top: 0;
-    right: -53.6px;
+    right: -63.6px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     background: #88c74a;
@@ -8853,7 +8865,6 @@ textarea:focus:-ms-input-placeholder {
 
   .footer__telephones {
     max-width: none;
-    width: 50%;
   }
 
   .footer__navigation {
@@ -9463,8 +9474,8 @@ textarea:focus:-ms-input-placeholder {
   }
 
   .filter__burger {
-    right: -36px;
-    max-width: 36px;
+    right: -54px;
+    max-width: 56px;
     max-height: 53.6px;
   }
 
