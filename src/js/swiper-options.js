@@ -73,12 +73,12 @@ try {
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      1200: {
+      1000: {
         spaceBetween: 20,
         slidesPerView: 5,
         slidesPerGroup: 1,
       },
-      950: {
+      768: {
         spaceBetween: 15,
         slidesPerView: 4,
         slidesPerGroup: 1,
