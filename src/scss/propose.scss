@@ -6,7 +6,7 @@
   &__title {
     margin-bottom: 80px;
 
-    text-align: left;
+    text-align: center;
   }
   &__blocks {
     display: flex;
@@ -16,13 +16,15 @@
   &__item {
     min-width: 25%;
 
+    text-align: center;
     font-family: $mainHeadingFont;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
   }
   &__square {
-    width: 54px;
-    height: 54px;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
     padding: 6px;
     margin-bottom: 17px;
     display: flex;
@@ -63,15 +65,19 @@
       text-align: center;
     }
     &__square {
+      margin: unset;
       margin-right: 10px;
     }
     &__item {
+      max-width: 240px;
+      width: 100%;
+      margin: 0 auto;
       display: flex;
+      justify-content: flex-start;
       align-items: center;
+      text-align: center;
       margin-bottom: 35px;
       width: 100%;
-
-      text-align: center;
       &:last-child {
         margin-bottom: 0;
       }

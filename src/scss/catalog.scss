@@ -1,6 +1,6 @@
 .catalog {
   padding-top: 89px;
-  padding-bottom: 216px;
+  padding-bottom: 96px;
 
   transition: transform 0.4s ease;
   &__sort {
@@ -63,15 +63,15 @@
         display: flex;
       }
       .catalog__title {
-        margin-bottom: 90px;
+        margin-bottom: 60px;
         font-family: $mainHeadingFont;
-        font-size: 30px;
+        font-size: 24px;
         font-weight: 700;
       }
       .catalog__subtitle {
         margin-bottom: 26px;
 
-        font-size: 25px;
+        font-size: 16px;
         font-weight: 500;
         font-family: $mainHeadingFont;
       }
@@ -108,7 +108,7 @@
       }
       .catalog__mail {
         margin-bottom: 39px;
-        font-size: 22px;
+        font-size: 16px;
         letter-spacing: 4%;
         font-weight: 500;
         color: $mainBlckColor;
@@ -120,7 +120,8 @@
         flex-direction: column;
       }
       .catalog__phone {
-        font-size: 20px;
+        font-size: 16px;
+        line-height: 1.4;
         font-weight: 600;
         color: $mainBlckColor;
       }
@@ -237,7 +238,7 @@
           }
         }
         .catalog__subtitle {
-          font-size: 20px;
+          font-size: 16px;
         }
         .catalog__mail {
           margin-bottom: 10px;

@@ -1,6 +1,6 @@
 .order {
   margin-top: 125px;
-  margin-bottom: 250px;
+  margin-bottom: 60px;
 
   transition: all 0.4s ease;
   &__inner {
@@ -53,15 +53,15 @@
     margin-bottom: 40px;
   }
   &__subtitle {
-    margin-bottom: 37px;
+    margin-bottom: 24px;
 
-    font-size: 23px;
+    font-size: 16px;
     font-weight: 500;
     font-family: $mainHeadingFont;
   }
   &__additional {
     margin-bottom: 12px;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.17;
     font-family: $mainHeadingFont;
   }
@@ -71,6 +71,7 @@
         position: relative;
         padding-left: 28px;
         display: inline-block;
+        font-size: 14px;
         &:before,
         &:after {
           content: '';
@@ -172,7 +173,7 @@
 
         border: 1px solid #ebebeb;
         &::placeholder {
-          font-size: 16px;
+          font-size: 14px;
           color: #888;
           opacity: 0.8;
           font-weight: 300;

@@ -28,14 +28,15 @@
     width: 100%;
     margin-bottom: 49px;
 
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.2;
   }
   &__button {
     width: auto;
     display: inline-block;
-    padding: 20px 35px;
+    padding: 1.25rem 2rem;
     border: 1px solid $mainWhtColor;
-    font-size: 23px;
+    font-size: 16px;
     font-weight: 500;
     color: $mainWhtColor;
 
@@ -48,6 +49,7 @@
   &__image {
     width: 50%;
     max-width: 464px;
+    min-height: 100%;
     img {
       max-width: 100%;
     }
@@ -63,8 +65,8 @@
     &__image {
       width: 100%;
       max-width: none;
-      opacity: 0.4;
       bottom: -30%;
+      right: -30%;
       z-index: 0;
       pointer-events: none;
       position: absolute;
@@ -88,7 +90,7 @@
     min-height: auto;
     padding-top: 170px;
     &__title {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     &__description {
       margin-bottom: 30px;
@@ -99,29 +101,28 @@
 @media (max-width: 720px) {
   .preview {
     padding-top: 140px;
-    &__title {
-      margin-bottom: 20px;
-    }
-    &__description {
-      margin-bottom: 30px;
-    }
   }
 }
 
 @media (max-width: 440px) {
   .preview {
+    &__title {
+      text-align: center;
+    }
+    &__description {
+      text-align: center;
+    }
     &__inner {
       padding-left: 0px;
     }
     &__button {
       font-size: 18px;
     }
-    &__image {
-      display: none;
-    }
     &__button {
-      width: 100%;
+      margin: 0 auto;
       text-align: center;
+      display: block;
+      width: fit-content;
     }
   }
 }

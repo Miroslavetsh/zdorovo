@@ -20,10 +20,15 @@
   &__address {
     max-width: 417px;
     width: 100%;
+    font-size: 16px;
   }
   &__telephones {
     max-width: 376px;
     width: 100%;
+    a {
+      font-size: 16px;
+      white-space: nowrap;
+    }
   }
   &__logo {
     width: 99px;
@@ -40,7 +45,7 @@
   &__head {
     margin-bottom: 30px;
 
-    font-size: 24px;
+    font-size: 20px;
     color: $secCompColor;
   }
   &__soc {
@@ -48,10 +53,10 @@
     justify-content: space-between;
     margin-bottom: 40px;
     a {
-      height: 40px;
-      width: 40px;
+      height: 28px;
+      width: 28px;
       svg {
-        max-width: 40px;
+        max-width: 28px;
         path {
           transition: all 0.4s ease;
         }
@@ -91,7 +96,7 @@
     flex-direction: column;
     gap: 16px;
 
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: $mainWhtColor;
     a {
@@ -104,12 +109,12 @@
     font-size: 15px;
   }
   &__button {
-    padding: 16px 0;
+    padding: 8px 0;
     height: 50px;
     position: absolute;
     top: 0%;
     right: 95px;
-    max-width: 150px;
+    max-width: 100px;
     width: 100%;
     background: $mainWhtColor;
 
@@ -170,7 +175,6 @@
     }
     &__telephones {
       max-width: none;
-      width: 50%;
     }
     &__navigation {
       margin-top: -100px;
