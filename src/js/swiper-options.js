@@ -100,4 +100,6 @@ try {
       },
     },
   })
-} catch (e) {}
+} catch (err) {
+  console.error(err)
+}
