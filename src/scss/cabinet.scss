@@ -13,6 +13,10 @@
     z-index: 5;
     background: #fff;
   }
+  &__orders {
+    max-height: 1000px;
+    overflow-x: auto;
+  }
   &__main {
     width: 64%;
     margin-bottom: 77px;
@@ -273,6 +277,11 @@
       background: #ebebeb;
 
       transform: translate(-50%);
+    }
+    &._spinning {
+      img {
+        animation: spin 1s ease-in-out;
+      }
     }
     img {
       margin-right: 20px;
@@ -562,6 +571,16 @@
     margin-top: 0;
   }
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 1024px) {
   .cabinet {
     &__inner {
