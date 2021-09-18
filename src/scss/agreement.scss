@@ -10,17 +10,14 @@
   &__text {
     font-family: $mainHeadingFont;
     line-height: 1.4;
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      transition: all 0.4s ease-in-out;
+    }
   }
   &__subtitle {
     font-size: 20px;
-  }
-  &__list {
-    li {
-      font-size: 14px;
-      margin-bottom: 20px;
-
-      list-style: none;
-    }
   }
 }
 @media (max-width: 440px) {

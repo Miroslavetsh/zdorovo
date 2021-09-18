@@ -47,3 +47,6 @@ function upToTop() {
 
 /* === Roulette === */
 @@include('roulette.js')
+
+/* === Agreement === */
+@@include('lazyloading.js')
