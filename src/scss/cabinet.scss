@@ -28,6 +28,12 @@
       }
     }
   }
+  &__card {
+    .card__like {
+      left: 10px;
+      top: 0;
+    }
+  }
   &__main.cabinet__main--fullsize {
     width: 100%;
     .cabinet__cards {
@@ -251,6 +257,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    .cabinet__img:hover {
+      img {
+        display: block;
+      }
+    }
   }
   &__repeat {
     position: relative;
@@ -309,6 +320,7 @@
   }
   .swiper-wrapper {
     margin-bottom: 0;
+    align-items: flex-end;
   }
   &__slide {
     .cabinet__card {
