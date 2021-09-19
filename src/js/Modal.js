@@ -75,7 +75,6 @@ const ModalsInterface = (function () {
   return {
     init: function () {
       const modalsArray = searchEveryModal()
-
       modalsArray.forEach((modal) => {
         const buttonsToOpen = document.querySelectorAll(
           `[data-modal-open="${modal.dataset['modalName']}"]`

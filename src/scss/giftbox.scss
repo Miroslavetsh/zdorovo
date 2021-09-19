@@ -7,9 +7,6 @@
   &__open {
     width: 100%;
     height: 100%;
-    background: url('../img/large-box/large-box-empty.png') center center
-      no-repeat;
-    background-size: contain;
   }
   &__left {
     max-width: 990px;
@@ -648,5 +645,89 @@
       color: #88c74a;
       margin-left: 12px;
     }
+  }
+}
+
+.giftbox__packages-wrapper {
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 22px 130px 136px 152px;
+  @media screen and (max-width: 1200px) {
+    padding: 50px 0;
+    width: 100%;
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 50px 0;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 20px 0;
+  }
+
+  h3 {
+    margin-bottom: 89px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: black;
+    width: 100%;
+    text-align: center;
+    @media screen and (max-width: 1000px) {
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 480px) {
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+    @media screen and (max-width: 380px) {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+  }
+
+  .giftbox__packages-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 1200px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 720px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 620px) {
+      width: 100%;
+    }
+  }
+  .giftbox__packages {
+    width: 297px;
+    height: 297px;
+    position: relative;
+    cursor: pointer;
+    @media screen and (max-width: 680px) {
+      height: 200px;
+    }
+    @media screen and (max-width: 380px) {
+      height: 150px;
+    }
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+  .first__giftbox-package {
+    background: url('../img/large-box/large-box.png') center center no-repeat;
+    background-size: contain;
+  }
+  .second__giftbox-package {
+    background: url('../img/large-box/large-box-2.png') center center no-repeat;
+    background-size: contain;
   }
 }

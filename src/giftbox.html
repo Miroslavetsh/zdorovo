@@ -52,7 +52,7 @@
                                         Клікніть на товар у стрічці, щоб додати його в набір
                                     </div> 
 
-                                    <div class="giftbox__open">
+                                    <div class="giftbox__open"> <!---Поменять путь к картинке закрытой коробке, когда giftbox собран. (Все картинки giftbox находятся в img/large-box)-->
 
                                     </div>
                                 </div>
@@ -346,6 +346,17 @@
 
         </section>
         @@include('_footer.html')
+    </div>
+    <div class="modal" data-modal-name="sertifi" data-timeout="1000" data-store-state="false">
+        <div class="modal__body">
+            <div class="giftbox__packages-wrapper">
+                <h3>Оберіть набір, який будемо збирати</h3>
+                <div class="giftbox__packages-inner">
+                    <div class="giftbox__packages first__giftbox-package" data-close data-img="./img/large-box/large-box-empty.png"></div>
+                    <div class="giftbox__packages second__giftbox-package" data-close data-img="./img/large-box/large-box-empty-2.png"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

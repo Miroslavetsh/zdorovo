@@ -19,6 +19,7 @@ function upToTop() {
 @@include('card-like.js')
 @@include('copying.js')
 @@include('Modal.js')
+@@include('giftbox.js')
 
 /* === Homepage === */
 @@include('payment-tabs.js')
