@@ -100,7 +100,9 @@ try {
       },
     },
   })
-} catch (e) {}
+} catch (err) {
+  console.error(err)
+}
 
 const MENU_TO_BURGER_WIDTH = 840
 const BODY = document.querySelector('html')
@@ -116,6 +118,7 @@ function upToTop() {
   })
 }
 
+/* === Every page === */
 // Header
 try {
   const header = document.querySelector('.header')
@@ -182,7 +185,9 @@ try {
       })
     })
   }
-} catch (e) {}
+} catch (err) {
+  console.error(err)
+}
 
 // Cards plus / minus
 
@@ -204,165 +209,9 @@ try {
         +this.parentNode.querySelector('input').value + 1
     })
   })
-} catch {}
-
-// Tabs on index page
-
-try {
-  const paymentHeads = document.querySelectorAll('.payment__heading')
-  const paymentContents = document.querySelectorAll('.payment__content')
-  const paymentTriggers = document.querySelectorAll('.payment__trigger')
-  const paymentBodies = document.querySelectorAll('.payment__body')
-
-  paymentHeads.forEach(function (head) {
-    head.addEventListener('click', activateHead)
-  })
-
-  paymentTriggers.forEach(function (trigger) {
-    trigger.addEventListener('click', activateTrigger)
-  })
-
-  function activateHead() {
-    paymentHeads.forEach((head) => {
-      head.classList.remove('_active')
-    })
-    this.classList.add('_active')
-    activateTab(this.dataset['tabOrder'])
-  }
-
-  function activateTab(tabOrder) {
-    paymentContents.forEach((cont) => {
-      if (tabOrder === cont.dataset['tab']) {
-        cont.classList.add('_active')
-      } else {
-        cont.classList.remove('_active')
-      }
-    })
-  }
-
-  function activateTrigger() {
-    if (this.classList.contains('_active')) {
-      paymentTriggers.forEach((trigger) => {
-        trigger.classList.remove('_active')
-      })
-    } else {
-      paymentTriggers.forEach((trigger) => {
-        trigger.classList.remove('_active')
-      })
-      this.classList.add('_active')
-    }
-    activateBody(this.dataset['trigger'])
-  }
-
-  function activateBody(order) {
-    paymentBodies.forEach((body) => {
-      if (order === body.dataset['body']) {
-        body.classList.toggle('_active')
-      } else {
-        body.classList.remove('_active')
-      }
-    })
-  }
-} catch {}
-
-// Catalog sorting
-
-try {
-  const catalogSorting = document.querySelector('.catalogSorting')
-  let catalogLinks = catalogSorting.querySelectorAll('.catalog__link')
-
-  catalogLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-      catalogLinks.forEach((link) => {
-        link.classList.remove('_active')
-      })
-
-      this.classList.add('_active')
-    })
-  })
-} catch {}
-
-// Catalog filter
-
-try {
-  const filter = document.querySelector('.filter')
-  const filterTriggers = filter.querySelectorAll('.filterTrigger')
-  const filterBurger = filter.querySelector('.filterBurger')
-
-  filterTriggers.forEach((trigger) => {
-    trigger.addEventListener('click', () => {
-      trigger.parentNode.classList.toggle('_active')
-    })
-  })
-
-  filterBurger.addEventListener('click', () => {
-    filter.classList.toggle('_active')
-  })
-} catch {}
-
-// Gallery in product card
-
-try {
-  const triggers = document.querySelector('.galleryTriggers')
-  const content = document.querySelector('.galleryContent')
-
-  triggers.addEventListener('click', (event) => {
-    if (
-      event.target.src &&
-      !event.target.parentNode.parentNode.classList.contains(
-        'product__row--play'
-      )
-    ) {
-      content.innerHTML = ''
-      content.insertAdjacentHTML(
-        'afterbegin',
-        `<img src="${event.target.src}" alt="" />`
-      )
-    }
-  })
-} catch (e) {}
-
-// Product table slide
-
-try {
-  const productSlide = document.querySelector('.productSlide')
-  productSlide.parentNode
-    .querySelector('.showHideTable')
-    .addEventListener('click', function () {
-      productSlide.classList.toggle('_hidden')
-      this.classList.toggle('_hidden')
-      if (this.classList.contains('_hidden')) {
-        this.innerHTML = 'Детальніше'
-      } else {
-        this.innerHTML = 'Приховати'
-      }
-    })
-} catch (e) {}
-
-// Register tabs
-
-try {
-  const registerTabs = document.querySelector('.register__tabs')
-  const triggers = registerTabs.querySelectorAll('.register__title')
-
-  triggers.forEach((trigger) => {
-    trigger.addEventListener('click', function () {
-      triggers.forEach((trigger) => {
-        trigger.classList.remove('_active')
-        registerTabs.parentNode
-          .querySelectorAll('.register__content')
-          .forEach((content) => {
-            content.classList.remove('_active')
-
-            if (content.dataset['content'] === this.dataset['trigger']) {
-              content.classList.add('_active')
-            }
-          })
-      })
-      this.classList.add('_active')
-    })
-  })
-} catch (e) {}
+} catch (err) {
+  console.error(err)
+}
 
 // Card Like
 
@@ -378,87 +227,9 @@ try {
       }
     })
   })
-} catch (e) {}
-
-// Eye in register
-
-try {
-  const inputs = document.querySelectorAll('.register__input')
-
-  const passwordInputs = Array.from(inputs).filter(
-    (input) => input.getAttribute('type') === 'password'
-  )
-
-  passwordInputs.forEach((input) => {
-    input.toggleType = function () {
-      if (this.type === 'password') this.type = 'text'
-      else if (this.type === 'text') this.type = 'password'
-    }
-
-    input.parentNode
-      .querySelector('img')
-      .addEventListener('click', function () {
-        if (input.type === 'password') {
-          input.type = 'text'
-        } else if (input.type === 'text') {
-          input.type = 'password'
-        }
-      })
-  })
-} catch (e) {}
-
-// Cabinet orders toggler in aside block
-
-try {
-  const orders = document.querySelectorAll('.order')
-
-  orders.forEach((order) => {
-    const showMoreOrderButton = order.querySelector('.showMoreOrderInfo')
-
-    showMoreOrderButton.addEventListener('click', () => {
-      order.querySelector('.cabinet__hidden').classList.toggle('_opened')
-      showMoreOrderButton.classList.toggle('_active')
-    })
-  })
-} catch (e) {}
-
-// Cabinet profile
-
-try {
-  const profile = document.querySelector('.cabinetProfile')
-  const redactorButton = profile.querySelector('.rewriteProfileButton')
-  const inputItems = profile.querySelectorAll('.inputedItem')
-
-  redactorButton.addEventListener('click', () => {
-    profile.classList.toggle('_redacting')
-
-    inputItems.forEach((item) => {
-      if (item.tagName.toLowerCase() === 'input')
-        item.toggleAttribute('readonly')
-      if (item.tagName.toLowerCase() === 'select')
-        item.toggleAttribute('disabled')
-    })
-  })
-} catch (e) {}
-
-// Order show hidden part
-
-try {
-  const orderBlocks = document.querySelectorAll('.orderBlock')
-  const orderInputs = document.querySelectorAll('.showHidden')
-
-  orderInputs.forEach((input) => {
-    orderBlocks.forEach((block) => {
-      input.addEventListener('click', () => {
-        if ([...block.querySelectorAll('.showHidden')].includes(input))
-          block.classList.remove('_hidden')
-        else {
-          block.classList.add('_hidden')
-        }
-      })
-    })
-  })
-} catch (e) {}
+} catch (err) {
+  console.error(err)
+}
 
 // Copying
 
@@ -490,39 +261,11 @@ try {
       }
     })
   })
-} catch (e) {}
+} catch (err) {
+  console.error(err)
+}
 
-try {
-  const resetButtons = document.querySelectorAll('.resetButton')
-
-  resetButtons.forEach((button) => {
-    const nameOfFieldsToReset = button.dataset['reset']
-    const inputsToReset = document.querySelectorAll(
-      `[data-to-reset="${nameOfFieldsToReset}"]`
-    )
-
-    button.addEventListener('click', () => {
-      inputsToReset.forEach((input) => {
-        input.value = ''
-      })
-    })
-  })
-} catch (e) {}
-
-// Sertificate prices button
-
-try {
-  const inputForUsersValue = document.querySelector('[data-reset-radios]')
-
-  inputForUsersValue.addEventListener('click', () => {
-    inputForUsersValue.parentElement
-      .querySelectorAll('input[type="radio"]')
-      .forEach((input) => {
-        input.checked = false
-      })
-  })
-} catch (e) {}
-
+// Modal
 const ModalsInterface = (function () {
   const searchEveryModal = () => {
     return Array.from(document.querySelectorAll('.modal'))
@@ -599,7 +342,6 @@ const ModalsInterface = (function () {
   return {
     init: function () {
       const modalsArray = searchEveryModal()
-
       modalsArray.forEach((modal) => {
         const buttonsToOpen = document.querySelectorAll(
           `[data-modal-open="${modal.dataset['modalName']}"]`
@@ -636,6 +378,336 @@ const ModalsInterface = (function () {
 
 ModalsInterface.init()
 
+const giftBoxes = document.querySelector('.giftbox__packages-inner')
+const giftBoxPreview = document.querySelector('.giftbox__open')
+function loadGiftBox(event) {
+  if (event.target.classList.contains('giftbox__packages')) {
+    const boxImg = event.target.dataset.img
+    giftBoxPreview.style.background = `url("${boxImg}") center center no-repeat`
+    giftBoxPreview.style.backgroundSize = 'contain'
+    console.log(event.target)
+  }
+}
+giftBoxes.addEventListener('click', loadGiftBox)
+
+
+/* === Homepage === */
+// Tabs on index page
+
+try {
+  const paymentHeads = document.querySelectorAll('.payment__heading')
+  const paymentContents = document.querySelectorAll('.payment__content')
+  const paymentTriggers = document.querySelectorAll('.payment__trigger')
+  const paymentBodies = document.querySelectorAll('.payment__body')
+
+  paymentHeads.forEach(function (head) {
+    head.addEventListener('click', activateHead)
+  })
+
+  paymentTriggers.forEach(function (trigger) {
+    trigger.addEventListener('click', activateTrigger)
+  })
+
+  function activateHead() {
+    paymentHeads.forEach((head) => {
+      head.classList.remove('_active')
+    })
+    this.classList.add('_active')
+    activateTab(this.dataset['tabOrder'])
+  }
+
+  function activateTab(tabOrder) {
+    paymentContents.forEach((cont) => {
+      if (tabOrder === cont.dataset['tab']) {
+        cont.classList.add('_active')
+      } else {
+        cont.classList.remove('_active')
+      }
+    })
+  }
+
+  function activateTrigger() {
+    if (this.classList.contains('_active')) {
+      paymentTriggers.forEach((trigger) => {
+        trigger.classList.remove('_active')
+      })
+    } else {
+      paymentTriggers.forEach((trigger) => {
+        trigger.classList.remove('_active')
+      })
+      this.classList.add('_active')
+    }
+    activateBody(this.dataset['trigger'])
+  }
+
+  function activateBody(order) {
+    paymentBodies.forEach((body) => {
+      if (order === body.dataset['body']) {
+        body.classList.toggle('_active')
+      } else {
+        body.classList.remove('_active')
+      }
+    })
+  }
+} catch (err) {
+  console.error(err)
+}
+
+
+/* === Catalog === */
+// Catalog sorting
+
+try {
+  const catalogSorting = document.querySelector('.catalogSorting')
+  let catalogLinks = catalogSorting.querySelectorAll('.catalog__link')
+
+  catalogLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      catalogLinks.forEach((link) => {
+        link.classList.remove('_active')
+      })
+
+      this.classList.add('_active')
+    })
+  })
+} catch (err) {
+  console.error(err)
+}
+
+// Catalog filter
+
+try {
+  const filter = document.querySelector('.filter')
+  const filterTriggers = filter.querySelectorAll('.filterTrigger')
+  const filterBurger = filter.querySelector('.filterBurger')
+
+  filterTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      trigger.parentNode.classList.toggle('_active')
+    })
+  })
+
+  filterBurger.addEventListener('click', () => {
+    filter.classList.toggle('_active')
+  })
+} catch (err) {
+  console.error(err)
+}
+
+
+/* === Product === */
+// Gallery in product card
+
+try {
+  const triggers = document.querySelector('.galleryTriggers')
+  const content = document.querySelector('.galleryContent')
+
+  triggers.addEventListener('click', (event) => {
+    if (
+      event.target.src &&
+      !event.target.parentNode.parentNode.classList.contains(
+        'product__row--play'
+      )
+    ) {
+      content.innerHTML = ''
+      content.insertAdjacentHTML(
+        'afterbegin',
+        `<img src="${event.target.src}" alt="" />`
+      )
+    }
+  })
+} catch (err) {
+  console.error(err)
+}
+
+// Product table slide in cabinet
+
+try {
+  const productSlide = document.querySelector('.productSlide')
+  productSlide.parentNode
+    .querySelector('.showHideTable')
+    .addEventListener('click', function () {
+      productSlide.classList.toggle('_hidden')
+      this.classList.toggle('_hidden')
+      if (this.classList.contains('_hidden')) {
+        this.innerHTML = 'Детальніше'
+      } else {
+        this.innerHTML = 'Приховати'
+      }
+    })
+} catch (err) {
+  console.error(err)
+}
+
+
+/* === Register === */
+// Register tabs
+
+try {
+  const registerTabs = document.querySelector('.register__tabs')
+  const triggers = registerTabs.querySelectorAll('.register__title')
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', function () {
+      triggers.forEach((trigger) => {
+        trigger.classList.remove('_active')
+        registerTabs.parentNode
+          .querySelectorAll('.register__content')
+          .forEach((content) => {
+            content.classList.remove('_active')
+
+            if (content.dataset['content'] === this.dataset['trigger']) {
+              content.classList.add('_active')
+            }
+          })
+      })
+      this.classList.add('_active')
+    })
+  })
+} catch (err) {
+  console.error(err)
+}
+
+// Eye in register
+
+try {
+  const inputs = document.querySelectorAll('.register__input')
+
+  const passwordInputs = Array.from(inputs).filter(
+    (input) => input.getAttribute('type') === 'password'
+  )
+
+  passwordInputs.forEach((input) => {
+    input.toggleType = function () {
+      if (this.type === 'password') this.type = 'text'
+      else if (this.type === 'text') this.type = 'password'
+    }
+
+    input.parentNode
+      .querySelector('img')
+      .addEventListener('click', function () {
+        if (input.type === 'password') {
+          input.type = 'text'
+        } else if (input.type === 'text') {
+          input.type = 'password'
+        }
+      })
+  })
+} catch (err) {
+  console.error(err)
+}
+
+
+/* === Cabinet === */
+// Cabinet orders toggler in aside block
+
+try {
+  const orders = document.querySelectorAll('.order')
+
+  orders.forEach((order) => {
+    const showMoreOrderButton = order.querySelector('.showMoreOrderInfo')
+
+    showMoreOrderButton.addEventListener('click', () => {
+      order.querySelector('.cabinet__hidden').classList.toggle('_opened')
+      showMoreOrderButton.classList.toggle('_active')
+    })
+  })
+
+  const repeatButtons = document.querySelectorAll('.cabinet__repeat')
+
+  repeatButtons.forEach((elem) => {
+    elem.addEventListener('click',() => {
+      elem.classList.add('_spinning')
+      setTimeout(() => {
+        elem.classList.remove('_spinning')
+      }, 1000);
+    })
+  })
+} catch (err) {
+  console.error(err)
+}
+
+// Cabinet profile
+
+try {
+  const profile = document.querySelector('.cabinetProfile')
+  const redactorButton = profile.querySelector('.rewriteProfileButton')
+  const inputItems = profile.querySelectorAll('.inputedItem')
+
+  redactorButton.addEventListener('click', () => {
+    profile.classList.toggle('_redacting')
+
+    inputItems.forEach((item) => {
+      if (item.tagName.toLowerCase() === 'input')
+        item.toggleAttribute('readonly')
+      if (item.tagName.toLowerCase() === 'select')
+        item.toggleAttribute('disabled')
+    })
+  })
+} catch (err) {
+  console.error(err)
+}
+
+// Order show hidden part
+
+try {
+  const orderBlocks = document.querySelectorAll('.orderBlock')
+  const orderInputs = document.querySelectorAll('.showHidden')
+
+  orderInputs.forEach((input) => {
+    orderBlocks.forEach((block) => {
+      input.addEventListener('click', () => {
+        if ([...block.querySelectorAll('.showHidden')].includes(input))
+          block.classList.remove('_hidden')
+        else {
+          block.classList.add('_hidden')
+        }
+      })
+    })
+  })
+} catch (err) {
+  console.error(err)
+}
+
+// Reset button
+
+try {
+  const resetButtons = document.querySelectorAll('.resetButton')
+
+  resetButtons.forEach((button) => {
+    const nameOfFieldsToReset = button.dataset['reset']
+    const inputsToReset = document.querySelectorAll(
+      `[data-to-reset="${nameOfFieldsToReset}"]`
+    )
+
+    button.addEventListener('click', () => {
+      inputsToReset.forEach((input) => {
+        input.value = ''
+      })
+    })
+  })
+} catch (err) {
+  console.error(err)
+}
+
+
+/* === Sertificate === */
+// Sertificate prices button
+
+try {
+  const inputForUsersValue = document.querySelector('[data-reset-radios]')
+
+  inputForUsersValue.addEventListener('click', () => {
+    inputForUsersValue.parentElement
+      .querySelectorAll('input[type="radio"]')
+      .forEach((input) => {
+        input.checked = false
+      })
+  })
+} catch (err) {
+  console.error(err)
+}
+
 // Order form block delivery accordion
 
 try {
@@ -650,8 +722,12 @@ try {
       })
     })
   })
-} catch {}
+} catch (err) {
+  console.error(err)
+}
 
+
+/* === Roulette === */
 // Only For Roulette
 
 try {
@@ -664,4 +740,47 @@ try {
       rouletteItem.classList.toggle('_hidden')
     })
   })
-} catch (e) {}
+} catch (err) {
+  console.error(err)
+}
+
+
+/* === Agreement === */
+// Lazy loading
+
+try {
+  const lazyLoadingContainer = document.querySelector('.agreement__text')
+  const ELEMENTS_TO_SHOW = 12
+
+  let lastIndexOfShowingText = 0
+
+  let observeElement = document.createElement('div')
+  observeElement.className = 'lazy-last-element'
+  observeElement.style.height = '2px'
+  let allChildren = Array.from(lazyLoadingContainer.children)
+  // Format container
+  lazyLoadingContainer.insertAdjacentElement('afterend', observeElement)
+  lazyLoadingContainer.innerHTML = ''
+
+  let callback = function (entries) {
+    if (entries[0].isIntersecting) {
+      setTimeout(() => {
+        lastIndexOfShowingText += ELEMENTS_TO_SHOW
+
+        let childrenToInsert = allChildren.slice(0, lastIndexOfShowingText)
+
+        childrenToInsert.forEach((child) => {
+          lazyLoadingContainer.insertAdjacentElement('beforeend', child)
+          child.animate([{ opacity: 0 }, { opacity: 0.5 }, { opacity: 1 }])
+        })
+      }, 400)
+    }
+  }
+
+  // Observing last element in viewport
+  let observer = new IntersectionObserver(callback)
+  observer.observe(observeElement)
+} catch (err) {
+  console.warn(err)
+}
+
