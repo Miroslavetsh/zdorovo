@@ -29,8 +29,54 @@
     }
   }
   &__card {
+    .card__img {
+      overflow: hidden;
+      position: relative;
+      picture {
+        img {
+          width: auto;
+        }
+        &:nth-child(2) {
+          img {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            visibility: hidden;
+            opacity: 0;
+
+            transform: translateX(-50%);
+          }
+        }
+      }
+      &--toggle {
+        &:hover {
+          & > img {
+            opacity: 0;
+            &:nth-child(2) {
+              opacity: 1;
+              pointer-events: none;
+              visibility: visible;
+            }
+          }
+          picture {
+            &:nth-child(1) {
+              img {
+                opacity: 0;
+              }
+            }
+            &:nth-child(2) {
+              img {
+                pointer-events: none;
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
     .card__like {
-      left: 10px;
+      left: 0;
       top: 0;
     }
   }
@@ -212,25 +258,6 @@
       }
     }
   }
-  &__img {
-    position: relative;
-    &--dn {
-      display: none;
-      position: absolute;
-    }
-    &:hover {
-      img {
-        display: none;
-      }
-      .cabinet__img--dn {
-        display: block;
-        position: static;
-      }
-    }
-    img {
-      max-width: 100%;
-    }
-  }
   &__hidden {
     max-height: 0;
     overflow: hidden;
@@ -242,7 +269,10 @@
       overflow: visible;
     }
     .cabinet__img {
-      max-width: 95px;
+      img {
+        width: 100%;
+        max-width: 95px;
+      }
     }
   }
   &__subtitle {
@@ -257,11 +287,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    .cabinet__img:hover {
-      img {
-        display: block;
-      }
-    }
   }
   &__repeat {
     position: relative;
