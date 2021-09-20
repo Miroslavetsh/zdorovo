@@ -106,9 +106,22 @@
     margin-bottom: 45px;
   }
   &__title {
+    padding-right: 30px;
     margin-bottom: 42px;
 
     text-align: left;
+    position: relative;
+  }
+  &__logout {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    max-width: 20px;
+
+    transform: translateY(-50%);
+    svg {
+      width: 20px;
+    }
   }
   &__desc {
     margin-bottom: 33px;
@@ -195,7 +208,7 @@
       font-size: 20px;
     }
   }
-  &__order {
+  &__order.order {
     margin-bottom: 10px;
     padding: 20px 55px 18px 17px;
 
