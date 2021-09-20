@@ -150,6 +150,7 @@
   }
 
   &__inner {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     min-width: 0;
@@ -280,6 +281,11 @@
         background: transparent;
       }
     }
+  }
+
+  .instruction {
+    max-width: 220px;
+    font-size: 14px;
   }
 
   &__aside {
@@ -511,7 +517,7 @@
 
   .swiper-wrapper {
     margin: -20px 0;
-    padding: 20px 0;
+    padding: 20px 10px;
     max-width: 1102px;
     display: flex;
     margin-left: 2px;
@@ -519,24 +525,24 @@
 
   .swiper-button-prev {
     position: absolute;
-    top: 50%;
+    top: 86%;
     left: 0;
     z-index: 10;
 
     cursor: pointer;
 
-    transform: translateY(-50%);
+    transform: translate(-100%, -50%);
   }
 
   .swiper-button-next {
     position: absolute;
-    top: 50%;
+    top: 86%;
     right: 0;
     z-index: 10;
 
     cursor: pointer;
 
-    transform: translateY(-50%);
+    transform: translate(100%, -50%);
   }
 
   .swiper-button-disabled {
