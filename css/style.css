@@ -1175,14 +1175,6 @@ textarea:focus:-ms-input-placeholder {
   max-width: 20px;
 }
 
-.header__logout {
-  margin-right: 10px;
-}
-
-.header__logout svg {
-  width: 20px;
-}
-
 .header__toggle {
   cursor: pointer;
 }
@@ -1327,7 +1319,7 @@ textarea:focus:-ms-input-placeholder {
 .preview__button {
   width: auto;
   display: inline-block;
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 3.5rem;
   border: 1px solid #fff;
   font-size: 16px;
   font-weight: 500;
@@ -3597,11 +3589,7 @@ textarea:focus:-ms-input-placeholder {
   left: calc(50% - 2px);
 }
 
-.roulette__button:hover span:nth-child(n) {
-  visibility: hidden;
-}
-
-.roulette__button span:nth-child(1) {
+.roulette__button._animated span:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
@@ -3614,7 +3602,7 @@ textarea:focus:-ms-input-placeholder {
           animation: animate_line_1 4s linear infinite;
 }
 
-.roulette__button span:nth-child(2) {
+.roulette__button._animated span:nth-child(2) {
   position: absolute;
   top: 0;
   right: 0;
@@ -3629,7 +3617,7 @@ textarea:focus:-ms-input-placeholder {
           animation-delay: 2s;
 }
 
-.roulette__button span:nth-child(3) {
+.roulette__button._animated span:nth-child(3) {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -3642,7 +3630,7 @@ textarea:focus:-ms-input-placeholder {
           animation: animate_line_3 4s linear infinite;
 }
 
-.roulette__button span:nth-child(4) {
+.roulette__button._animated span:nth-child(4) {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -5330,8 +5318,24 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .cabinet__title {
+  padding-right: 30px;
   margin-bottom: 42px;
   text-align: left;
+  position: relative;
+}
+
+.cabinet__logout {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  max-width: 20px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.cabinet__logout svg {
+  width: 20px;
 }
 
 .cabinet__desc {
@@ -5452,7 +5456,7 @@ textarea:focus:-ms-input-placeholder {
   font-size: 20px;
 }
 
-.cabinet__order {
+.cabinet__order.order {
   margin-bottom: 10px;
   padding: 20px 55px 18px 17px;
   border: 1px solid #ebebeb;
@@ -5460,7 +5464,7 @@ textarea:focus:-ms-input-placeholder {
   font-family: "Roboto", sans-serif;
 }
 
-.cabinet__order:last-child {
+.cabinet__order.order:last-child {
   margin-bottom: 0;
 }
 
@@ -7176,6 +7180,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .giftbox__inner {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7280,6 +7285,11 @@ textarea:focus:-ms-input-placeholder {
 
 .giftbox__form .giftbox__multiply button {
   background: transparent;
+}
+
+.giftbox .instruction {
+  max-width: 220px;
+  font-size: 14px;
 }
 
 .giftbox__aside {
@@ -7524,7 +7534,7 @@ textarea:focus:-ms-input-placeholder {
 
 .giftbox .swiper-wrapper {
   margin: -20px 0;
-  padding: 20px 0;
+  padding: 20px 10px;
   max-width: 1102px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7534,24 +7544,24 @@ textarea:focus:-ms-input-placeholder {
 
 .giftbox .swiper-button-prev {
   position: absolute;
-  top: 50%;
+  top: 86%;
   left: 0;
   z-index: 10;
   cursor: pointer;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translate(-100%, -50%);
+      -ms-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
 }
 
 .giftbox .swiper-button-next {
   position: absolute;
-  top: 50%;
+  top: 86%;
   right: 0;
   z-index: 10;
   cursor: pointer;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translate(100%, -50%);
+      -ms-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
 }
 
 .giftbox .swiper-button-disabled svg path {
