@@ -386,7 +386,6 @@ try {
       const boxImg = event.target.dataset.img
       giftBoxPreview.style.background = `url("${boxImg}") center center no-repeat`
       giftBoxPreview.style.backgroundSize = 'contain'
-      console.log(event.target)
     }
   }
   giftBoxes.addEventListener('click', loadGiftBox)
@@ -736,7 +735,7 @@ try {
 
 try {
   function getFullDate() {
-    return new Date().toISOString().split('T')[0].replaceAll('-', '.')
+    return new Date().toISOString().split('T')[0].replaceAll('-', '.').split('.').reverse().join('.')
   }
 
   class Images {
@@ -746,9 +745,9 @@ try {
       return [
         { id: 0, src: 'img/roulette/roulette.png', text: 'Вчора було:' },
         { id: 1, src: 'img/catalog/1.png', text: 'Позавчора було:' },
-        { id: 2, src: 'img/slider/1.jpg', text: '2021.09.18 було:' },
-        { id: 3, src: 'img/product/product.png', text: '2021.09.17 було:' },
-        { id: 4, src: 'img/404/error.png', text: '2021.09.16 було:' },
+        { id: 2, src: 'img/slider/1.jpg', text: '22.09.2021 було:' },
+        { id: 3, src: 'img/product/product.png', text: '21.09.2021 було:' },
+        { id: 4, src: 'img/404/error.png', text: '20.09.2021 було:' },
       ]
     }
   }
@@ -816,20 +815,16 @@ try {
   let allChildren = Array.from(lazyLoadingContainer.children)
   // Format container
   lazyLoadingContainer.insertAdjacentElement('afterend', observeElement)
-  lazyLoadingContainer.innerHTML = ''
 
-  let callback = function (entries) {
+  let callback = async function (entries) {
     if (entries[0].isIntersecting) {
-      setTimeout(() => {
-        lastIndexOfShowingText += ELEMENTS_TO_SHOW
+      lastIndexOfShowingText += ELEMENTS_TO_SHOW
 
-        let childrenToInsert = allChildren.slice(0, lastIndexOfShowingText)
+      let childrenToAnimate = allChildren.slice(0, lastIndexOfShowingText)
 
-        childrenToInsert.forEach((child) => {
-          lazyLoadingContainer.insertAdjacentElement('beforeend', child)
-          child.animate([{ opacity: 0 }, { opacity: 0.5 }, { opacity: 1 }])
-        })
-      }, 400)
+      childrenToAnimate.forEach((child) => {
+        child.classList.add('_animated')
+      })
     }
   }
 
