@@ -1,5 +1,7 @@
 .filter {
+  min-height: 320px;
   &__block {
+    margin-bottom: -10px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -24,7 +26,7 @@
     &--hits {
       a {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -195,11 +197,20 @@
 @media (max-width: 640px) {
   .filter {
     max-width: 320px;
-    padding-bottom: 30px;
-    position: fixed;
-    flex-direction: column;
-    z-index: 20;
     left: -300px;
+    &__body {
+      background: #fff;
+      max-width: 320px;
+      padding-bottom: 30px;
+      position: absolute;
+      // overflow-x: visible;
+      // overflow-y: scroll;
+      flex-direction: column;
+      z-index: 20;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
 
     background: $mainWhtColor;
 

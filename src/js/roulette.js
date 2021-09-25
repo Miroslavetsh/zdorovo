@@ -2,7 +2,7 @@
 
 try {
   function getFullDate() {
-    return new Date().toISOString().split('T')[0].replaceAll('-', '.')
+    return new Date().toISOString().split('T')[0].replaceAll('-', '.').split('.').reverse().join('.')
   }
 
   class Images {
@@ -12,9 +12,9 @@ try {
       return [
         { id: 0, src: 'img/roulette/roulette.png', text: 'Вчора було:' },
         { id: 1, src: 'img/catalog/1.png', text: 'Позавчора було:' },
-        { id: 2, src: 'img/slider/1.jpg', text: '2021.09.18 було:' },
-        { id: 3, src: 'img/product/product.png', text: '2021.09.17 було:' },
-        { id: 4, src: 'img/404/error.png', text: '2021.09.16 було:' },
+        { id: 2, src: 'img/slider/1.jpg', text: '22.09.2021 було:' },
+        { id: 3, src: 'img/product/product.png', text: '21.09.2021 було:' },
+        { id: 4, src: 'img/404/error.png', text: '20.09.2021 було:' },
       ]
     }
   }

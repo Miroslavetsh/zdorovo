@@ -10,7 +10,7 @@
     margin-bottom: 36px;
   }
   &__cards {
-    padding: 0 60px;
+    padding: 0 160px;
   }
   &__card {
     text-align: center;
@@ -28,6 +28,14 @@
   &__txt {
     font-size: 16px;
     line-height: 1.19;
+  }
+}
+
+@media (max-width: 990px) {
+  .numbers {
+    &__cards {
+      padding: 0 30px;
+    }
   }
 }
 
@@ -58,13 +66,14 @@
 
 @media (max-width: 560px) {
   .numbers {
+    padding-top: 0;
     &__row {
       flex-wrap: wrap;
-      margin-bottom: 15px;
+      margin-bottom: 36px;
     }
     &__card {
       margin: 0 auto;
-      margin-bottom: 15px;
+      margin-bottom: 36px;
       &:last-child {
         margin-bottom: 0;
       }

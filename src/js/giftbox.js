@@ -6,7 +6,6 @@ try {
       const boxImg = event.target.dataset.img
       giftBoxPreview.style.background = `url("${boxImg}") center center no-repeat`
       giftBoxPreview.style.backgroundSize = 'contain'
-      console.log(event.target)
     }
   }
   giftBoxes.addEventListener('click', loadGiftBox)

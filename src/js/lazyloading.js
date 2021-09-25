@@ -12,20 +12,16 @@ try {
   let allChildren = Array.from(lazyLoadingContainer.children)
   // Format container
   lazyLoadingContainer.insertAdjacentElement('afterend', observeElement)
-  lazyLoadingContainer.innerHTML = ''
 
-  let callback = function (entries) {
+  let callback = async function (entries) {
     if (entries[0].isIntersecting) {
-      setTimeout(() => {
-        lastIndexOfShowingText += ELEMENTS_TO_SHOW
+      lastIndexOfShowingText += ELEMENTS_TO_SHOW
 
-        let childrenToInsert = allChildren.slice(0, lastIndexOfShowingText)
+      let childrenToAnimate = allChildren.slice(0, lastIndexOfShowingText)
 
-        childrenToInsert.forEach((child) => {
-          lazyLoadingContainer.insertAdjacentElement('beforeend', child)
-          child.animate([{ opacity: 0 }, { opacity: 0.5 }, { opacity: 1 }])
-        })
-      }, 400)
+      childrenToAnimate.forEach((child) => {
+        child.classList.add('_animated')
+      })
     }
   }
 

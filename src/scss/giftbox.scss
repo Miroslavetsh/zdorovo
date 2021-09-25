@@ -28,6 +28,11 @@
       order: 3;
       padding: 0;
     }
+    @media screen and (max-width: 420px) {
+      max-width: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__box {
@@ -234,6 +239,10 @@
     @media screen and (max-width: 580px) {
       width: 338px;
     }
+    @media screen and (max-width: 420px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
     @media screen and (max-width: 400px) {
       width: 100%;
     }
@@ -299,7 +308,7 @@
   &__title {
     margin: 17px 0;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 44px;
     font-family: Montserrat;
     @media screen and (max-width: 800px) {
@@ -309,6 +318,9 @@
     @media screen and (max-width: 480px) {
       font-size: 20px;
       margin: 9px 0 0;
+    }
+    @media screen and (max-width: 420px) {
+      font-size: 12px;
     }
   }
 
@@ -331,15 +343,19 @@
       height: 170px;
     }
     @media screen and (max-width: 420px) {
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       width: 100%;
       height: auto;
+      flex-direction: row;
     }
     .giftbox__item {
       list-style-type: none;
       margin-bottom: 10px;
       font-size: 14px;
       line-height: 16px;
+      @media screen and (max-width: 420px) {
+        width: 50%;
+      }
       &:last-child {
         margin-bottom: 0;
       }
@@ -356,6 +372,7 @@
   }
 
   &__card {
+    max-width: 240px;
     font-family: Roboto;
     padding: 18px 0;
     cursor: pointer;
@@ -493,6 +510,7 @@
     color: $mainCompColor;
     font-size: 18px;
     line-height: 21px;
+    font-weight: 500;
   }
 
   &__weight {
