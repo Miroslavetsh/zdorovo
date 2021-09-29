@@ -1,17 +1,15 @@
 .roulette {
   margin-top: 110px;
-  padding-bottom: 44px;
+  padding-bottom: 144px;
 
   transition: all 0.4s ease;
-  @media screen and (max-width: 768px) {
-    padding-top: 0;
-  }
   &--mid {
     height: 268px;
     background: $mainCompColor;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
   }
   &--bottom {
+    margin-bottom: -120px;
     transform: translateY(-41px);
     &:last-child {
       transform: translateY(-50%);
@@ -20,6 +18,9 @@
       }
       @media screen and (max-width: 768px) {
         transform: translateY(-16%);
+        &.animate_on_press {
+          padding-bottom: 0;
+        }
       }
       .roulette__bottom {
         align-items: unset;
@@ -220,6 +221,7 @@
   }
   &__description {
     padding-top: 64px;
+    padding-left: 32px;
   }
   &__prom {
     display: inline-block;
@@ -254,7 +256,7 @@
     }
   }
   &__desc {
-    margin-bottom: 120px;
+    margin-bottom: 60px;
     padding-top: 70px;
     font-weight: 500;
     font-size: 18px;
