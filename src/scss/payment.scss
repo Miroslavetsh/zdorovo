@@ -9,41 +9,46 @@
   &__triggers {
     margin-bottom: 54px;
     display: flex;
-    justify-content: space-between;
   }
   &__heading {
     white-space: nowrap;
-    margin-left: 43px;
-    font-size: 20px;
+    padding-left: 43px;
     width: 50%;
-    width: fit-content;
     position: relative;
 
     background: transparent;
-    text-align-last: left;
+    text-align: left;
 
     color: $mainWhtColor;
     font-size: 24px;
     font-weight: 700;
-    &::after {
-      content: '';
-      opacity: 0;
-      transform: scaleX(0);
+    &:last-child {
+      padding-left: 84px;
     }
-    &._active {
+    span {
+      position: relative;
       &::after {
         content: '';
-        position: absolute;
-        height: 3px;
-        width: 100%;
-        left: 0;
-        opacity: 1;
-        background: $mainWhtColor;
-        bottom: -15px;
+        opacity: 0;
+        transform: scaleX(0);
+      }
+    }
+    &._active {
+      span {
+        &::after {
+          content: '';
+          position: absolute;
+          height: 3px;
+          width: 100%;
+          left: 0;
+          opacity: 1;
+          background: $mainWhtColor;
+          bottom: -15px;
 
-        transition: all 0.4s ease;
-        transform-origin: center;
-        transform: scaleX(1);
+          transition: all 0.4s ease;
+          transform-origin: center;
+          transform: scaleX(1);
+        }
       }
     }
   }
@@ -91,7 +96,7 @@
   &__item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 36px;
     &:first-child {
       margin-bottom: 40px;
     }
@@ -171,7 +176,7 @@
     font-weight: 500;
     border: 1px solid transparent;
 
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     &:hover {
       border: 1px solid #fff;
     }
@@ -276,6 +281,7 @@
     padding-bottom: 80px;
     &__heading {
       width: 100%;
+      padding-left: 0;
       white-space: normal;
       display: flex;
       justify-content: center;
@@ -283,7 +289,7 @@
 
       text-align: center;
       &:last-child {
-        width: 100%;
+        padding-left: 0;
       }
     }
     &__triggers {
