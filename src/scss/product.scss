@@ -73,9 +73,11 @@
   }
   &__content {
     max-width: 312px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     img {
       max-width: 100%;
-      margin-top: 60px;
     }
   }
   &__row {
@@ -411,9 +413,7 @@
       flex-direction: column-reverse;
     }
     &__content {
-      img {
-        margin-top: 0;
-      }
+      margin: 0 auto;
     }
     &__buttons {
       flex-wrap: wrap;
