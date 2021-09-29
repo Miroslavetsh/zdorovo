@@ -68,6 +68,7 @@ try {
   })
 
   const sliderGiftBox = new Swiper('#productsBlock', {
+    Infinity: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

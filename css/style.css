@@ -1772,29 +1772,29 @@ textarea:focus:-ms-input-placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .payment__heading {
   white-space: nowrap;
-  margin-left: 43px;
-  font-size: 20px;
+  padding-left: 43px;
   width: 50%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   position: relative;
   background: transparent;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align: left;
   color: #fff;
   font-size: 24px;
   font-weight: 700;
 }
 
-.payment__heading::after {
+.payment__heading:last-child {
+  padding-left: 84px;
+}
+
+.payment__heading span {
+  position: relative;
+}
+
+.payment__heading span::after {
   content: '';
   opacity: 0;
   -webkit-transform: scaleX(0);
@@ -1802,7 +1802,7 @@ textarea:focus:-ms-input-placeholder {
           transform: scaleX(0);
 }
 
-.payment__heading._active::after {
+.payment__heading._active span::after {
   content: '';
   position: absolute;
   height: 3px;
@@ -1891,7 +1891,7 @@ textarea:focus:-ms-input-placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
 }
 
 .payment__item:first-child {
@@ -2004,9 +2004,9 @@ textarea:focus:-ms-input-placeholder {
   font-size: 20px;
   font-weight: 500;
   border: 1px solid transparent;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .payment__trigger:hover {
@@ -2809,11 +2809,20 @@ textarea:focus:-ms-input-placeholder {
 
 .product__content {
   max-width: 312px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .product__content img {
   max-width: 100%;
-  margin-top: 60px;
 }
 
 .product__row {
@@ -3531,7 +3540,7 @@ textarea:focus:-ms-input-placeholder {
 
 .roulette {
   margin-top: 110px;
-  padding-bottom: 44px;
+  padding-bottom: 144px;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -3545,6 +3554,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .roulette--bottom {
+  margin-bottom: -120px;
   -webkit-transform: translateY(-41px);
       -ms-transform: translateY(-41px);
           transform: translateY(-41px);
@@ -3796,6 +3806,7 @@ textarea:focus:-ms-input-placeholder {
 
 .roulette__description {
   padding-top: 64px;
+  padding-left: 32px;
 }
 
 .roulette__prom {
@@ -3846,7 +3857,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .roulette__desc {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   padding-top: 70px;
   font-weight: 500;
   font-size: 18px;
@@ -4998,7 +5009,7 @@ textarea:focus:-ms-input-placeholder {
 
 .filter__label {
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 16px;
   white-space: nowrap;
 }
 
@@ -5509,6 +5520,7 @@ textarea:focus:-ms-input-placeholder {
 
 .cabinet__card .card__img picture img {
   width: auto;
+  height: auto;
 }
 
 .cabinet__card .card__img picture:nth-child(2) img {
@@ -5948,7 +5960,6 @@ textarea:focus:-ms-input-placeholder {
 
 .cabinet__card .cabinet__img {
   max-width: 117px;
-  margin: 0 16px;
 }
 
 .cabinet__card .cabinet__img picture,
@@ -5970,11 +5981,34 @@ textarea:focus:-ms-input-placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 25px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 8px;
 }
 
 .cabinet__info .cabinet__price {
+  color: #88c74a;
   font-size: 16px;
+}
+
+.cabinet__info .cabinet__gr {
+  white-space: nowrap;
+}
+
+.cabinet__info .card__additional {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #000;
+}
+
+.cabinet__info .card__additional .card__item {
+  width: 100%;
 }
 
 .cabinet__head {
@@ -7521,16 +7555,25 @@ textarea:focus:-ms-input-placeholder {
   width: 100%;
 }
 
-.giftbox__form._disabled input,
-.giftbox__form._disabled textarea {
-  background: #ffffff;
+.giftbox__form input,
+.giftbox__form textarea {
   color: rgba(136, 136, 136, 0.8);
+}
+
+.giftbox__form button {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.giftbox__form:not(._disabled) input,
+.giftbox__form:not(._disabled) textarea {
+  background: #ffffff;
+  color: #000;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.giftbox__form._disabled button {
+.giftbox__form:not(._disabled) button {
   color: black;
   background: #ffffff;
 }
@@ -7610,7 +7653,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .giftbox__card {
-  max-width: 240px;
+  width: 240px;
   font-family: Roboto;
   padding: 18px 0;
   cursor: pointer;
@@ -8814,6 +8857,7 @@ body {
 
   .payment__heading {
     width: 100%;
+    padding-left: 0;
     white-space: normal;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8828,7 +8872,7 @@ body {
   }
 
   .payment__heading:last-child {
-    width: 100%;
+    padding-left: 0;
   }
 
   .payment__triggers {
@@ -9045,14 +9089,14 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .roulette {
-    padding-top: 0;
-  }
-
   .roulette--bottom:last-child {
     -webkit-transform: translateY(-16%);
         -ms-transform: translateY(-16%);
             transform: translateY(-16%);
+  }
+
+  .roulette--bottom:last-child.animate_on_press {
+    padding-bottom: 0;
   }
 
   .roulette__socials {
@@ -9498,6 +9542,7 @@ body {
   }
 
   .filter {
+    position: absolute;
     max-width: 320px;
     left: -300px;
     background: #fff;
@@ -10381,8 +10426,8 @@ body {
             flex-direction: column-reverse;
   }
 
-  .product__content img {
-    margin-top: 0;
+  .product__content {
+    margin: 0 auto;
   }
 
   .product__buttons {
@@ -10491,7 +10536,8 @@ body {
   }
 
   .giftbox__title {
-    font-size: 12px;
+    line-height: 1.1;
+    margin-bottom: 12px;
   }
 
   .giftbox__list {
@@ -10587,6 +10633,10 @@ body {
   .filter__burger img {
     max-width: 20px;
     max-height: 30px;
+  }
+
+  .filter__label {
+    font-size: 14px;
   }
 
   .cabinet__title {
