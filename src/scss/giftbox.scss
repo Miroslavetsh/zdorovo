@@ -229,6 +229,13 @@
     padding-top: 39px;
     max-width: 386px;
     width: 100%;
+    input,
+    textarea {
+      color: rgba(136, 136, 136, 0.8);
+    }
+    button {
+      background-color: rgba(#fff, 0.6);
+    }
     @media screen and (max-width: 880px) {
       max-width: 338px;
     }
@@ -247,11 +254,11 @@
       width: 100%;
     }
 
-    &._disabled {
+    &:not(._disabled) {
       input,
       textarea {
         background: #ffffff;
-        color: rgba(136, 136, 136, 0.8);
+        color: #000;
         transition: all 0.4s ease;
       }
       button {
@@ -320,7 +327,8 @@
       margin: 9px 0 0;
     }
     @media screen and (max-width: 420px) {
-      font-size: 12px;
+      line-height: 1.1;
+      margin-bottom: 12px;
     }
   }
 
@@ -372,7 +380,7 @@
   }
 
   &__card {
-    max-width: 240px;
+    width: 240px;
     font-family: Roboto;
     padding: 18px 0;
     cursor: pointer;
@@ -599,9 +607,6 @@
   }
 }
 
-// .swiper-slide {
-//   max-width: 206px;
-// }
 .wrapper {
   display: flex;
   justify-content: center;
