@@ -409,10 +409,10 @@
     }
     .card__additional {
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
       color: #000;
       .card__item {
-        width: 100%;
+        width: 50%;
       }
     }
   }
