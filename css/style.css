@@ -2897,6 +2897,10 @@ textarea:focus:-ms-input-placeholder {
   font-size: 30px;
 }
 
+.product__prices .product__price {
+  color: #88c74a;
+}
+
 .product__prices .product__price--old {
   margin-right: 0;
   color: #9b9b9b;
@@ -2910,11 +2914,14 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .product__prices .card__additional .card__item {
+  margin-left: -12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
-  width: 100%;
 }
 
 .product__prices .card__additional .card__item span {
@@ -6014,15 +6021,11 @@ textarea:focus:-ms-input-placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   color: #000;
 }
 
 .cabinet__info .card__additional .card__item {
-  width: 100%;
+  width: 50%;
 }
 
 .cabinet__head {
