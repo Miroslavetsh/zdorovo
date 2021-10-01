@@ -2874,6 +2874,9 @@ textarea:focus:-ms-input-placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -6011,10 +6014,13 @@ textarea:focus:-ms-input-placeholder {
 .cabinet__info .cabinet__price {
   color: #88c74a;
   font-size: 16px;
+  width: 50%;
 }
 
 .cabinet__info .cabinet__gr {
   white-space: nowrap;
+  width: 50%;
+  text-align: right;
 }
 
 .cabinet__info .card__additional {
@@ -6026,6 +6032,7 @@ textarea:focus:-ms-input-placeholder {
 
 .cabinet__info .card__additional .card__item {
   width: 50%;
+  white-space: nowrap;
 }
 
 .cabinet__head {
@@ -10666,6 +10673,10 @@ body {
 }
 
 @media screen and (max-width: 380px) {
+  .product__prices .card__additional .card__item {
+    width: 100%;
+  }
+
   .giftbox__packages-wrapper h3 {
     margin-bottom: 15px;
     font-size: 20px;
