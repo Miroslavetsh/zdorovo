@@ -135,6 +135,7 @@
       font-size: 30px;
     }
     .product__price {
+      color: $mainCompColor;
       &--old {
         margin-right: 0;
 
@@ -149,9 +150,10 @@
     }
     .card__additional {
       .card__item {
+        margin-left: -12px;
         display: flex;
+        align-items: center;
         font-size: 18px;
-        width: 100%;
         span {
           display: inline-block;
           margin-left: 8px;
