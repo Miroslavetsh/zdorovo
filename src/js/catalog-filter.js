@@ -14,6 +14,4 @@ try {
   filterBurger.addEventListener('click', () => {
     filter.classList.toggle('_active')
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}

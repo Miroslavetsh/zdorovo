@@ -22,6 +22,4 @@ try {
       }, 1000);
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}

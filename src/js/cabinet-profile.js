@@ -15,6 +15,4 @@ try {
         item.toggleAttribute('disabled')
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}

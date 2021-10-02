@@ -18,6 +18,4 @@ try {
         +this.parentNode.querySelector('input').value + 1
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}

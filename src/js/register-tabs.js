@@ -21,6 +21,4 @@ try {
       this.classList.add('_active')
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}

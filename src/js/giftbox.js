@@ -9,6 +9,4 @@ try {
     }
   }
   giftBoxes.addEventListener('click', loadGiftBox)
-} catch (err) {
-  console.error(err)
-}
+} catch {}

@@ -62,6 +62,4 @@ try {
     },
     { once: true }
   )
-} catch (err) {
-  console.error(err)
-}
+} catch {}

@@ -10,6 +10,4 @@ try {
         input.checked = false
       })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}

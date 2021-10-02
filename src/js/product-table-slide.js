@@ -13,6 +13,4 @@ try {
         this.innerHTML = 'Приховати'
       }
     })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
