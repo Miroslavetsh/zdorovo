@@ -101,9 +101,7 @@ try {
       },
     },
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 const MENU_TO_BURGER_WIDTH = 840
 const BODY = document.querySelector('html')
@@ -186,9 +184,7 @@ try {
       })
     })
   }
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Cards plus / minus
 
@@ -210,9 +206,7 @@ try {
         +this.parentNode.querySelector('input').value + 1
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Card Like
 
@@ -228,9 +222,7 @@ try {
       }
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Copying
 
@@ -262,9 +254,7 @@ try {
       }
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Modal
 const ModalsInterface = (function () {
@@ -390,9 +380,7 @@ try {
     }
   }
   giftBoxes.addEventListener('click', loadGiftBox)
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 
 /* === Homepage === */
@@ -453,9 +441,7 @@ try {
       }
     })
   }
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 
 /* === Catalog === */
@@ -474,9 +460,7 @@ try {
       this.classList.add('_active')
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Catalog filter
 
@@ -494,9 +478,7 @@ try {
   filterBurger.addEventListener('click', () => {
     filter.classList.toggle('_active')
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 
 /* === Product === */
@@ -520,9 +502,7 @@ try {
       )
     }
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Product table slide in cabinet
 
@@ -539,9 +519,7 @@ try {
         this.innerHTML = 'Приховати'
       }
     })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 
 /* === Register === */
@@ -568,9 +546,7 @@ try {
       this.classList.add('_active')
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Eye in register
 
@@ -597,9 +573,7 @@ try {
         }
       })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 
 /* === Cabinet === */
@@ -627,9 +601,7 @@ try {
       }, 1000);
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Cabinet profile
 
@@ -648,9 +620,7 @@ try {
         item.toggleAttribute('disabled')
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Order show hidden part
 
@@ -669,9 +639,7 @@ try {
       })
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Reset button
 
@@ -690,9 +658,7 @@ try {
       })
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 
 /* === Sertificate === */
@@ -708,9 +674,7 @@ try {
         input.checked = false
       })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 // Order form block delivery accordion
 
@@ -726,9 +690,7 @@ try {
       })
     })
   })
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 
 /* === Roulette === */
@@ -796,9 +758,7 @@ try {
     },
     { once: true }
   )
-} catch (err) {
-  console.error(err)
-}
+} catch {}
 
 
 /* === Agreement === */
@@ -806,7 +766,7 @@ try {
 
 try {
   const lazyLoadingContainer = document.querySelector('.agreement__text')
-  const ELEMENTS_TO_SHOW = 12
+  const ELEMENTS_TO_SHOW = window.innerHeight < 642 ? 12 : 20
 
   let lastIndexOfShowingText = 0
 
@@ -832,7 +792,5 @@ try {
   // Observing last element in viewport
   let observer = new IntersectionObserver(callback)
   observer.observe(observeElement)
-} catch (err) {
-  console.warn(err)
-}
+} catch {}
 
