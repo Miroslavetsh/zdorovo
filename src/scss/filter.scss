@@ -1,5 +1,7 @@
 .filter {
+  min-height: 320px;
   &__block {
+    margin-bottom: -10px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -24,7 +26,7 @@
     &--hits {
       a {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -89,7 +91,7 @@
   }
   &__label {
     line-height: 1.5;
-    font-size: 20px;
+    font-size: 16px;
     white-space: nowrap;
     input {
       display: none;
@@ -194,12 +196,20 @@
 
 @media (max-width: 640px) {
   .filter {
+    position: absolute;
     max-width: 320px;
-    padding-bottom: 30px;
-    position: fixed;
-    flex-direction: column;
-    z-index: 20;
     left: -300px;
+    &__body {
+      background: #fff;
+      max-width: 320px;
+      padding-bottom: 30px;
+      position: absolute;
+      flex-direction: column;
+      z-index: 20;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
 
     background: $mainWhtColor;
 
@@ -249,6 +259,9 @@
         max-width: 20px;
         max-height: 30px;
       }
+    }
+    &__label {
+      font-size: 14px;
     }
   }
 }

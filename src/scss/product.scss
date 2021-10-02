@@ -8,7 +8,7 @@
     margin-bottom: 25px;
     a,
     span {
-      width: 54%;
+      width: 55%;
     }
   }
   &__back {
@@ -72,10 +72,12 @@
     }
   }
   &__content {
-    max-width: 342px;
+    max-width: 312px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     img {
       max-width: 100%;
-      margin-top: 60px;
     }
   }
   &__row {
@@ -115,6 +117,7 @@
   &__pricing {
     margin-bottom: 27px;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     .card__like {
       position: static;
@@ -133,6 +136,7 @@
       font-size: 30px;
     }
     .product__price {
+      color: $mainCompColor;
       &--old {
         margin-right: 0;
 
@@ -143,6 +147,22 @@
       }
       &--new {
         color: #e40000;
+      }
+    }
+    .card__additional {
+      .card__item {
+        margin-left: -12px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        @media screen and (max-width: 380px) {
+          width: 100%;
+        }
+        span {
+          display: inline-block;
+          margin-left: 8px;
+          font-size: 14px;
+        }
       }
     }
   }
@@ -411,9 +431,7 @@
       flex-direction: column-reverse;
     }
     &__content {
-      img {
-        margin-top: 0;
-      }
+      margin: 0 auto;
     }
     &__buttons {
       flex-wrap: wrap;

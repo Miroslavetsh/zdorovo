@@ -18,6 +18,8 @@
     visibility: visible;
   }
   &__body {
+    display: flex;
+    justify-content: center;
     padding: 35px 38px;
     background: #fff;
     max-width: 1029px;
@@ -43,6 +45,13 @@
   }
   iframe {
     max-width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .modal {
+    &__body {
+      width: 80%;
+    }
   }
 }
 @media (max-width: 720px) {

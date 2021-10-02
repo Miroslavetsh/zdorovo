@@ -5,6 +5,11 @@
   }
   .card {
     min-width: 220px;
+    &__img {
+      picture {
+        margin: 0;
+      }
+    }
     &__outer {
       justify-content: start;
       gap: 10px;

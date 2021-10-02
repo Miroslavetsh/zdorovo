@@ -10,16 +10,37 @@
   &__text {
     font-family: $mainHeadingFont;
     line-height: 1.4;
+    p {
+      margin-bottom: 20px;
+      opacity: 0;
+      visibility: hidden;
+      font-size: 0;
+
+      transform: translateX(-10px);
+
+      transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+      &._animated {
+        opacity: 1;
+        visibility: visible;
+        font-size: 14px;
+        transform: translateX(0);
+      }
+    }
   }
   &__subtitle {
     font-size: 20px;
-  }
-  &__list {
-    li {
-      font-size: 14px;
-      margin-bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0;
 
-      list-style: none;
+    transform: translateX(-10px);
+
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    &._animated {
+      font-size: 20px;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
     }
   }
 }

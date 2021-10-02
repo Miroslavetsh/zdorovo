@@ -11,7 +11,11 @@
     width: 33%;
     position: relative;
     z-index: 5;
+  }
+  &__orders {
+    max-height: 860px;
     background: #fff;
+    overflow-x: auto;
   }
   &__main {
     width: 64%;
@@ -22,6 +26,59 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+  &__card {
+    .card__img {
+      overflow: hidden;
+      position: relative;
+      picture {
+        img {
+          width: auto;
+          height: auto;
+        }
+        &:nth-child(2) {
+          img {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            visibility: hidden;
+            opacity: 0;
+
+            transform: translateX(-50%);
+          }
+        }
+      }
+      &--toggle {
+        &:hover {
+          & > img {
+            opacity: 0;
+            &:nth-child(2) {
+              opacity: 1;
+              pointer-events: none;
+              visibility: visible;
+            }
+          }
+          picture {
+            &:nth-child(1) {
+              img {
+                opacity: 0;
+              }
+            }
+            &:nth-child(2) {
+              img {
+                pointer-events: none;
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+    .card__like {
+      left: 0;
+      top: 0;
     }
   }
   &__main.cabinet__main--fullsize {
@@ -50,9 +107,23 @@
     margin-bottom: 45px;
   }
   &__title {
+    padding-right: 30px;
+    font-size: 28px;
     margin-bottom: 42px;
 
     text-align: left;
+    position: relative;
+  }
+  &__logout {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    max-width: 20px;
+
+    transform: translateY(-50%);
+    svg {
+      width: 20px;
+    }
   }
   &__desc {
     margin-bottom: 33px;
@@ -81,9 +152,13 @@
       }
     }
   }
+  &__txt {
+    margin-left: 24px;
+  }
   &__text {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 24px;
   }
   &__segment {
     width: 28%;
@@ -123,6 +198,7 @@
     }
     .title {
       margin-bottom: 0;
+      font-size: 24px;
       margin-right: 30px;
     }
   }
@@ -139,7 +215,7 @@
       font-size: 20px;
     }
   }
-  &__order {
+  &__order.order {
     margin-bottom: 10px;
     padding: 20px 55px 18px 17px;
 
@@ -202,25 +278,6 @@
       }
     }
   }
-  &__img {
-    position: relative;
-    &--dn {
-      display: none;
-      position: absolute;
-    }
-    &:hover {
-      img {
-        display: none;
-      }
-      .cabinet__img--dn {
-        display: block;
-        position: static;
-      }
-    }
-    img {
-      max-width: 100%;
-    }
-  }
   &__hidden {
     max-height: 0;
     overflow: hidden;
@@ -232,7 +289,11 @@
       overflow: visible;
     }
     .cabinet__img {
-      max-width: 95px;
+      img {
+        height: auto;
+        width: 100%;
+        max-width: 95px;
+      }
     }
   }
   &__subtitle {
@@ -274,6 +335,11 @@
 
       transform: translate(-50%);
     }
+    &._spinning {
+      img {
+        animation: spin 1s ease-in-out;
+      }
+    }
     img {
       margin-right: 20px;
     }
@@ -300,6 +366,7 @@
   }
   .swiper-wrapper {
     margin-bottom: 0;
+    align-items: flex-end;
   }
   &__slide {
     .cabinet__card {
@@ -315,8 +382,11 @@
 
     box-shadow: none;
     .cabinet__img {
-      max-width: 147px;
-      margin-right: 10px;
+      max-width: 117px;
+      picture,
+      img {
+        max-width: 100%;
+      }
     }
   }
   &__notification {
@@ -327,11 +397,27 @@
   }
   &__info {
     display: flex;
-    align-items: end;
     justify-content: space-between;
-    margin-bottom: 25px;
+    align-items: flex-end;
+    margin-bottom: 8px;
     .cabinet__price {
+      color: $mainCompColor;
       font-size: 16px;
+      width: 50%;
+    }
+    .cabinet__gr {
+      white-space: nowrap;
+      width: 50%;
+      text-align: right;
+    }
+    .card__additional {
+      display: flex;
+      // flex-direction: column;
+      color: #000;
+      .card__item {
+        width: 50%;
+        white-space: nowrap;
+      }
     }
   }
   &__head {
@@ -562,6 +648,16 @@
     margin-top: 0;
   }
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 1024px) {
   .cabinet {
     &__inner {

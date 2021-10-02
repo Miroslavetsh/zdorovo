@@ -1,6 +1,6 @@
 .roulette {
   margin-top: 110px;
-  padding-bottom: 44px;
+  padding-bottom: 144px;
 
   transition: all 0.4s ease;
   &--mid {
@@ -9,9 +9,19 @@
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
   }
   &--bottom {
-    transform: translateY(-30px);
+    margin-bottom: -120px;
+    transform: translateY(-41px);
     &:last-child {
       transform: translateY(-50%);
+      @media screen and (max-width: 1080px) {
+        transform: translateY(-32%);
+      }
+      @media screen and (max-width: 768px) {
+        transform: translateY(-16%);
+        &.animate_on_press {
+          padding-bottom: 0;
+        }
+      }
       .roulette__bottom {
         align-items: unset;
       }
@@ -71,54 +81,54 @@
       &::before {
         left: calc(50% - 2px);
       }
-      span {
-        &:nth-child(n) {
-          visibility: hidden;
-        }
-      }
     }
-    span {
-      &:nth-child(1) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(to right, #fff, $mainCompColor);
-
-        animation: animate_line_1 4s linear infinite;
+    &._animated {
+      &::before {
+        animation: animate_gray_rect 1s alternate infinite;
       }
-      &:nth-child(2) {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 3px;
-        height: 100%;
-        background: linear-gradient(to bottom, #fff, $mainCompColor);
+      span {
+        &:nth-child(1) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background: linear-gradient(to right, #fff, $mainCompColor);
 
-        animation: animate_line_2 4s linear infinite;
-        animation-delay: 2s;
-      }
-      &:nth-child(3) {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(to left, #fff, $mainCompColor);
+          animation: animate_line_1 4s linear infinite;
+        }
+        &:nth-child(2) {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 3px;
+          height: 100%;
+          background: linear-gradient(to bottom, #fff, $mainCompColor);
 
-        animation: animate_line_3 4s linear infinite;
-      }
-      &:nth-child(4) {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 3px;
-        height: 100%;
-        background: linear-gradient(to top, #fff, $mainCompColor);
+          animation: animate_line_2 4s linear infinite;
+          animation-delay: 2s;
+        }
+        &:nth-child(3) {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 3px;
+          background: linear-gradient(to left, #fff, $mainCompColor);
 
-        animation: animate_line_4 4s linear infinite;
-        animation-delay: 2s;
+          animation: animate_line_3 4s linear infinite;
+        }
+        &:nth-child(4) {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          background: linear-gradient(to top, #fff, $mainCompColor);
+
+          animation: animate_line_4 4s linear infinite;
+          animation-delay: 2s;
+        }
       }
     }
     &--green {
@@ -142,7 +152,7 @@
     margin-bottom: 15px;
     font-family: $mainHeadingFont;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 37px;
     color: #000000;
   }
@@ -154,6 +164,18 @@
       line-height: 16px;
       font-size: 14px;
       color: #818181;
+    }
+  }
+  &__socials {
+    &--mob {
+      margin-top: 24px;
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+      &--mob {
+        display: block;
+      }
     }
   }
   &__content {
@@ -177,7 +199,12 @@
     margin-bottom: 42px;
   }
   &__photo {
-    margin-right: 42px;
+    @media screen and (max-width: 768px) {
+      & > img,
+      & > picture > img {
+        max-width: 280px;
+      }
+    }
     img {
       max-width: 344px;
       width: 100%;
@@ -193,7 +220,8 @@
     }
   }
   &__description {
-    padding-top: 40px;
+    padding-top: 64px;
+    padding-left: 32px;
   }
   &__prom {
     display: inline-block;
@@ -228,7 +256,7 @@
     }
   }
   &__desc {
-    margin-bottom: 120px;
+    margin-bottom: 60px;
     padding-top: 70px;
     font-weight: 500;
     font-size: 18px;
@@ -240,6 +268,10 @@
   }
   &__pricing {
     margin-bottom: 15px;
+    padding-top: 56px;
+    @media screen and (max-width: 768px) {
+      padding-top: 16px;
+    }
     p {
       margin-bottom: 10px;
       font-weight: 300;
@@ -255,6 +287,12 @@
 
 .animate_on_press:not(._hidden) {
   animation: pulse 1.5s ease-out;
+  @media screen and (max-width: 1080px) {
+    animation: pulse_tablet 1.5s ease-out;
+  }
+  @media screen and (max-width: 768px) {
+    animation: pulse_mobile 1.5s ease-out;
+  }
 }
 
 @keyframes pulse {
@@ -276,19 +314,51 @@
   }
 }
 
+@keyframes pulse_tablet {
+  0% {
+    transform: scale(2) translateX(0);
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.3;
+    transform: scale(1) translateY(-32%);
+  }
+  95% {
+    opacity: 1;
+    transform: scale(1.01) translateY(-32%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(-32%);
+  }
+}
+
+@keyframes pulse_mobile {
+  0% {
+    transform: scale(2) translateX(0);
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.3;
+    transform: scale(1) translateY(-16%);
+  }
+  95% {
+    opacity: 1;
+    transform: scale(1.01) translateY(-16%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(-16%);
+  }
+}
+
 @media (max-width: 1080px) {
   .roulette {
-    &--bottom,
-    &--bottom:last-child {
-      transform: none;
-    }
     &--mid {
-      margin-bottom: 20px;
       .roulette__top {
         align-items: center;
         padding: 30px 0;
       }
-      height: auto;
     }
     &__content {
       flex-direction: column;
@@ -322,27 +392,45 @@
 
 @media (max-width: 768px) {
   .roulette {
+    margin-top: 140px;
     padding-bottom: 120px;
+    &__title {
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
     &__product {
       flex-direction: column;
+      margin-bottom: 24px;
     }
     &__name {
       margin-bottom: 20px;
     }
     &__text {
       text-align: center;
-    }
-    &__photo {
-      margin-right: 0;
+      margin-top: 24px;
     }
   }
 }
 
+@media (max-width: 480px) {
+  .roulette {
+    &--bottom {
+      transform: translateY(-28px);
+    }
+    &__button {
+      padding: 16px 8px;
+    }
+  }
+}
+@media (max-width: 404px) {
+  .roulette {
+    &--bottom {
+      transform: translateY(-38px);
+    }
+  }
+}
 @media (max-width: 440px) {
   .roulette {
-    &__text {
-      text-align: left;
-    }
     &__buttons {
       flex-direction: column;
       .roulette__button {
@@ -389,5 +477,14 @@
   }
   100% {
     transform: translateY(-100%);
+  }
+}
+
+@keyframes animate_gray_rect {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
