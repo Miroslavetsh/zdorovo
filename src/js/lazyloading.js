@@ -2,7 +2,7 @@
 
 try {
   const lazyLoadingContainer = document.querySelector('.agreement__text')
-  const ELEMENTS_TO_SHOW = 12
+  const ELEMENTS_TO_SHOW = window.innerHeight < 642 ? 12 : 20
 
   let lastIndexOfShowingText = 0
 
@@ -28,6 +28,4 @@ try {
   // Observing last element in viewport
   let observer = new IntersectionObserver(callback)
   observer.observe(observeElement)
-} catch (err) {
-  console.warn(err)
-}
+} catch {}
