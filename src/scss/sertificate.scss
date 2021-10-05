@@ -275,6 +275,12 @@
   }
 }
 
+.modal[data-modal-name='sertificate'] {
+  .modal__body {
+    display: block;
+  }
+}
+
 @media (max-width: 820px) {
   .sertificate {
     &__back {
