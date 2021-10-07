@@ -2,7 +2,13 @@
 
 try {
   function getFullDate() {
-    return new Date().toISOString().split('T')[0].replaceAll('-', '.').split('.').reverse().join('.')
+    return new Date()
+      .toISOString()
+      .split('T')[0]
+      .replace(/-/g, '.')
+      .split('.')
+      .reverse()
+      .join('.')
   }
 
   class Images {
@@ -41,22 +47,29 @@ try {
       let timing = images.length
 
       setTimeout(() => {
-        rouletteItems.forEach((rouletteItem) => {
+        rouletteItems.forEach((rouletteItem, index) => {
           rouletteItem.classList.toggle('_hidden')
         })
       }, timing * 1000)
 
       let intervalHandler = () => {
+        if (counter === timing) {
+          clearInterval(interval)
+        }
+
         counter++
 
-        dateBlock.innerHTML = images[counter].text
-        let img = document.createElement('img')
-        img.src = images.find((img) => img.id === counter).src
-        image.innerHTML = ''
-        image.append(img)
+        
+        if (images[counter] && images[counter].text) {
+          dateBlock.innerHTML = images[counter].text
+          let img = document.createElement('img')
+          img.src = images.find((img) => img.id === counter).src
+          image.innerHTML = ''
+          image.append(img)
+        }
       }
 
-      setInterval(intervalHandler, 1000)
+      const interval = setInterval(intervalHandler, 1000)
 
       button.classList.add('_animated')
     },
