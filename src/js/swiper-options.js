@@ -13,10 +13,10 @@ try {
     spaceBetween: 10,
   })
 
-  const slider = new Swiper('.cabinet__slider', {
+  const slider = new Swiper('#cabinet-slider', {
     navigation: {
-      nextEl: '.swiper__button--next',
-      prevEl: '.swiper__button--prev',
+      nextEl: '#swiper-button-next',
+      prevEl: '#swiper-button-prev',
     },
     spaceBetween: 15,
     breakpoints: {
@@ -29,10 +29,10 @@ try {
     },
   })
 
-  const sliderFavourite = new Swiper('.cabinet__slider--fullsize-fav', {
+  const sliderFavourite = new Swiper('#cabinet-slider-fav', {
     navigation: {
-      nextEl: '.cabinet__slider--fullsize-fav--next',
-      prevEl: '.cabinet__slider--fullsize-fav--prev',
+      nextEl: '#cabinet-slider-fav-next',
+      prevEl: '#cabinet-slider-fav-prev',
     },
     spaceBetween: 15,
     breakpoints: {
@@ -48,10 +48,10 @@ try {
     },
   })
 
-  const sliderRecommend = new Swiper('.cabinet__slider--fullsize-rec', {
+  const sliderRecommend = new Swiper('#cabinet-slider-rec', {
     navigation: {
-      nextEl: '.cabinet__slider--fullsize-rec--next',
-      prevEl: '.cabinet__slider--fullsize-rec--prev',
+      nextEl: '#cabinet-slider-rec-next',
+      prevEl: '#cabinet-slider-rec-prev',
     },
 
     breakpoints: {

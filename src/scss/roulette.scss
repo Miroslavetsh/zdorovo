@@ -256,12 +256,13 @@
     }
   }
   &__desc {
+    max-width: 340px;
     margin-bottom: 60px;
     padding-top: 70px;
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    color: #fff;
+    color: #212121;
     strong {
       display: block;
     }
