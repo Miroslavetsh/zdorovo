@@ -1,2 +1,2 @@
 # Zdorovo
-Follow the [Link](https://miroslavetsh.github.io/Zdorovo/) and visit page
+Follow the [Link](https://miroslavetsh.github.io/zdorovo/) and visit page
